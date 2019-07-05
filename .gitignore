@@ -1,0 +1,11 @@
+/vendor
+/.idea
+/.vscode
+/.vagrant
+*.code-workspace
+node_modules
+build
+theme/assets/mix-manifest.json
+theme/assets/js/
+theme/assets/css/
+theme/assets/fonts/

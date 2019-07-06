@@ -1,5 +1,4 @@
 # Ikigai
-This is Default Laraone Frontend Theme, MIT licensed so you can do what ever you want with it.
+Default Laraone Frontend Theme
 
-
-![alt text](https://quicket.azureedge.net/media/0158696_0.Jpeg)
+![Ikigai](https://i.imgur.com/PR6uCae.png)

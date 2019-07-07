@@ -13,7 +13,7 @@
 
         <div class="post-meta">
             <div class="post-meta-detail">
-                Posted on {{ $post->created_at->format('Y-m-d') }} by Niko Craft
+                Posted on {{ $post->created_at->format('Y-m-d') }} by {{ $post->author->username }}
             </div>
         </div>
 

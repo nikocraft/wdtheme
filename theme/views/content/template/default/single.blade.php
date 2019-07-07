@@ -17,7 +17,7 @@
     @if($showMetaData)
         <div class="post-meta">
             <div class="post-meta-detail">
-                Posted on {{ $content->created_at->format('Y-m-d') }} by Niko Craft
+                Posted on {{ $content->created_at->format('Y-m-d') }} by {{ $content->author->username }}
             </div>
         </div>
     @endif

@@ -9,21 +9,21 @@
                 "type": "object",
                 "properties": {
                     "label": { "type": "string" },
-                    "type": { 
+                    "type": {
                         "type": "string",
                         "enum": [ "string", "integer", "boolean", "section" ]
                     },
                     "key": { "type": "string" },
                     "default": { "type": ["string", "boolean", "integer"]},
-                    "meta": { 
+                    "meta": {
                         "type": "object",
                         "properties": {
-                            "uiType": { 
+                            "uiType": {
                                 "type": "string",
                                 "enum": ["input", "inputDisabled", "select", "layoutSelector", "contentLayoutSelector", "px", "mediaLibrary", "textArea", "color", "boolSelect"]
                             },
                             "options": { "type": "array" },
-                            "dependency": { 
+                            "dependency": {
                                 "type": "object",
                                 "properties": {
                                     "on": { "type": "string" },
@@ -63,16 +63,16 @@
         "views-path": { "type": "string" },
         "asset-path": { "type": "string" },
         "settings": { "$ref": "#/definitions/settings" }
-      },
-      "required": [
-          "name", 
-          "namespace", 
-          "tags",
-          "author", 
-          "version", 
-          "description", 
-          "views-path", 
-          "asset-path",
-          "settings"
-        ]
+    },
+    "required": [
+        "name",
+        "namespace",
+        "tags",
+        "author",
+        "version",
+        "description",
+        "views-path",
+        "asset-path",
+        "settings"
+    ]
 }

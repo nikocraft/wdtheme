@@ -58,4 +58,14 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Phoenix Relative Path
+    |--------------------------------------------------------------------------
+    |
+    | Relative path where Phoenix is, used to sync the themes while developing
+    |
+    */
+    'phoenix_path' => env('PHOENIX_PATH', '../phoenix'),
+
 ];

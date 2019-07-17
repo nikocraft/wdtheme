@@ -962,48 +962,6 @@
                     "default": "Sidebar",
                     "type": "string",
                     "meta": { "layout": "vertical" }
-                },
-                {
-                    "label": "Header",
-                    "key": "header",
-                    "default": "Header",
-                    "type": "string",
-                    "meta": { "layout": "horizontal" }
-                },
-                {
-                    "label": "Single Content Top",
-                    "key": "singleContentTop",
-                    "default": "Single Top Position",
-                    "type": "string",
-                    "meta": { "layout": "horizontal" }
-                },
-                {
-                    "label": "Single Content Bottom",
-                    "key": "singleContentBottom",
-                    "default": "Single Bottom Position",
-                    "type": "string",
-                    "meta": { "layout": "horizontal" }
-                },
-                {
-                    "label": "Index Content Top",
-                    "key": "indexContentTop",
-                    "default": "Index Top Position",
-                    "type": "string",
-                    "meta": { "layout": "horizontal" }
-                },
-                {
-                    "label": "Index Content Bottom",
-                    "key": "indexContentBottom",
-                    "default": "Index Bottom Position",
-                    "type": "string",
-                    "meta": { "layout": "horizontal" }
-                },
-                {
-                    "label": "Footer",
-                    "key": "footer",
-                    "default": "Footer",
-                    "type": "string",
-                    "meta": { "layout": "horizontal" }
                 }
             ]
         },
@@ -1017,13 +975,6 @@
                     "label": "Header",
                     "key": "header",
                     "default": "Header",
-                    "type": "string",
-                    "meta": { }
-                },
-                {
-                    "label": "Footer",
-                    "key": "footer",
-                    "default": "Footer",
                     "type": "string",
                     "meta": { }
                 }

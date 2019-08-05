@@ -4,10 +4,10 @@
 
 @php
     $contentType = $content->type->slug;
-    $showTitle = isset($content->settingsAsJson->showTitle) ? $content->settingsAsJson->showTitle : get_theme_setting('content.' . $contentType . '.showTitle');
-    $showMetaData = isset($content->settingsAsJson->showMetaData) ? $content->settingsAsJson->showMetaData : get_theme_setting('content.' . $contentType . '.showMetaData');
-    $showAuthorBio = isset($content->settingsAsJson->showAuthorBio) ? $content->settingsAsJson->showAuthorBio : get_theme_setting('content.' . $contentType . '.showAuthorBio');
-    $showComments = isset($content->settingsAsJson->showComments) ? $content->settingsAsJson->showComments : get_theme_setting('content.' . $contentType . '.showComments');
+    $showTitle = $content->settings->get('showTitle', get_theme_setting('content.' . $contentType . '.showTitle'));
+    $showMetaData = $content->settings->get('showMetaData', get_theme_setting('content.' . $contentType . '.showMetaData'));
+    $showAuthorBio = $content->settings->get('showAuthorBio', get_theme_setting('content.' . $contentType . '.showAuthorBio'));
+    $showComments = $content->settings->get('showComments', get_theme_setting('content.' . $contentType . '.showComments'));
 @endphp
 
 <div class="post">

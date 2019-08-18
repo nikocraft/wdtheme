@@ -28,7 +28,7 @@
         @endphp
 
         <div class="widget">
-            @if($settings->get('renderTitle'))<div class="widget-header"><{{ get_theme_setting('widgets.titleSize')}} class="widget-title">{{ $settings->blockTitle }}</{{ get_theme_setting('widgets.titleSize')}}></div>@endif
+            @if($settings->get('renderTitle'))<div class="widget-header"><{{ get_theme_setting('widgets.titleSize')}} class="widget-title">{{ $settings>get('blockTitle') }}</{{ get_theme_setting('widgets.titleSize')}}></div>@endif
             <div class="widget-body" style="padding: 10;">
                 @component('content.render.rootwidget', [
                     'blockId' => $widgetBlockId,

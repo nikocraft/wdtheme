@@ -1,26 +1,28 @@
-{{-- WIDGETS --}}
 @php
+    $widget = get_widget('sidebar');
+    $widgetVisible = false;
+
     switch ($pageType) {
         case 'single':
             $contentTypeId = $content->type->slug;
             $contentId = $content->id;
-            $widget = get_widget_by_area($widgets, 'sidebar', $contentTypeId, $contentId);
+            $widgetVisible = is_widget_visible($widget, $contentTypeId, $contentId);
             break;
         case 'index':
             $contentTypeId = $contentType->slug;
-            $widget = get_widget_by_area($widgets, 'sidebar', $contentTypeId);
+            $widgetVisible = is_widget_visible($widget, $contentTypeId);
             break;
         default:
             $contentTypeId = $contentType->slug;
-            $widget = get_widget_by_area($widgets, 'sidebar', $contentTypeId);
+            $widgetVisible = is_widget_visible($widget, $contentTypeId);
             break;
     }
 
-    if($widget)
-        list($widgetBlockList, $widgetBlockIds) = process_widget_blocks($widget->blocks);
+    if($widgetVisible)
+        list($widgetBlockList, $widgetBlockIds) = get_widget_blocks($widget);
 @endphp
 
-@if($widget)
+@if($widgetVisible)
     @foreach($widgetBlockIds as $widgetBlockId)
         @php
             $widgetBlock = $widgetBlockList[$widgetBlockId];
@@ -28,11 +30,17 @@
         @endphp
 
         <div class="widget">
-            @if($settings->get('renderTitle'))<div class="widget-header"><{{ get_theme_setting('widgets.titleSize')}} class="widget-title">{{ $settings>get('blockTitle') }}</{{ get_theme_setting('widgets.titleSize')}}></div>@endif
+            @if($settings->get('renderTitle'))
+                <div class="widget-header">
+                    <{{ get_theme_setting('widgets.titleSize')}} class="widget-title">
+                        {{ $settings->blockTitle }}
+                    </{{ get_theme_setting('widgets.titleSize')}}>
+                </div>
+            @endif
             <div class="widget-body" style="padding: 10;">
                 @component('content.render.rootwidget', [
                     'blockId' => $widgetBlockId,
-                    'allWidgets' => $widgetBlockList
+                    'allBlocks' => $widgetBlockList
                 ])@endcomponent
             </div>
         </div>

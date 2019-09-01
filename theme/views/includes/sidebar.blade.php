@@ -1,32 +1,32 @@
 @php
-    $widget = get_widget('sidebar');
-    $widgetVisible = false;
+    $widgetGroup = get_widget_group('sidebar');
+    $widgetGroupVisible = false;
 
     switch ($pageType) {
         case 'single':
             $contentTypeId = $content->type->slug;
             $contentId = $content->id;
-            $widgetVisible = is_widget_visible($widget, $contentTypeId, $contentId);
+            $widgetGroupVisible = is_widget_group_visible($widgetGroup, $contentTypeId, $contentId);
             break;
         case 'index':
             $contentTypeId = $contentType->slug;
-            $widgetVisible = is_widget_visible($widget, $contentTypeId);
+            $widgetGroupVisible = is_widget_group_visible($widgetGroup, $contentTypeId);
             break;
         default:
             $contentTypeId = $contentType->slug;
-            $widgetVisible = is_widget_visible($widget, $contentTypeId);
+            $widgetGroupVisible = is_widget_group_visible($widgetGroup, $contentTypeId);
             break;
     }
 
-    if($widgetVisible)
-        list($widgetBlockList, $widgetBlockIds) = get_widget_blocks($widget);
+    if($widgetGroupVisible)
+        list($widgets, $widgetsIds) = get_widgets($widgetGroup);
 @endphp
 
-@if($widgetVisible)
-    @foreach($widgetBlockIds as $widgetBlockId)
+@if($widgetGroupVisible)
+    @foreach($widgetsIds as $widgetId)
         @php
-            $widgetBlock = $widgetBlockList[$widgetBlockId];
-            $settings = $widgetBlock->settings;
+            $widgetGroupBlock = $widgets[$widgetId];
+            $settings = $widgetGroupBlock->settings;
         @endphp
 
         <div class="widget">
@@ -39,8 +39,8 @@
             @endif
             <div class="widget-body" style="padding: 10;">
                 @component('content.render.rootwidget', [
-                    'blockId' => $widgetBlockId,
-                    'allBlocks' => $widgetBlockList
+                    'widgetId' => $widgetId,
+                    'widgets' => $widgets
                 ])@endcomponent
             </div>
         </div>

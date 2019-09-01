@@ -129,6 +129,13 @@
                     "type": "section",
                     "settings": [
                         {
+                            "label": "Pagination",
+                            "key": "pagination",
+                            "default": "12",
+                            "type": "string",
+                            "meta": { "uiType": "input" }
+                        },
+                        {
                             "label": "Excerpt Length",
                             "key": "excerptLength",
                             "default": "300",

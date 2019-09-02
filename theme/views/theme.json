@@ -129,13 +129,6 @@
                     "type": "section",
                     "settings": [
                         {
-                            "label": "Pagination",
-                            "key": "pagination",
-                            "default": "12",
-                            "type": "string",
-                            "meta": { "uiType": "input" }
-                        },
-                        {
                             "label": "Excerpt Length",
                             "key": "excerptLength",
                             "default": "300",
@@ -192,6 +185,27 @@
                                     "meta": { "uiType": "input", "info": "Leave empty for full height" }
                                 }
                             ]
+                        }
+                    ]
+                },
+                {
+                    "label": "Pagination",
+                    "key": "pagination",
+                    "type": "section",
+                    "settings": [
+                        {
+                            "label": "Type",
+                            "key": "type",
+                            "default": "simple",
+                            "type": "string",
+                            "meta": { "uiType": "select", "options": ["simple", "standard"] }
+                        },
+                        {
+                            "label": "Per Page",
+                            "key": "perPage",
+                            "default": "12",
+                            "type": "string",
+                            "meta": { "uiType": "input" }
                         }
                     ]
                 },

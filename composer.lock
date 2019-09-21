@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "075439e0a129daf7072e0fca5737bc67",
+    "content-hash": "b7f6b681d1fe994cb2447de81d9586b5",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -1008,20 +1008,21 @@
             "time": "2019-01-14T23:55:14+00:00"
         },
         {
-            "name": "laraone/cli-theme",
+            "name": "laraone/themedev",
             "version": "1.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/laraone/theme-cli.git",
-                "reference": "b49839c0b1e398007bdc0d20bb7b065531f89891"
+                "url": "https://github.com/laraone/themedev.git",
+                "reference": "fd857476f89caa33b9b8a6266a123c2318f89e97"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laraone/theme-cli/zipball/b49839c0b1e398007bdc0d20bb7b065531f89891",
-                "reference": "b49839c0b1e398007bdc0d20bb7b065531f89891",
+                "url": "https://api.github.com/repos/laraone/themedev/zipball/fd857476f89caa33b9b8a6266a123c2318f89e97",
+                "reference": "fd857476f89caa33b9b8a6266a123c2318f89e97",
                 "shasum": ""
             },
             "require": {
+                "justinrainbow/json-schema": "^5.2",
                 "php": ">=7.1"
             },
             "require-dev": {
@@ -1032,13 +1033,13 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "laraone\\clitheme\\CLIThemeServiceProvider"
+                        "laraone\\themedev\\ThemeDevServiceProvider"
                     ]
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "laraone\\clitheme\\": "src/"
+                    "laraone\\themedev\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1053,8 +1054,8 @@
                     "name": "Mystery Reloaded"
                 }
             ],
-            "description": "CLI package for Laraone CMS theme development",
-            "time": "2019-09-21T20:50:18+00:00"
+            "description": "Theme Development Package for Laraone CMS",
+            "time": "2019-09-21T22:49:47+00:00"
         },
         {
             "name": "laravel-zero/foundation",
@@ -2942,53 +2943,6 @@
                 "object graph"
             ],
             "time": "2019-08-09T12:45:53+00:00"
-        },
-        {
-            "name": "mysteryreloaded/laraone-theme",
-            "version": "1.2.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mysteryreloaded/laraone-theme.git",
-                "reference": "e93e35be287855440759396e0dbd2a4b7e84b500"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mysteryreloaded/laraone-theme/zipball/e93e35be287855440759396e0dbd2a4b7e84b500",
-                "reference": "e93e35be287855440759396e0dbd2a4b7e84b500",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.1"
-            },
-            "require-dev": {
-                "orchestra/testbench": "~3.0",
-                "phpunit/phpunit": "6.*"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "mysteryreloaded\\laraonetheme\\ThemeServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "mysteryreloaded\\laraonetheme\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "mysteryreloaded",
-                    "email": "ntrifunovicsrb@gmail.com"
-                }
-            ],
-            "description": "Support files for laraone theme development",
-            "time": "2019-09-17T18:34:26+00:00"
         },
         {
             "name": "phar-io/manifest",

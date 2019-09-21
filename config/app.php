@@ -56,6 +56,7 @@ return [
         App\Providers\AppServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\Translation\TranslationServiceProvider::class,
+        laraone\clitheme\CLIThemeServiceProvider::class
     ],
 
     /*

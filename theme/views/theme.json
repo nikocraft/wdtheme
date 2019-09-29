@@ -1,7 +1,7 @@
 {
     "name"              : "ikigai",
-    "releases_url"      : "https://github.com/laraone/ikigai_theme_releases/raw/master/releases.json",
-    "download_url"      : "https://github.com/laraone/ikigai_theme_releases/releases/download",
+    "releases_url"      : "https://github.com/laraone/ikigai-theme-releases/raw/master/releases.json",
+    "download_url"      : "https://github.com/laraone/ikigai-theme-releases/releases/download",
     "namespace"         : "com.reimaginedworks.ikigai",
     "folder"            : "ikigai",
     "tags"              : [ "minimalistic", "clean", "modern", "blog" ],

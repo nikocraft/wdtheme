@@ -14,7 +14,7 @@
             <comment-box :content-id="contentId"></comment-box>
         </div>
     </div>
-    <div v-else class="comments-load">
+    <div v-else class="load-comments-wrapper">
         <div @click="loadComments()" class="btn btn-primary">Load Comments</div>
     </div>
 </template>

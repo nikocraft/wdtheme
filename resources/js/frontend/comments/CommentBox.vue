@@ -1,36 +1,37 @@
 <template>
     <div class="comment-box">
         <div class="comment-form">
-            <div v-if="!loggedUser" class="form-group">
+            <div class="comment-box-header">
                 <h3>Leave a Reply</h3>
-                Your email address will not be published. Required fields are marked *
+                <div>Your email address will not be published. Required fields are marked *</div>
             </div>
-            <div class="comment-data">
-                <div v-if="!loggedUser" class="form-group comment-data-item">
+
+            <div v-if="!loggedUser" class="comment-data">
+                <div class="comment-data-item">
                     <label for="name">Name</label> *
-                    <input v-validate="'required'" data-vv-as="Name" name="name" type="text" class="form-control" v-model="name">
+                    <input v-validate="'required'" data-vv-as="Name" name="name" type="text" class="form-input" v-model="name">
                     <span>{{ errors.first('name') }}</span>
                 </div>
             
-                <div v-if="!loggedUser" class="form-group comment-data-item">
+                <div class="comment-data-item">
                     <label for="email">Email</label> *
-                    <input v-validate="'required|email'" data-vv-as="Email" name="email" type="text" class="form-control" v-model="email">
+                    <input v-validate="'required|email'" data-vv-as="Email" name="email" type="text" class="form-input" v-model="email">
                     <span>{{ errors.first('email') }}</span>
                 </div>
 
-                <div v-if="!loggedUser" class="form-group comment-data-item">
+                <div class="comment-data-item">
                     <label for="website">Website</label>
-                    <input type="text" name="website" class="form-control" v-model="website">
+                    <input type="text" name="website" class="form-input" v-model="website">
                 </div>
             </div>
 
-            <div class="form-group">
-                <label for="body">Comment</label> <span v-if="!loggedUser">*</span>
-                <textarea v-validate="'required'" data-vv-as="Comment" name="body" class="form-control" style="height: 105px;" v-model="body"></textarea>
+            <div class="comment-body">
+                <div><label for="body">Comment</label> <span>*</span></div>
+                <textarea v-validate="'required'" data-vv-as="Comment" name="body" class="form-input" v-model="body"></textarea>
                 <span>{{ errors.first('body') }}</span>
             </div>
 
-            <div class="form-group" style="display: flex; justify-content: flex-end;">
+            <div class="comment-btn">
                 <button @click="comment()" type="submit" name="button" class="btn btn-primary">Comment</button>
             </div>
         </div>
@@ -106,70 +107,3 @@
         }
     }
 </script>
-
-<style lang="scss">
-    .comment-box {
-        position: relative;
-        margin-top: 15px;
-
-        h3 {
-            margin-top: 0px;
-        }
-    }
-
-    .comment-form {
-        padding: 10px 0px;
-    }
-
-    .comment-data {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 5px;
-    }
-
-    .comment-data-item {
-        width: 100%;
-        margin: 5px;
-    }
-
-    .spinner {
-        display: flex;
-        justify-content: center;
-        position: absolute;
-        top: -5px;
-        background: rgba(255, 255, 255, 0.11);
-        height: 100%;
-        align-items: center;
-        width: 100%;
-        align-self: center;
-    }
-
-    .lds-dual-ring {
-        display: flex;
-        width: 64px;
-        height: 64px;
-    }
-
-    .lds-dual-ring:after {
-        content: " ";
-        display: block;
-        width: 46px;
-        height: 46px;
-        margin: 1px;
-        border-radius: 50%;
-        border: 5px solid #cef;
-        border-color: #cef transparent #cef transparent;
-        animation: lds-dual-ring 1.2s linear infinite;
-    }
-
-    @keyframes lds-dual-ring {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-
-</style>

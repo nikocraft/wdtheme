@@ -1,0 +1,40 @@
+/* .container:after, .container:before {
+    content: unset;
+} */
+
+.container-fluid::after, .container-fluid::before, .container::after, .container::before {
+    /* display: table; */
+    content: " ";
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 100%;
+    }
+}
+  
+@media (min-width: 992px) {
+    .container {
+        width: 100%;
+    }
+}
+  
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+
+.container-wide :last-child {
+    margin-bottom: 0px !important;
+}
+
+.container-fluid {
+    width: 100%;
+}
+
+.container .content .container {
+    width: unset;
+    padding: unset;
+}

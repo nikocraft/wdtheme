@@ -170,3 +170,19 @@
 .block-link, .block-link:hover {
     text-decoration: none;
 }
+
+/* Recent Posts Block*/
+.recent-post-title-link {
+    font-size: 16px;
+    color: #337ab7;
+}
+
+.recent-post-date {
+    font-size: 14px;
+    color: #555;
+}
+
+.recent-post-featured-image:hover ~ .recent-post-details .recent-post-title a {
+    color: #23527c;
+    text-decoration: underline;
+}

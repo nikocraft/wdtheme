@@ -18,9 +18,19 @@
             <img src="{{ $post->featuredimage->original }}" class="post-featured-image img-responsive" alt="">
         @endif
 
-        <div class="post-excerpt">
+        {{-- <div class="post-excerpt">
             {{ get_excerpt($post, get_theme_setting('content.general.excerptLength')) }}
-        </div>
+        </div> --}}
+
+        @if(has_excerpt($post))
+            <div class="post-excerpt">
+                {!! get_excerpt($post, get_theme_setting('content.general.excerptLength')) !!}
+            </div>
+        @elseif(has_text_block($post))
+            <div class="post-excerpt text-block">
+                {!! get_text_block($post) !!}
+            </div>
+        @endif
 
         <div class="post-footer">
             <div class="post-meta-detail">

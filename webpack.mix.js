@@ -15,7 +15,7 @@ mix.webpackConfig({
 
 mix.setPublicPath('theme/assets')
    .js('resources/js/frontend/app.js', 'js')
-   .sass('resources/sass/theme.scss', 'css/styles.css')
+   .sass('resources/sass/styles.scss', 'css/styles.css')
 ;
 
 mix.version();

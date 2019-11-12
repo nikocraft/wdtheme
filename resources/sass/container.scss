@@ -2,29 +2,26 @@
     content: unset;
 } */
 
-.container-fluid::after, .container-fluid::before, .container::after, .container::before {
+.container-fluid::after, 
+.container-fluid::before, 
+.container::after, 
+.container::before {
     /* display: table; */
     content: " ";
 }
 
-@media (min-width: 768px) {
-    .container {
-        width: 100%;
-    }
-}
-  
-@media (min-width: 992px) {
-    .container {
-        width: 100%;
-    }
-}
-  
-@media (min-width: 1200px) {
-    .container {
-        width: 1170px;
-    }
-}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: $container-width;
+    max-width: $container-max-width;
 
+    @media (max-width: $large-devices) {
+        width: 100%;
+    }
+}
 
 .container-wide :last-child {
     margin-bottom: 0px !important;

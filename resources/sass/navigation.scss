@@ -6,11 +6,11 @@
     justify-content: space-between;
     height: 100%;
     align-items: center;
-}
 
-.nav-container a:hover {
-    color: #444;
-    text-decoration: none;
+    a:hover {
+        color: #444;
+        text-decoration: none;
+    }
 }
 
 .nav-menu div {
@@ -18,14 +18,14 @@
     padding-bottom: 10px;
     border-top: 1px solid #525252b5;
     cursor: pointer;
-}
 
-.nav-menu div:last-child {
-    border-bottom: 1px solid #525252b5;
-}
+    &:last-child {
+        border-bottom: 1px solid #525252b5;
+    }
 
-.nav-menu div:hover {
-    color: #8c8c8c;
+    &:hover {
+        color: #8c8c8c;
+    }
 }
 
 .navbar {
@@ -120,12 +120,6 @@
     display: block;
   }
 
-.responsive-menu {
-    display: flex;
-    flex: 1;
-    justify-content: flex-end;
-}
-
 #hamburger {
     background-color: #222;
     width: 100%;
@@ -133,104 +127,94 @@
     position: absolute;
     display: none;
     z-index: 10000;
-}
 
-#hamburger .hamburger-menu {
-    color: #fbfbfb;
-    background-color: #222;
-    position: relative;
-    top: 30px;
-}
+    .hamburger-menu {
+        color: #fbfbfb;
+        background-color: #222;
+        position: relative;
+        top: 30px;
+    }
 
-#hamburger .hamburger-menu-title {
-    font-size: 35px;
-    padding: 10px 15px;
-    display: flex;
-    margin-top: 32px;
-    color: #333;
-}
+    .hamburger-menu-title {
+        font-size: 35px;
+        padding: 10px 15px;
+        display: flex;
+        margin-top: 32px;
+        color: #333;
+    }
 
-#hamburger .hamburger-menu-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
+    .hamburger-menu-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
 
-#hamburger .hamburger-menu-item a {
-    font-size: 20px;
-    color: white;
-    flex: 1;
-    padding: 10px 0px;
-    padding-left: 20px;
-    text-transform: uppercase;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        a {
+            font-size: 20px;
+            color: white;
+            flex: 1;
+            padding: 10px 0px;
+            padding-left: 20px;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-#hamburger .hamburger-menu-item i {
-    padding: 0px 40px;
-    font-size: 22px;
-}
+        i {
+            padding: 0px 40px;
+            font-size: 22px;
+        }
+    }
 
-#hamburger .dropdown-content {
-    display: none;
-    z-index: 1;
-    width: 100%;
-}
+    .dropdown-content {
+        display: none;
+        z-index: 1;
+        width: 100%;
+    }
 
-#hamburger .drop-menu-item {
-    display: flex;
-}
+    .drop-menu-item {
+        display: flex;
 
-#hamburger .drop-menu-item a {
-    font-size: 18px;
-    color: white;
-    text-transform: none;
-    padding: 10px 0px;
-    padding-left: 40px;
-}
+        a {
+            font-size: 18px;
+            color: white;
+            text-transform: none;
+            padding: 10px 0px;
+            padding-left: 40px;
+        }
+    }
 
-#hamburger .dropdown-button-close {
-    display: none;
-}
-
-.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after {
-    background-color: #333;
+    .dropdown-button-close {
+        display: none;
+    }
 }
 
 .hamburger {
     outline: none;
     z-index: 20000;
-}
 
-@media (min-width: 768px) {
-    .menu {
-        display: none;
-    }
-
-    .responsive-menu {
-        display: flex;
+    &.is-active {
+        .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+            background-color: #333;
+        }
     }
 }
-  
-@media (min-width: 992px) {
-    .menu {
-        display: flex;
-    }
 
-    .responsive-menu {
+.menu {
+    display: flex;
+    
+    @media (max-width: $small-devices) {
         display: none;
     }
 }
-  
-@media (min-width: 1200px) {
-    .menu {
-        display: flex;
-    }
 
-    .responsive-menu {
-        display: none;
+.responsive-menu {
+    display: none;
+    flex: 1;
+    justify-content: flex-end;
+
+    @media (max-width: $medium-devices) {
+        display: flex;
     }
 }

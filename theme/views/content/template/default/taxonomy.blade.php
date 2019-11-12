@@ -31,7 +31,7 @@
                     ]) @endtaxonomy
                 </div>
             </div>
-            {{-- <a class="post-read-more" href="/{{ $post->type->slug }}/{{ $post->slug }}">Read More</a> --}}
+            {{-- <a class="btn btn-primary" href="/{{ $post->type->slug }}/{{ $post->slug }}">Read More</a> --}}
         </div>
     </div>
     @endforeach

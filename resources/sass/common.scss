@@ -55,12 +55,18 @@ textarea {
     border: 1px solid transparent;
     padding: 6px 12px;
     font-size: 14px;
-    line-height: 1.42857143;
+    line-height: 1.4;
     border-radius: 4px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
+
+    &:active, .active {
+        -webkit-box-shadow: unset;
+        box-shadow: inset unset;
+    }
+
+    &:hover, &:focus, .focus {
+        color: white;
+    }
 }
 
 .btn-primary {
@@ -73,13 +79,19 @@ textarea {
         background-color: #455056;
         border-color: unset;
     }
-}
 
-.btn:active, .btn.active {
-    -webkit-box-shadow: unset;
-    box-shadow: inset unset;
-}
+    &.active, &:active, .open>&.dropdown-toggle {
+        background-color: #455056;
+        border-color: unset;
+    }
 
-.btn:hover, .btn:focus, .btn.focus {
-    color: white;
+    &.focus, &:focus {
+        background-color: #455056;
+        border-color: unset;
+    }
+
+    &:active:focus {
+        background-color: #455056;
+        border-color: unset;
+    }
 }

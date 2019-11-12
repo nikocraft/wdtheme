@@ -1,18 +1,18 @@
-// third party hambuger styles
-@import "hamburgers.css";
+// Bootstrap
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
-@import "_variables.scss";
-
-// cms blocks
-@import "blocks.scss";
-
-// theme css
-@import "layout.scss";
-@import "container.scss";
-@import "common.scss";
-@import "sidebar.scss";
-@import "navigation.scss";
-@import "content.scss";
-@import "headlines.scss";
-@import "comments.scss";
-@import "pagination.scss";
+// Components styles
+@import "normalize";
+@import "hamburgers";
+@import "_variables";
+@import "container";
+@import "layout";
+@import "headlines";
+@import "navigation";
+@import "logo";
+@import "blocks";
+@import "common";
+@import "pagination";
+@import "widgets";
+@import "content";
+@import "comments";

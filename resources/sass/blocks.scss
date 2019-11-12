@@ -117,12 +117,16 @@
             background-color: transparent;
         }
 
+        .tab-item {
+            background-color: rgba(53, 101, 171, 0.05);
+    
+            &:hover {
+                background-color: rgba(53, 101, 171, 0.15);
+            }
+        }
+        
         .active-tab-item {
             background-color: rgba(53, 101, 171, 0.13);
-        }
-
-        .tab-item:hover {
-            background-color: rgba(53, 101, 171, 0.15);
         }
     }
 }
@@ -174,7 +178,12 @@
 /* Recent Posts Block*/
 .recent-post-title-link {
     font-size: 16px;
-    color: #337ab7;
+    color: #444;
+
+    &:hover {
+        color: #216a94;
+        text-decoration: none;
+    }
 }
 
 .recent-post-date {
@@ -183,6 +192,6 @@
 }
 
 .recent-post-featured-image:hover ~ .recent-post-details .recent-post-title a {
-    color: #23527c;
-    text-decoration: underline;
+    color: #216a94;
+    text-decoration: none;
 }

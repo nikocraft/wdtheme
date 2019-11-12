@@ -1,44 +1,21 @@
 
 /** Logo */
 .logo {
-    flex: 3;
+    flex: 1;
     height: 100%;
     display: flex;
     align-items: center;
-}
 
-@media (min-width: 768px) {
-    .logo {
-        flex: 0.52;
-        height: 100%;
-        display: flex;
-        align-items: center;
+    @media (max-width: $small-devices) {
+        flex: 3;
     }
-}
 
-@media (min-width: 992px) {
-    .logo {
-        flex: 0.52;
-        height: 100%;
-        display: flex;
-        align-items: center;
+    .logo-link {
+        font-size: 24px;
+        color: #222;
+
+        &:hover {
+            color: #111;
+        }
     }
-}
-
-@media (min-width: 1200px) {
-    .logo {
-        flex: 0.52;
-        height: 100%;
-        display: flex;
-        align-items: center;
-    }
-}
-
-.logo .logo-link {
-    font-size: 24px;
-    color: #222;
-}
-
-.logo .logo-link:hover {
-    color: #111;
 }

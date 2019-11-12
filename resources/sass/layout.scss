@@ -1,10 +1,10 @@
 body {
-    overflow-x: hidden;
     font-family: covik-sans, sans-serif;
-    line-height: 25px;
-    font-size: 15px;
-    background-color: #fbfbfb;
-    color: #333;
+    font-size: $body-font-size;
+    line-height: $body-line-height;
+    background-color: $body-background-color;
+    color: $body-text-color;
+    overflow-x: hidden;
 }
 
 .ikigai {
@@ -15,13 +15,13 @@ body {
 }
 
 header {
-    height: 122px;
+    height: $header-height;
 }
 
 footer {
-    background-color: #27313a;
-    color: white;
-    font-size: 12px;
+    background-color: $footer-background-color;
+    color: $footer-text-color;
+    font-size: $footer-font-size;
 
     .footer-wrap {
         display: flex;
@@ -33,19 +33,11 @@ footer {
 }
 
 .content-wrap {
-    display: block;
+    display: flex;
     flex: 1;
-}
 
-@media (min-width: 992px) {
-    .content-wrap {
-        display: flex;
-    }
-}
-
-@media (min-width: 1200px) {
-    .content-wrap {
-        display: flex;
+    @media (max-width: $medium-devices) {
+        display: block;
     }
 }
 
@@ -55,66 +47,46 @@ footer {
 
 .content-left {
     order: 1;
+    width: 70%;
+
+    @media (max-width: $medium-devices) {
+        width: 100%;
+    }
 }
 
 .content-right {
     order: 2;
+    width: 70%;
+
+    @media (max-width: $medium-devices) {
+        width: 100%;
+    }
 }
 
 .sidebar {
-    width: 100%;
+    width: 30%;
     height: 100%;
     padding: 0px;
+
+    @media (max-width: $medium-devices) {
+        width: 100%;
+    }
 }
 
 .sidebar-left {
     order: 1;
+    margin-right: 30px; 
+
+    @media (max-width: $medium-devices) {
+        margin-right: 0; 
+    }
 }
 
 .sidebar-right {
     order: 2;
-}
+    margin-left: 30px;
 
-@media (min-width: 992px) {
-    .content-left {
-        width: 70%;
-    }
-    
-    .content-right {
-        width: 70%;
-    }
-
-    .sidebar {
-        width: 30%;
-    }
-
-    .sidebar-left {
-        margin-right: 30px; 
-    }
-    
-    .sidebar-right {
-        margin-left: 30px; 
-    }
-}
-
-@media (min-width: 1200px) {
-    .content-left {
-        width: 70%;
-    }
-    
-    .content-right {
-        width: 70%;
-    }
-
-    .sidebar {
-        width: 30%;
-    }
-
-    .sidebar-left {
-        margin-right: 30px; 
-    }
-    
-    .sidebar-right {
-        margin-left: 30px; 
+    @media (max-width: $medium-devices) {
+        margin-left: 0; 
     }
 }

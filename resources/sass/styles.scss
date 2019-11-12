@@ -1,18 +1,23 @@
-// Bootstrap
-// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-
-// Components styles
+// reset styles
 @import "normalize";
+
+// third party hambuger styles
 @import "hamburgers";
+
+// theme variables
 @import "_variables";
+
+// theme styles
 @import "container";
 @import "layout";
+@import "common";
 @import "headlines";
 @import "navigation";
 @import "logo";
-@import "blocks";
-@import "common";
 @import "pagination";
 @import "widgets";
 @import "content";
 @import "comments";
+
+// cms blocks
+@import "blocks";

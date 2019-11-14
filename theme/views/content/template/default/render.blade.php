@@ -5,10 +5,10 @@
 
     switch ($pageType) {
         case 'single':
-            $contentLayout = $content->layout ?? get_theme_setting('content.' . $contentType->slug  . '.layout');
+            $contentLayout = $content->layout ?? get_theme_setting('content.' . $contentType->slug  . '.layout.singlePage');
             break;
         default:
-            $contentLayout = get_theme_setting('content.' . $contentType->slug . '.layoutIndex');
+            $contentLayout = get_theme_setting('content.' . $contentType->slug . '.layout.indexPage');
             break;
     }
 @endphp

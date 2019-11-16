@@ -4,18 +4,18 @@ const path = require('path');
 mix.webpackConfig({
   resolve: {
     alias: {
-      root: path.resolve(__dirname, './resources/js'),
-      styles: path.resolve(__dirname, './resources/sass'),
-      frontend: path.resolve(__dirname, './resources/js/frontend'),
-      utils: path.resolve(__dirname, './resources/js/utils'),
-      directives: path.resolve(__dirname, './resources/js/directives')
+      root: path.resolve(__dirname, './src/resources/js'),
+      styles: path.resolve(__dirname, './src/resources/sass'),
+      frontend: path.resolve(__dirname, './src/resources/js/frontend'),
+      utils: path.resolve(__dirname, './src/resources/js/utils'),
+      directives: path.resolve(__dirname, './src/resources/js/directives')
     }
   }
 });
 
-mix.setPublicPath('theme/assets')
-   .js('resources/js/frontend/app.js', 'js')
-   .sass('resources/sass/styles.scss', 'css/styles.css')
+mix.setPublicPath('build/theme/assets')
+   .js('src/resources/js/frontend/app.js', 'js')
+   .sass('src/resources/sass/styles.scss', 'css/styles.css')
 ;
 
 mix.version();

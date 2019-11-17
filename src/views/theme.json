@@ -1,8 +1,9 @@
 {
     "name"              : "ikigai",
-    "releases_url"      : "https://github.com/laraone/ikigai-theme-releases/raw/master/releases.json",
-    "download_url"      : "https://github.com/laraone/ikigai-theme-releases/releases/download",
+    "releases_url"      : "https://github.com/laraone/ikigai/raw/master/releases.json",
+    "download_url"      : "https://github.com/laraone/ikigai/releases/download",
     "namespace"         : "com.reimaginedworks.ikigai",
+    "version"           : "1.0.0",
     "folder"            : "ikigai",
     "tags"              : [ "minimalistic", "clean", "modern", "blog" ],
     "author"            : "Niko Craft, Reimagined Works",

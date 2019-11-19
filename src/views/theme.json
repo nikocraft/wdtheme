@@ -339,41 +339,6 @@
             ]
         },
         {
-            "label": "Widgets",
-            "key": "widgets",
-            "type": "section",
-            "settings": [
-                {
-                    "label": "Title Size",
-                    "key": "titleSize",
-                    "default": "h4",
-                    "type": "string",
-                    "meta": { "uiType": "select", "options": ["h1", "h2", "h3", "h4", "h5", "h6"] }
-                },
-                {
-                    "label": "Title Text Style",
-                    "key": "titleStyle",
-                    "default": "capitalize",
-                    "type": "string",
-                    "meta": { "uiType": "select", "options": [ "none", "capitalize", "uppercase", "lowercase" ] }
-                },
-                {
-                    "label": "Title Color",
-                    "key": "titleColor",
-                    "default": "#333",
-                    "type": "string",
-                    "meta": { "uiType": "color" }
-                },
-                {
-                    "label": "Spacing",
-                    "key": "spacing",
-                    "default": "15px",
-                    "type": "string",
-                    "meta": { "uiType": "input" }
-                }
-            ]
-        },
-        {
             "label": "Layouts",
             "key": "layouts",
             "type": "section",
@@ -937,6 +902,41 @@
                             "meta": { "uiType": "input" }
                         }
                     ]
+                }
+            ]
+        },
+        {
+            "label": "Widgets",
+            "key": "widgets",
+            "type": "section",
+            "settings": [
+                {
+                    "label": "Title Size",
+                    "key": "titleSize",
+                    "default": "h4",
+                    "type": "string",
+                    "meta": { "uiType": "select", "options": ["h1", "h2", "h3", "h4", "h5", "h6"] }
+                },
+                {
+                    "label": "Title Text Style",
+                    "key": "titleStyle",
+                    "default": "capitalize",
+                    "type": "string",
+                    "meta": { "uiType": "select", "options": [ "none", "capitalize", "uppercase", "lowercase" ] }
+                },
+                {
+                    "label": "Title Color",
+                    "key": "titleColor",
+                    "default": "#333",
+                    "type": "string",
+                    "meta": { "uiType": "color" }
+                },
+                {
+                    "label": "Spacing",
+                    "key": "spacing",
+                    "default": "15px",
+                    "type": "string",
+                    "meta": { "uiType": "input" }
                 }
             ]
         },

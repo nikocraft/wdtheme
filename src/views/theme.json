@@ -547,7 +547,7 @@
                     "settings": [
                         {
                             "label": "Animation",
-                            "key": "style",
+                            "key": "animation",
                             "default": "hamburger--collapse",
                             "type": "string",
                             "meta": { "uiType": "select", "options": [

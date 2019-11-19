@@ -1,8 +1,8 @@
-<div class="hamburger-menu-title">{{ get_website_setting('website.title') }}</div>
-<div class="hamburger-menu">
+<div class="website-title">{{ get_website_setting('website.title') }}</div>
+<div class="menu">
     @if($menu)
         @foreach ($menu as $key => $item)
-            <div class="hamburger-menu-item @if($item->subItems->count()) dropdown @endif">
+            <div class="menu-item @if($item->subItems->count()) dropdown @endif">
                 @if($item->parent_id == null)
                     @if($item->url)
                         <a href="{{ $item->url }}">{{ $item->title }}</a>
@@ -25,7 +25,7 @@
             </div>
         @endforeach
     @else
-        <div class="hamburger-menu-item">
+        <div class="no-menu">
             <span>No Menu Created Yet</span>
         </div>
     @endif

@@ -135,14 +135,7 @@
     display: none;
     z-index: 10000;
 
-    .hamburger-menu {
-        color: #fbfbfb;
-        background-color: #222;
-        position: relative;
-        top: 30px;
-    }
-
-    .hamburger-menu-title {
+    .website-title {
         font-size: 35px;
         padding: 10px 15px;
         display: flex;
@@ -150,47 +143,56 @@
         color: #333;
     }
 
-    .hamburger-menu-item {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
+    .menu {
+        color: #fbfbfb;
+        background-color: #222;
+        position: relative;
+        top: 30px;
 
-        a, span {
-            font-size: 20px;
-            color: white;
-            flex: 1;
-            padding: 10px 0px;
-            padding-left: 20px;
-            text-transform: uppercase;
+        .menu-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }
-
-        i {
-            padding: 0px 40px;
-            font-size: 22px;
-        }
-    }
-
-    .dropdown-content {
-        display: none;
-        z-index: 1;
-        width: 100%;
-
-        .drop-menu-item {
-            display: flex;
+            flex-wrap: wrap;
     
-            a {
-                font-size: 18px;
+            a, span {
+                font-size: 20px;
                 color: white;
-                text-transform: none;
+                flex: 1;
                 padding: 10px 0px;
-                padding-left: 40px;
+                padding-left: 20px;
+                text-transform: uppercase;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+    
+            i {
+                padding: 0px 40px;
+                font-size: 22px;
+            }
+
+            .dropdown-content {
+                display: none;
+                z-index: 1;
+                width: 100%;
+        
+                .drop-menu-item {
+                    display: flex;
+            
+                    a {
+                        font-size: 18px;
+                        color: white;
+                        text-transform: none;
+                        padding: 10px 0px;
+                        padding-left: 40px;
+                    }
+                }
             }
         }
     }
+
+
 
     .dropdown-button-close {
         display: none;

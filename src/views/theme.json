@@ -576,6 +576,38 @@
                     ]
                 },
                 {
+                    "label": "Hamburger Button",
+                    "key": "hamburgerButton",
+                    "type": "section",
+                    "settings": [
+                        {
+                            "label": "Animation",
+                            "key": "style",
+                            "default": "hamburger--collapse",
+                            "type": "string",
+                            "meta": { "uiType": "select", "options": [
+                                "hamburger--collapse", "hamburger--slider", "hamburger--squeeze", "hamburger--arrow",
+                                "hamburger--arrowturn", "hamburger--spin", "hamburger--elastic", "hamburger--vortex",
+                                "hamburger--stand", "hamburger--spring", "hamburger--spring", "hamburger--minus",
+                                "hamburger--3dx", "hamburger--3dy"] }
+                        },
+                        {
+                            "label": "Color",
+                            "key": "color",
+                            "default": "#333",
+                            "type": "string",
+                            "meta": { "uiType": "color" }
+                        },
+                        {
+                            "label": "Active Color",
+                            "key": "activeColor",
+                            "default": "#333",
+                            "type": "string",
+                            "meta": { "uiType": "color" }
+                        }
+                    ]
+                },
+                {
                     "label": "Hamburger Menu",
                     "key": "hamburger",
                     "type": "section",
@@ -623,64 +655,18 @@
                             "type": "section",
                             "settings": [
                                 {
-                                    "label": "Logo Type",
-                                    "key": "logotype",
-                                    "default": "text",
-                                    "type": "string",
-                                    "meta": { "uiType": "select", "options": ["text", "image"] }
-                                },
-                                {
                                     "label": "Font Color",
                                     "key": "fontColor",
                                     "default": "#222",
                                     "type": "string",
-                                    "meta": { "uiType": "color", "dependency": { "on": "logotype", "if": "text" } }
+                                    "meta": { "uiType": "color" }
                                 },
                                 {
                                     "label": "Font Size",
                                     "key": "fontSize",
                                     "default": "24px",
                                     "type": "string",
-                                    "meta": { "uiType": "input", "dependency": { "on": "logotype", "if": "text" } }
-                                },
-                                {
-                                    "label": "Logo Image",
-                                    "key": "logoImage",
-                                    "default": "",
-                                    "type": "string",
-                                    "meta": { "uiType": "mediaLibrary", "dependency": { "on": "logotype", "if": "image" } }
-                                }
-                            ]
-                        },
-                        {
-                            "label": "Button",
-                            "key": "button",
-                            "type": "section",
-                            "settings": [
-                                {
-                                    "label": "Animation",
-                                    "key": "style",
-                                    "default": "hamburger--collapse",
-                                    "type": "string",
-                                    "meta": { "uiType": "select", "options": [
-                                        "hamburger--collapse", "hamburger--slider", "hamburger--squeeze", "hamburger--arrow",
-                                        "hamburger--arrowturn", "hamburger--spin", "hamburger--elastic", "hamburger--vortex",
-                                        "hamburger--stand", "hamburger--spring", "hamburger--spring", "hamburger--minus",
-                                        "hamburger--3dx", "hamburger--3dy"] }
-                                },
-                                {
-                                    "label": "Color",
-                                    "key": "color",
-                                    "default": "#333",
-                                    "type": "string",
-                                    "meta": { "uiType": "color" }
-                                },
-                                {
-                                    "label": "Active Color",
-                                    "key": "activeColor",
-                                    "default": "#333",
-                                    "type": "string",
-                                    "meta": { "uiType": "color" }
+                                    "meta": { "uiType": "input" }
                                 }
                             ]
                         },

@@ -1,6 +1,6 @@
 <div class="website-title">{{ get_website_setting('website.title') }}</div>
-<div class="menu">
-    @if($menu)
+@if($menu)
+    <div class="menu">
         @foreach ($menu as $key => $item)
             <div class="menu-item @if($item->subItems->count()) dropdown @endif">
                 @if($item->parent_id == null)
@@ -24,9 +24,9 @@
                 @endif
             </div>
         @endforeach
-    @else
-        <div class="no-menu">
-            <span>No Menu Created Yet</span>
-        </div>
-    @endif
-</div>
+    </div>
+@else
+    <div class="no-menu">
+        <span>No Menu Created Yet</span>
+    </div>
+@endif

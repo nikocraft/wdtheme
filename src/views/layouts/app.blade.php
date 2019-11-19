@@ -11,29 +11,27 @@
     @include('includes/footer')
 </div>
 
-<!-- Scripts -->
 @routes
 
 @php
-    $fontResources = get_theme_setting('resources.fonts');
-    $iconResources = get_theme_setting('resources.icons');
-    $cssResources = get_theme_setting('resources.css');
+    $jsResources = get_theme_setting('resources.javascript');
     $themeFolder = get_theme_folder();
 @endphp
 
+<!-- main script -->
 <script src="{{ mix('js/app.js', 'themes/'.$themeFolder) }}"></script>
 
-@php
-    $jsResources = get_theme_setting('resources.javascript');
-@endphp
-
+{{-- third party js libs that theme specified --}}
 @foreach ( $jsResources as $key => $jsResource )
     @if($jsResource)
         <script id="{{ $key }}" src="{{ $jsResource }}"></script>
     @endif
 @endforeach
 
+{{-- theme's custom scripts that need jQuery --}}
 @include('includes/scripts')
+
+{{-- scripts injected by specific views --}}
 @stack('scripts')
 
 <noscript>Please enable JavaScript to view this website correctly.</noscript>

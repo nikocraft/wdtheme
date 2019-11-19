@@ -67,6 +67,7 @@
 }
 
 .content-index {
+    margin-bottom: 30px;
     .posts {
         display: block;
         .post {
@@ -95,6 +96,7 @@
 }
 
 .content-single {
+    margin-bottom: 30px;
     .post {
         @include post-mixin;
 

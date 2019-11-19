@@ -18,48 +18,33 @@
     </button>
 </div>
 
-@php
-    $menu = get_menu('header');
-@endphp
-
 <div class="menu-wrapper">
-    <div class="menu">
-        @if($menu)
+    @if($menu)
+        <div class="menu">
             @foreach ($menu as $key => $item)
                 <div class="menu-item @if($item->subItems->count()) dropdown @endif">
                     @if($item->parent_id == null)
-                        <a href="/{{ $item->url }}">{{ $item->title }}</a>
+                        @if($item->url)
+                            <a href="{{ $item->url }}">{{ $item->title }}</a>
+                        @else
+                            <span>{{ $item->title }}</span>
+                        @endif
                     @endif
 
                     @if($item->subItems->count())
-                        <div class="dropdown-content animated zoomIn faster">
+                        <div class="dropdown-content">
                         @foreach ($item->subItems as $key => $subItem)
-                            <div class="drop-menu-item"><a href="/{{ $subItem->url }}">{{ $subItem->title }}</a></div>
+                            <div class="drop-menu-item"><a href="{{ $subItem->url }}">{{ $subItem->title }}</a></div>
                         @endforeach
                         </div>
                     @endif
                 </div>
             @endforeach
-        @else
-            <div class="menu-item">
-                <a href="/">Start</a>
-            </div>
-
-            <div class="menu-item">
-                <a href="/posts">Blog</a>
-            </div>
-
-            <div class="menu-item dropdown">
-                <a href="/posts">Media</a>
-                <div class="dropdown-content">
-                    <div class="drop-menu-item"><a href="/posts">Videos</a></div>
-                    <div class="drop-menu-item"><a href="/posts">Images</a></div>
-                </div>
-            </div>
-
-            <div class="menu-item">
-                <a href="/posts">About</a>
-            </div>
-        @endif
-    </div>
+        </div>
+    @else
+        <div class="no-menu">
+            <span>No Menu Created Yet</span>
+        </div>
+    @endif
+    
 </div>

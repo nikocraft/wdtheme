@@ -34,91 +34,99 @@
 
 /** Menu Stuff */
 .menu-wrapper {
-    display: none;
+    display: flex;
     height: 100%;
-    flex: 0;
+    flex: 1;
     display: flex;
     align-items: center;
-}
 
-@media (min-width: 768px) {
-    .menu-wrapper {
+    @media (max-width: $medium-devices) {
         display: none;
         flex: 0;
     }
-}
-
-@media (min-width: 992px) {
-    .menu-wrapper {
+    
+    .no-menu {
         display: flex;
+        flex-direction: row;
         flex: 1;
+        justify-content: flex-end;
+        align-items: center;
+
+        @media (max-width: $medium-devices) {
+            display: none;
+        }
+    }
+    
+    .menu {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        justify-content: flex-end;
+        align-items: center;
+
+        @media (max-width: $medium-devices) {
+            display: none;
+        }
+
+        .menu-item {
+            padding: 0px;
+            cursor: pointer;
+            height: 100%;
+            /* display: flex; */
+            align-items: center;
+            font-size: 14px;
+            font-weight: bold;
+
+            a, span {
+                color: #222;
+                text-decoration: none;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                padding: 5px 20px;
+            }
+
+            &:hover {
+                background-color: #eef2f4;
+            }
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                min-width: 220px;
+                height: max-content;
+                background-color: #eef2f4;
+                padding: 12px 0px;
+                z-index: 90000;
+
+                .drop-menu-item {
+                    a {
+                        color: #222;
+                        text-decoration: none;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        padding: 7px 20px;
+                    }
+                    
+                    &:hover {
+                        background-color: rgba(1,1,1, 0.05);
+                    }
+                }
+            }
+
+            &:hover .dropdown-content {
+                display: block;
+            }
+        }
     }
 }
 
-@media (min-width: 1200px) {
-    .menu-wrapper {
-        display: flex;
-        flex: 1;
-    }
-}
-
-.menu {
-    display: none;
-    flex-direction: row;
-    flex: 1;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.menu .menu-item {
-    padding: 0px;
-    cursor: pointer;
-    height: 100%;
-    /* display: flex; */
-    align-items: center;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.menu .menu-item a, .menu .drop-menu-item a {
-    color: #222;
-    text-decoration: none;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding: 5px 20px;
-}
-
-.menu .drop-menu-item a {
-    padding: 7px 20px;
-}
-
-.menu .drop-menu-item:hover {
-    background-color: rgba(1,1,1, 0.05);
-}
-
-.menu .menu-item:hover {
-    background-color: #eef2f4;
-}
-
-.menu .dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.menu .dropdown-content {
-    display: none;
-    position: absolute;
-    min-width: 220px;
-    height: max-content;
-    background-color: #eef2f4;
-    padding: 12px 0px;
-    z-index: 90000;
-  }
-
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
 
 #hamburger {
     background-color: #222;
@@ -149,7 +157,7 @@
         align-items: center;
         flex-wrap: wrap;
 
-        a {
+        a, span {
             font-size: 20px;
             color: white;
             flex: 1;
@@ -171,17 +179,17 @@
         display: none;
         z-index: 1;
         width: 100%;
-    }
 
-    .drop-menu-item {
-        display: flex;
-
-        a {
-            font-size: 18px;
-            color: white;
-            text-transform: none;
-            padding: 10px 0px;
-            padding-left: 40px;
+        .drop-menu-item {
+            display: flex;
+    
+            a {
+                font-size: 18px;
+                color: white;
+                text-transform: none;
+                padding: 10px 0px;
+                padding-left: 40px;
+            }
         }
     }
 
@@ -198,14 +206,6 @@
         .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
             background-color: #333;
         }
-    }
-}
-
-.menu {
-    display: flex;
-    
-    @media (max-width: $small-devices) {
-        display: none;
     }
 }
 

@@ -4,10 +4,11 @@
 
 @php
     $contentType = $content->type->slug;
-    $showTitle = $content->settings->get('showTitle', get_theme_setting('content.' . $contentType . '.settings.showTitle'));
-    $showMetaData = $content->settings->get('showMetaData', get_theme_setting('content.' . $contentType . '.settings.showMetaData'));
-    $showAuthorBio = $content->settings->get('showAuthorBio', get_theme_setting('content.' . $contentType . '.settings.showAuthorBio'));
-    $showComments = $content->settings->get('showComments', get_theme_setting('content.' . $contentType . '.settings.showComments'));
+    $themeDefaultContentSettings = 'content.' . $contentType . '.settings';
+    $showTitle = $content->settings->get('showTitle', get_theme_setting($themeDefaultContentSettings . '.showTitle'));
+    $showMetaData = $content->settings->get('showMetaData', get_theme_setting($themeDefaultContentSettings . '.showMetaData'));
+    $showAuthorBio = $content->settings->get('showAuthorBio', get_theme_setting($themeDefaultContentSettings . '.showAuthorBio'));
+    $showComments = $content->settings->get('showComments', get_theme_setting($themeDefaultContentSettings . '.showComments'));
 @endphp
 
 <div class="post">

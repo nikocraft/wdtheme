@@ -1009,16 +1009,16 @@
         },
         {
             "name": "laraone/themedev",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laraone/themedev.git",
-                "reference": "ebda76b508e6f5066d92b78a6c6c7478cda52623"
+                "reference": "2c6ca968a7bf5de05077b095d54a902be3c53f98"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laraone/themedev/zipball/ebda76b508e6f5066d92b78a6c6c7478cda52623",
-                "reference": "ebda76b508e6f5066d92b78a6c6c7478cda52623",
+                "url": "https://api.github.com/repos/laraone/themedev/zipball/2c6ca968a7bf5de05077b095d54a902be3c53f98",
+                "reference": "2c6ca968a7bf5de05077b095d54a902be3c53f98",
                 "shasum": ""
             },
             "require": {
@@ -1055,7 +1055,7 @@
                 }
             ],
             "description": "Theme Development Package for Laraone CMS",
-            "time": "2019-11-16T22:40:08+00:00"
+            "time": "2019-11-17T23:20:41+00:00"
         },
         {
             "name": "laravel-zero/foundation",

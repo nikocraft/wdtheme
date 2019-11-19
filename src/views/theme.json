@@ -27,7 +27,14 @@
                         {
                             "label": "Width",
                             "key": "width",
-                            "default": "1170px",
+                            "default": "80%",
+                            "type": "string",
+                            "meta": { "uiType": "input" }
+                        },
+                        {
+                            "label": "Max Width",
+                            "key": "maxWidth",
+                            "default": "1280px",
                             "type": "string",
                             "meta": { "uiType": "input" }
                         },

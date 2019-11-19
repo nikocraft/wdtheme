@@ -41,7 +41,9 @@
                         ]) @endtaxonomy
                     </div>
                 </div>
-                <a class="btn btn-primary" href="/{{ $post->type->slug }}/{{ $post->slug }}">Read More</a>
+                @if(has_excerpt($post) || has_text_block($post))
+                    <a class="btn btn-primary" href="/{{ $post->type->slug }}/{{ $post->slug }}">Read More</a>
+                @endif
             </div>
         </div>
     @endforeach

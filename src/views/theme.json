@@ -193,27 +193,27 @@
                                     "meta": { "uiType": "input", "info": "Leave empty for full height" }
                                 }
                             ]
-                        }
-                    ]
-                },
-                {
-                    "label": "Pagination",
-                    "key": "pagination",
-                    "type": "section",
-                    "settings": [
-                        {
-                            "label": "Type",
-                            "key": "type",
-                            "default": "simple",
-                            "type": "string",
-                            "meta": { "uiType": "select", "options": ["simple", "standard"] }
                         },
                         {
-                            "label": "Per Page",
-                            "key": "perPage",
-                            "default": "12",
-                            "type": "string",
-                            "meta": { "uiType": "input" }
+                            "label": "Pagination",
+                            "key": "pagination",
+                            "type": "section",
+                            "settings": [
+                                {
+                                    "label": "Type",
+                                    "key": "type",
+                                    "default": "simple",
+                                    "type": "string",
+                                    "meta": { "uiType": "select", "options": ["simple", "standard"] }
+                                },
+                                {
+                                    "label": "Per Page",
+                                    "key": "perPage",
+                                    "default": "12",
+                                    "type": "string",
+                                    "meta": { "uiType": "input" }
+                                }
+                            ]
                         }
                     ]
                 },
@@ -476,67 +476,107 @@
                     "type": "section",
                     "settings": [
                         {
-                            "label": "Item Padding",
-                            "key": "itemPadding",
-                            "default": "5px 20px",
-                            "type": "string",
-                            "meta": { "uiType": "input" }
-                        },
-                        {
-                            "label": "Font Size",
-                            "key": "fontSize",
-                            "default": "14px",
-                            "type": "string",
-                            "meta": { "uiType": "input" }
-                        },
-                        {
-                            "label": "Item Font Color",
-                            "key": "fontColor",
-                            "default": "#222",
-                            "type": "string",
-                            "meta": { "uiType": "color" }
-                        },
-                        {
-                            "label": "Item Font Hover Color",
-                            "key": "fontHoverColor",
-                            "default": "#444",
-                            "type": "string",
-                            "meta": { "uiType": "color" }
-                        },
-                        {
-                            "label": "Item Background Color",
-                            "key": "itemBackgroundColor",
-                            "default": "",
-                            "type": "string",
-                            "meta": { "uiType": "color" }
-                        },
-                        {
-                            "label": "Item Hover Background Color",
-                            "key": "itemHoverBackgroundColor",
-                            "default": "#e8edf0",
-                            "type": "string",
-                            "meta": { "uiType": "color" }
-                        },
-                        {
-                            "label": "Drop Down",
-                            "key": "dropdown",
+                            "label": "Items",
+                            "key": "items",
                             "type": "section",
                             "settings": [
                                 {
-                                    "label": "Animation",
-                                    "key": "animation",
-                                    "default": "bounceIn",
+                                    "label": "Padding",
+                                    "key": "padding",
+                                    "default": "5px 20px",
                                     "type": "string",
-                                    "meta": { "uiType": "select", "options": [
-                                        "none", "bounceIn", "flipInX", "flipInY"
-                                        ] }
+                                    "meta": { "uiType": "input" }
+                                },
+                                {
+                                    "label": "Font Size",
+                                    "key": "fontSize",
+                                    "default": "14px",
+                                    "type": "string",
+                                    "meta": { "uiType": "input" }
+                                },
+                                {
+                                    "label": "Font Color",
+                                    "key": "fontColor",
+                                    "default": "#222",
+                                    "type": "string",
+                                    "meta": { "uiType": "color" }
+                                },
+                                {
+                                    "label": "Font Hover Color",
+                                    "key": "hoverFontColor",
+                                    "default": "#444",
+                                    "type": "string",
+                                    "meta": { "uiType": "color" }
+                                },
+                                {
+                                    "label": "Background Color",
+                                    "key": "backgroundColor",
+                                    "default": "",
+                                    "type": "string",
+                                    "meta": { "uiType": "color" }
+                                },
+                                {
+                                    "label": "Hover Background Color",
+                                    "key": "hoverBackgroundColor",
+                                    "default": "#e8edf0",
+                                    "type": "string",
+                                    "meta": { "uiType": "color" }
+                                }
+                            ]
+                        },
+                        {
+                            "label": "DropDown Items",
+                            "key": "dropdownItems",
+                            "type": "section",
+                            "settings": [
+                                {
+                                    "label": "Padding",
+                                    "key": "padding",
+                                    "default": "7px 20px",
+                                    "type": "string",
+                                    "meta": { "uiType": "input" }
+                                },
+                                {
+                                    "label": "Font Size",
+                                    "key": "fontSize",
+                                    "default": "14px",
+                                    "type": "string",
+                                    "meta": { "uiType": "input" }
+                                },
+                                {
+                                    "label": "Font Color",
+                                    "key": "fontColor",
+                                    "default": "#222",
+                                    "type": "string",
+                                    "meta": { "uiType": "color" }
+                                },
+                                {
+                                    "label": "Font Hover Color",
+                                    "key": "hoverFontColor",
+                                    "default": "#444",
+                                    "type": "string",
+                                    "meta": { "uiType": "color" }
+                                },
+                                {
+                                    "label": "Background Color",
+                                    "key": "backgroundColor",
+                                    "default": "",
+                                    "type": "string",
+                                    "meta": { "uiType": "color" }
+                                },
+                                {
+                                    "label": "Hover Background Color",
+                                    "key": "hoverBackgroundColor",
+                                    "default": "#e8edf0",
+                                    "type": "string",
+                                    "meta": { "uiType": "color" }
                                 }
                             ]
                         }
                     ]
                 },
                 {
-                    "label": "Hamburger",
+                    "label": "Hamburger Menu",
                     "key": "hamburger",
                     "type": "section",
                     "settings": [

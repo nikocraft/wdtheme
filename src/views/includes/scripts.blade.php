@@ -3,18 +3,18 @@
         $('.image-lightbox').magnificPopup({type:'image'});
     });
 
-    const $hamburger = $(".hamburger");
-    $hamburger.on("click", function(e) {
-        $hamburger.toggleClass("is-active");
-        var $hamburgerId = $("#hamburger");
-        if($hamburger.hasClass('is-active')) {
-            $hamburgerId.show();
-            $hamburgerId.attr("class", "hamburger-wrapper");
-            $hamburgerId.addClass("animated {{ get_theme_setting('header.hamburger.general.inAnimation') }} slow");
+    const $hamburgerBtn = $(".hamburger");
+    $hamburgerBtn.on("click", function(e) {
+        $hamburgerBtn.toggleClass("is-active");
+        const $hamburgerMenu = $("#hamburger-menu");
+        if($hamburgerBtn.hasClass('is-active')) {
+            $hamburgerMenu.show();
+            $hamburgerMenu.attr("class", "hamburger-wrapper");
+            $hamburgerMenu.addClass("animated {{ get_theme_setting('header.hamburger.general.inAnimation') }} slow");
         } else {
-            $hamburgerId.removeClass("animated {{ get_theme_setting('header.hamburger.general.inAnimation') }} slow");
+            $hamburgerMenu.removeClass("animated {{ get_theme_setting('header.hamburger.general.inAnimation') }} slow");
             window.setTimeout(function() {
-                $('#hamburger').addClass("animated {{ get_theme_setting('header.hamburger.general.outAnimation') }}");
+                $('#hamburger-menu').addClass("animated {{ get_theme_setting('header.hamburger.general.outAnimation') }}");
             }, 200);
         }
     });
@@ -48,5 +48,4 @@
         $(event.target).hide();
         $dropdownBtnOpen.show();
     });
-
 </script>

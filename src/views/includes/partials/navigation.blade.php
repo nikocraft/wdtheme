@@ -10,7 +10,7 @@
     @endif
 </div>
 
-<div class="responsive-menu">
+<div class="hamburger-wrapper">
     <button class="hamburger {{ get_theme_setting('header.hamburger.button.style') }}" type="button">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>

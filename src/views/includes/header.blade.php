@@ -3,7 +3,7 @@
         $menu = get_menu('header');
     @endphp
 
-    <div id="hamburger">
+    <div id="hamburger-menu">
         @include('includes/partials/hamburger-menu')
     </div>
     @switch(get_theme_setting('header.general.style'))

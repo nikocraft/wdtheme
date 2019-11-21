@@ -37,7 +37,7 @@
 <link rel="stylesheet" href="{{mix('css/styles.css', 'themes/'.$themeFolder)}}">
 
 @if(file_exists('themes/'.$themeFolder.'/css/customize.css'))
-    <link rel="stylesheet" href="{{asset('themes/'.$themeFolder.'/css/customize.css')}}?{{ str_random(7) }}">
+    <link rel="stylesheet" href="{{ asset('themes/'.$themeFolder.'/css/customize.css') }}?{{ get_theme_timestamp() }}">
 @endif
 
 {{-- User Custom CSS --}}

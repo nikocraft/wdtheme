@@ -7,11 +7,10 @@
                     @if($item->url)
                         <a href="{{ $item->url }}">{{ $item->title }}</a>
                     @else
-                        <span class="open-dropdown-menu">{{ $item->title }}</span>
+                        <span id="dropdown-menu-{{ $item->id }}" onclick="Lara.dropDownMenuToggle(this.id)">{{ $item->title }}</span>
                     @endif
                     @if($item->subItems->count())
-                        <i class="dropdown-button-open {{ get_theme_setting('header.hamburger.dropDownButtons.openIcon') }}"></i>
-                        <i class="dropdown-button-close {{ get_theme_setting('header.hamburger.dropDownButtons.closeIcon') }}"></i>
+                        <i id="dropdown-btn-{{ $item->id }}" onclick="Lara.dropDownMenuToggle('dropdown-menu-{{ $item->id }}')" class="{{ get_theme_setting('header.hamburger.dropDownButtons.openIcon') }}"></i>
                     @endif
                 @endif
 

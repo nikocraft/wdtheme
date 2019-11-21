@@ -956,76 +956,33 @@
                             "default": "https://use.typekit.net/owv5uoj.css",
                             "type": "string",
                             "meta": { "uiType": "input" }
-                        },
-                        {
-                            "label": "Font Source",
-                            "key": "source-2",
-                            "default": "https://fonts.googleapis.com/css?family=Montserrat:400,700",
-                            "type": "string",
-                            "meta": { "uiType": "input" }
                         }
                     ]
                 },
                 {
-                    "label": "Css",
-                    "key": "css",
+                    "label": "Icons",
+                    "key": "icons",
                     "type": "section",
                     "meta": { "hidden": true },
                     "settings": [
                         {
                             "label": "Source",
-                            "key": "icons",
+                            "key": "source-1",
                             "default": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css",
                             "type": "string",
                             "meta": { "uiType": "input" }
-                        },
-                        {
-                            "label": "Source",
-                            "key": "popup",
-                            "default": "https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css",
-                            "type": "string",
-                            "meta": { "uiType": "inputDisabled" }
-                        },
-                        {
-                            "label": "Source",
-                            "key": "animatecss",
-                            "default": "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css",
-                            "type": "string",
-                            "meta": { "uiType": "inputDisabled" }
-                        }
-                    ]
-                },
-                {
-                    "label": "Javascript",
-                    "key": "javascript",
-                    "type": "section",
-                    "meta": { "hidden": true },
-                    "settings": [
-                        {
-                            "label": "Source",
-                            "key": "jquery",
-                            "default": "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js",
-                            "type": "string",
-                            "meta": { "uiType": "inputDisabled" }
-                        },
-                        {
-                            "label": "Source",
-                            "key": "lightense",
-                            "default": "https://cdn.jsdelivr.net/gh/sparanoid/lightense-images@master/lightense.min.js",
-                            "type": "string",
-                            "meta": { "uiType": "inputDisabled" }
                         }
                     ]
                 }
             ]
         },
         {
-            "label": "Css",
+            "label": "Custom Css",
             "key": "css",
             "type": "section",
             "settings": [
                 {
-                    "label": "Custom Css",
+                    "label": "Css",
                     "key": "customCss",
                     "default": "",
                     "type": "string",

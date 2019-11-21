@@ -14,21 +14,13 @@
 @routes
 
 @php
-    $jsResources = get_theme_setting('resources.javascript');
     $themeFolder = get_theme_folder();
 @endphp
 
 <!-- main script -->
 <script src="{{ mix('js/app.js', 'themes/'.$themeFolder) }}"></script>
 
-{{-- third party js libs that theme specified --}}
-@foreach ( $jsResources as $key => $jsResource )
-    @if($jsResource)
-        <script id="{{ $key }}" src="{{ $jsResource }}"></script>
-    @endif
-@endforeach
-
-{{-- theme's custom scripts that need jQuery --}}
+{{-- theme's custom js variables --}}
 @include('includes/scripts')
 
 {{-- scripts injected by specific views --}}

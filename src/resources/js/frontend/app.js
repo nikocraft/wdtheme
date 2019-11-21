@@ -25,6 +25,7 @@ import VueScrollTo from 'vue-scrollto'
 import Comments from 'frontend/comments/Comments'
 import CommentsTree from 'frontend/comments/CommentsTree'
 import CommentBox from 'frontend/comments/CommentBox'
+import mediumZoom from "medium-zoom"
 
 Vue.use(VueScrollTo)
 Vue.use(VeeValidate)
@@ -42,5 +43,8 @@ const app = new Vue({
         standardComponents: standardComponentsList
     },
     el: '#app',
+    mounted() {
+        mediumZoom(".lightbox", { background: 'rgba(33, 37, 48, 0.92)' });
+    },
     components: { Comments }
 });

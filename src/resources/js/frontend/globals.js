@@ -35,9 +35,13 @@ const hamburgerToggle = (id) => {
     } else {
         hamburgerMenu.setAttribute('class', '')
         window.setTimeout(function() {
-            var hamburgerMenu2 = document.getElementById('hamburger-menu');
-            hamburgerMenu2.setAttribute('class', 'animated ' + window.themeSettings.hamburger.OutAnimation);
+            let hamburgerMenu = document.getElementById('hamburger-menu');
+            hamburgerMenu.setAttribute('class', 'animated ' + window.themeSettings.hamburger.OutAnimation);
         }, 200);
+        window.setTimeout(function() {
+            let hamburgerMenu = document.getElementById('hamburger-menu');
+            hamburgerMenu.style.display = 'none';
+        }, 950);
     }
 }
 
@@ -71,13 +75,6 @@ const dropDownMenuToggle = (id) => {
 
     dropDownBtnToggle(dropDownContent.id);
 }
-
-/**
- * Lightbox image popup event listener registration
- */
-window.addEventListener('load', function () {
-    Lightense('.lightense');
-}, false);
 
 /** Functions to be exported for use in themes directly */
 export {

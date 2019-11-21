@@ -20,7 +20,7 @@
             "type": "section",
             "settings": [
                 {
-                    "label": "Container",
+                    "label": "Content Container",
                     "key": "container",
                     "type": "section",
                     "settings": [
@@ -111,14 +111,21 @@
                         {
                             "label": "Color",
                             "key": "color",
-                            "default": "#222",
+                            "default": "#333",
                             "type": "string",
                             "meta": { "uiType": "color" }
                         },
                         {
                             "label": "Size",
                             "key": "size",
-                            "default": "13px",
+                            "default": "15px",
+                            "type": "string",
+                            "meta": { "uiType": "px", "maxAllowed": 1 }
+                        },
+                        {
+                            "label": "Line Height",
+                            "key": "lineHeight",
+                            "default": "25px",
                             "type": "string",
                             "meta": { "uiType": "px", "maxAllowed": 1 }
                         }
@@ -399,39 +406,39 @@
                     "type": "section",
                     "settings": [
                         {
-                            "label": "Logo Type",
-                            "key": "logotype",
+                            "label": "Type",
+                            "key": "type",
                             "default": "text",
                             "type": "string",
                             "meta": { "uiType": "select", "options": ["text", "image"] }
-                        },
-                        {
-                            "label": "Font Color",
-                            "key": "fontColor",
-                            "default": "#222",
-                            "type": "string",
-                            "meta": { "uiType": "color", "dependency": { "on": "logotype", "if": "text" } }
-                        },
-                        {
-                            "label": "Font Hover Color",
-                            "key": "fontHoverColor",
-                            "default": "#111",
-                            "type": "string",
-                            "meta": { "uiType": "color", "dependency": { "on": "logotype", "if": "text" } }
                         },
                         {
                             "label": "Font Size",
                             "key": "fontSize",
                             "default": "24px",
                             "type": "string",
-                            "meta": { "uiType": "input", "dependency": { "on": "logotype", "if": "text" } }
+                            "meta": { "uiType": "input", "dependency": { "on": "type", "if": "text" } }
+                        },
+                        {
+                            "label": "Font Color",
+                            "key": "fontColor",
+                            "default": "#333",
+                            "type": "string",
+                            "meta": { "uiType": "color", "dependency": { "on": "type", "if": "text" } }
+                        },
+                        {
+                            "label": "Font Hover Color",
+                            "key": "fontHoverColor",
+                            "default": "#111",
+                            "type": "string",
+                            "meta": { "uiType": "color", "dependency": { "on": "type", "if": "text" } }
                         },
                         {
                             "label": "Logo Image",
                             "key": "logoImage",
                             "default": "",
                             "type": "string",
-                            "meta": { "uiType": "mediaLibrary", "dependency": { "on": "logotype", "if": "image" } }
+                            "meta": { "uiType": "mediaLibrary", "dependency": { "on": "type", "if": "image" } }
                         }
                     ]
                 },
@@ -468,7 +475,7 @@
                                 },
                                 {
                                     "label": "Font Hover Color",
-                                    "key": "hoverFontColor",
+                                    "key": "fontHoverColor",
                                     "default": "#444",
                                     "type": "string",
                                     "meta": { "uiType": "color" }
@@ -481,9 +488,9 @@
                                     "meta": { "uiType": "color" }
                                 },
                                 {
-                                    "label": "Hover Background Color",
-                                    "key": "hoverBackgroundColor",
-                                    "default": "#e8edf0",
+                                    "label": "Background Hover Color",
+                                    "key": "backgroundHoverColor",
+                                    "default": "#eef2f4",
                                     "type": "string",
                                     "meta": { "uiType": "color" }
                                 }
@@ -517,7 +524,7 @@
                                 },
                                 {
                                     "label": "Font Hover Color",
-                                    "key": "hoverFontColor",
+                                    "key": "fontHoverColor",
                                     "default": "#444",
                                     "type": "string",
                                     "meta": { "uiType": "color" }
@@ -525,14 +532,14 @@
                                 {
                                     "label": "Background Color",
                                     "key": "backgroundColor",
-                                    "default": "",
+                                    "default": "#eef2f4",
                                     "type": "string",
                                     "meta": { "uiType": "color" }
                                 },
                                 {
                                     "label": "Hover Background Color",
-                                    "key": "hoverBackgroundColor",
-                                    "default": "#e8edf0",
+                                    "key": "backgroundHoverColor",
+                                    "default": "rgba(1,1,1,.05)",
                                     "type": "string",
                                     "meta": { "uiType": "color" }
                                 }
@@ -648,7 +655,7 @@
                                     "meta": { "uiType": "select", "options": [ "none", "capitalize", "uppercase", "lowercase" ] }
                                 },
                                 {
-                                    "label": "Spacing",
+                                    "label": "Margin",
                                     "key": "spacing",
                                     "default": "10px",
                                     "type": "string",

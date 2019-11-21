@@ -15,10 +15,10 @@
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
-    width: $container-width;
-    max-width: $container-max-width;
+    width: $containerWidth;
+    max-width: $containerMaxWidth;
 
-    @media (max-width: $large-devices) {
+    @media (max-width: $largeDevices) {
         width: 100%;
     }
 }

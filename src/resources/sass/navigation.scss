@@ -39,7 +39,7 @@
     display: flex;
     align-items: center;
 
-    @media (max-width: $medium-devices) {
+    @media (max-width: $mediumDevices) {
         display: none;
         flex: 0;
     }
@@ -51,7 +51,7 @@
         justify-content: flex-end;
         align-items: center;
 
-        @media (max-width: $medium-devices) {
+        @media (max-width: $mediumDevices) {
             display: none;
         }
     }
@@ -63,7 +63,7 @@
         justify-content: flex-end;
         align-items: center;
 
-        @media (max-width: $medium-devices) {
+        @media (max-width: $mediumDevices) {
             display: none;
         }
 
@@ -83,6 +83,10 @@
                 align-items: center;
                 padding: 5px 20px;
                 font-size: 14px;
+
+                &:hover {
+                    color: #444;
+                }
             }
 
             &:hover {
@@ -206,7 +210,7 @@
     flex: 1;
     justify-content: flex-end;
 
-    @media (max-width: $medium-devices) {
+    @media (max-width: $mediumDevices) {
         display: flex;
     }
 

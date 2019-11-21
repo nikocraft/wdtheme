@@ -1,9 +1,9 @@
 body {
     font-family: covik-sans, sans-serif;
-    font-size: $body-font-size;
-    line-height: $body-line-height;
-    background-color: $body-background-color;
-    color: $body-text-color;
+    font-size: $bodyFontSize;
+    line-height: $bodyLineHeight;
+    background-color: $bodyBackgroundColor;
+    color: $bodyTextColor;
     overflow-x: hidden;
 }
 
@@ -15,13 +15,13 @@ body {
 }
 
 header {
-    height: $header-height;
+    height: $headerHeight;
 }
 
 footer {
-    background-color: $footer-background-color;
-    color: $footer-text-color;
-    font-size: $footer-font-size;
+    background-color: $footerBackgroundColor;
+    color: $footerTextColor;
+    font-size: $footerFontSize;
 
     .footer-wrap {
         display: flex;
@@ -36,7 +36,7 @@ footer {
     display: flex;
     flex: 1;
 
-    @media (max-width: $medium-devices) {
+    @media (max-width: $mediumDevices) {
         display: block;
     }
 }
@@ -49,7 +49,7 @@ footer {
     order: 1;
     width: 70%;
 
-    @media (max-width: $medium-devices) {
+    @media (max-width: $mediumDevices) {
         width: 100%;
     }
 }
@@ -58,7 +58,7 @@ footer {
     order: 2;
     width: 70%;
 
-    @media (max-width: $medium-devices) {
+    @media (max-width: $mediumDevices) {
         width: 100%;
     }
 }
@@ -68,7 +68,7 @@ footer {
     height: 100%;
     padding: 0px;
 
-    @media (max-width: $medium-devices) {
+    @media (max-width: $mediumDevices) {
         width: 100%;
     }
 }
@@ -77,7 +77,7 @@ footer {
     order: 1;
     margin-right: 30px; 
 
-    @media (max-width: $medium-devices) {
+    @media (max-width: $mediumDevices) {
         margin-right: 0; 
     }
 }
@@ -86,7 +86,7 @@ footer {
     order: 2;
     margin-left: 30px;
 
-    @media (max-width: $medium-devices) {
+    @media (max-width: $mediumDevices) {
         margin-left: 0; 
     }
 }

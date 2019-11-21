@@ -23,7 +23,7 @@
 .columns-block {
     display: flex;
     width: 100%;
-    @media (max-width: $small-devices) {
+    @media (max-width: $smallDevices) {
         list-style: none;
         display: block;
     }
@@ -43,7 +43,7 @@
         margin-right: 0px !important;
     }
 
-    @media (max-width: $small-devices) {
+    @media (max-width: $smallDevices) {
         width: 100% !important;
         margin: 0 !important;
         margin-bottom: 15px !important;

@@ -70,7 +70,7 @@
         justify-content: space-between;
         margin-bottom: 10px;
     
-        @media (max-width: $medium-devices) {
+        @media (max-width: $mediumDevices) {
             display: block;
         }
     
@@ -79,7 +79,7 @@
             flex-shrink: 0;
             flex-basis: 33%;
     
-            @media (max-width: $medium-devices) {
+            @media (max-width: $mediumDevices) {
                 margin-bottom: 10px;
             }
         }

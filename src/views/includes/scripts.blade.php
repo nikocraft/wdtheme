@@ -1,9 +1,9 @@
 <script id="javascript-global-variables">
     window.themeSettings = []
-    window.themeSettings.hamburger = []
-    window.themeSettings.hamburger.dropDownButtons = []
-    window.themeSettings.hamburger.InAnimation = '{{ get_theme_setting('header.hamburger.general.inAnimation') }}'
-    window.themeSettings.hamburger.OutAnimation = '{{ get_theme_setting('header.hamburger.general.outAnimation') }}'
-    window.themeSettings.hamburger.dropDownButtons.openIcon = '{{ get_theme_setting('header.hamburger.dropDownButtons.openIcon') }}'
-    window.themeSettings.hamburger.dropDownButtons.closeIcon = '{{ get_theme_setting('header.hamburger.dropDownButtons.closeIcon') }}'
+    window.themeSettings.hamburgerMenu = []
+    window.themeSettings.hamburgerMenu.dropDownButtons = []
+    window.themeSettings.hamburgerMenu.inAnimation = '{{ get_theme_setting('header.hamburgerMenu.general.inAnimation') }}'
+    window.themeSettings.hamburgerMenu.outAnimation = '{{ get_theme_setting('header.hamburgerMenu.general.outAnimation') }}'
+    window.themeSettings.hamburgerMenu.dropDownButtons.openIcon = '{{ get_theme_setting('header.hamburgerMenu.dropDownButtons.openIcon') }}'
+    window.themeSettings.hamburgerMenu.dropDownButtons.closeIcon = '{{ get_theme_setting('header.hamburgerMenu.dropDownButtons.closeIcon') }}'
 </script>

@@ -31,12 +31,12 @@ const hamburgerToggle = (id) => {
     if(hasClass(hamburgerBtn, 'is-active')) {
         hamburgerMenu.style.display = 'block';
         hamburgerMenu.setAttribute('class', '');
-        hamburgerMenu.setAttribute('class', 'animated slow ' + window.themeSettings.hamburger.InAnimation);
+        hamburgerMenu.setAttribute('class', 'animated slow ' + window.themeSettings.hamburger.inAnimation);
     } else {
         hamburgerMenu.setAttribute('class', '')
         window.setTimeout(function() {
             let hamburgerMenu = document.getElementById('hamburger-menu');
-            hamburgerMenu.setAttribute('class', 'animated ' + window.themeSettings.hamburger.OutAnimation);
+            hamburgerMenu.setAttribute('class', 'animated ' + window.themeSettings.hamburger.outAnimation);
         }, 200);
         window.setTimeout(function() {
             let hamburgerMenu = document.getElementById('hamburger-menu');

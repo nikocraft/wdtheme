@@ -581,7 +581,7 @@
                 },
                 {
                     "label": "Hamburger Menu",
-                    "key": "hamburger",
+                    "key": "hamburgerMenu",
                     "type": "section",
                     "settings": [
                         {
@@ -644,7 +644,7 @@
                         },
                         {
                             "label": "Menu Items",
-                            "key": "items",
+                            "key": "menuItems",
                             "type": "section",
                             "settings": [
                                 {
@@ -655,16 +655,9 @@
                                     "meta": { "uiType": "select", "options": [ "none", "capitalize", "uppercase", "lowercase" ] }
                                 },
                                 {
-                                    "label": "Margin",
-                                    "key": "spacing",
-                                    "default": "10px",
-                                    "type": "string",
-                                    "meta": { "uiType": "input" }
-                                },
-                                {
-                                    "label": "Indent",
-                                    "key": "indent",
-                                    "default": "20px",
+                                    "label": "Padding",
+                                    "key": "padding",
+                                    "default": "10px 0 10px 20px",
                                     "type": "string",
                                     "meta": { "uiType": "input" }
                                 },
@@ -686,7 +679,7 @@
                         },
                         {
                             "label": "Drop-Down Items",
-                            "key": "dropDown",
+                            "key": "dropDownItems",
                             "type": "section",
                             "settings": [
                                 {
@@ -697,16 +690,9 @@
                                     "meta": { "uiType": "select", "options": [ "none", "capitalize", "uppercase", "lowercase" ] }
                                 },
                                 {
-                                    "label": "Spacing",
-                                    "key": "spacing",
-                                    "default": "10px",
-                                    "type": "string",
-                                    "meta": { "uiType": "input" }
-                                },
-                                {
-                                    "label": "Indent",
-                                    "key": "indent",
-                                    "default": "40px",
+                                    "label": "Padding",
+                                    "key": "padding",
+                                    "default": "10px 0 10px 40px",
                                     "type": "string",
                                     "meta": { "uiType": "input" }
                                 },

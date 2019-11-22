@@ -10,7 +10,7 @@
                         <span id="dropdown-menu-{{ $item->id }}" onclick="Lara.dropDownMenuToggle(this.id)">{{ $item->title }}</span>
                     @endif
                     @if($item->subItems->count())
-                        <i id="dropdown-btn-{{ $item->id }}" onclick="Lara.dropDownMenuToggle('dropdown-menu-{{ $item->id }}')" class="{{ get_theme_setting('header.hamburger.dropDownButtons.openIcon') }}"></i>
+                        <i id="dropdown-btn-{{ $item->id }}" onclick="Lara.dropDownMenuToggle('dropdown-menu-{{ $item->id }}')" class="{{ get_theme_setting('header.hamburgerMenu.dropDownButtons.openIcon') }}"></i>
                     @endif
                 @endif
 

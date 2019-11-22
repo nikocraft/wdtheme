@@ -20,7 +20,7 @@
             "type": "section",
             "settings": [
                 {
-                    "label": "Content Container",
+                    "label": "Container",
                     "key": "container",
                     "type": "section",
                     "settings": [

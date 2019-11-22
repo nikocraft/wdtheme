@@ -1,4 +1,4 @@
-{{-- body {
+body {
     @style([ 'property' => 'background-color', 'value' => data_get($settings, 'general.body.backgroundColor') ])
     @style([ 'property' => 'background-image', 'value' => data_get($settings, 'general.body.backgroundImage') ])
     @if(data_get($settings, 'general.body.backgroundImage'))
@@ -13,10 +13,32 @@
     @style([ 'property' => 'line-height', 'value' => data_get($settings, 'general.font.lineHeight') ])
 }
 
+{{-- Container --}}
+@media (min-width: 768px) {
+    .container {
+        width: 100%;
+    }
+}
+  
+@media (min-width: 992px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        @style([ 'property' => 'width', 'value' => data_get($settings, 'general.container.width') ])
+        @style([ 'property' => 'max-width', 'value' => data_get($settings, 'general.container.maxWidth') ])
+    }
+}
+
+{{-- Content Container Styles --}}
 .container.content-wrap {
     @style([ 'property' => 'background-color', 'value' => data_get($settings, 'general.container.backgroundColor') ])
 }
 
+{{-- Header Styles --}}
 header {
     @if(data_get($settings, 'header.general.style') == 'fullwidth')
         @style([ 'property' => 'background-color', 'value' => data_get($settings, 'header.general.backgroundColor') ])
@@ -38,25 +60,26 @@ header {
 .logo .logo-link:hover {
     @style([ 'property' => 'color', 'value' => data_get($settings, 'header.logo.fontHoverColor') ])
 }
-@endif --}}
+@endif
 
-{{-- header .menu-wrapper .menu .menu-item {
+{{-- Menu Styles --}}
+.menu-wrapper .menu .menu-item {
     @style([ 'property' => 'background-color', 'value' => data_get($settings, 'header.menu.items.backgroundColor') ])
 }
 
-header .menu-wrapper .menu .menu-item:hover {
+.menu-wrapper .menu .menu-item:hover {
     @style([ 'property' => 'background-color', 'value' => data_get($settings, 'header.menu.items.backgroundHoverColor') ])
 }
 
-header .menu-wrapper .menu .menu-item a {
+.menu-wrapper .menu .menu-item a {
     @style([ 'property' => 'font-size', 'value' => data_get($settings, 'header.menu.items.fontSize') ])
     @style([ 'property' => 'color', 'value' => data_get($settings, 'header.menu.items.fontColor') ])
     @style([ 'property' => 'padding', 'value' => data_get($settings, 'header.menu.items.padding') ])
 }
 
-header .menu-wrapper .menu .menu-item a:hover {
+.menu-wrapper .menu .menu-item a:hover {
     @style([ 'property' => 'color', 'value' => data_get($settings, 'header.menu.items.fontHoverColor') ])
-} --}}
+}
 
 .menu-wrapper .menu .dropdown .dropdown-content {
     @style([ 'property' => 'background-color', 'value' => data_get($settings, 'header.menu.dropdownItems.backgroundColor') ])
@@ -76,6 +99,7 @@ header .menu-wrapper .menu .menu-item a:hover {
     @style([ 'property' => 'color', 'value' => data_get($settings, 'header.menu.dropdownItems.FontHoverColor') ])
 }
 
+{{-- Hamburger Button Styles --}}
 .hamburger .hamburger-box .hamburger-inner {
     @style([ 'property' => 'background-color', 'value' => data_get($settings, 'header.hamburgerButton.color') ])
 }
@@ -90,7 +114,7 @@ header .menu-wrapper .menu .menu-item a:hover {
     @style([ 'property' => 'background-color', 'value' => data_get($settings, 'header.hamburgerButton.activeColor') ])
 }
 
-
+{{-- Hamburger Menu styles --}}
 #hamburger-menu {
     @style([ 'property' => 'background-color', 'value' => data_get($settings, 'header.hamburgerMenu.general.backgroundColor') ])
 }
@@ -123,6 +147,7 @@ header .menu-wrapper .menu .menu-item a:hover {
     @style([ 'property' => 'color', 'value' => data_get($settings, 'header.hamburgerMenu.dropDownButtons.fontColor') ])
 }
 
+{{-- Content styles --}}
 .content-index .posts .post .post-title-link, 
 .content-single .post .post-title {
     @style([ 'property' => 'color', 'value' => data_get($settings, 'content.general.postTitle.color') ])
@@ -133,28 +158,26 @@ header .menu-wrapper .menu .menu-item a:hover {
     @style([ 'property' => 'color', 'value' => data_get($settings, 'content.general.postTitle.hoverColor') ])
 }
 
-.posts .post div.post-featured-image {
+.content-index .posts .post .post-featured-image {
     @style([ 'property' => 'height', 'value' => data_get($settings, 'content.general.featuredImage.indexPageHeight') ])
 }
 
-.post div.post-featured-image {
+.content-single .post .post-featured-image {
     @style([ 'property' => 'height', 'value' => data_get($settings, 'content.general.featuredImage.singlePageHeight') ])
 }
 
-{{-- 
-
+{{-- Widget styles --}}
 .widget {
     @style([ 'property' => 'margin-bottom', 'value' => data_get($settings, 'widgets.spacing') ])
 }
-
 
 .widget .widget-title {
     @style([ 'property' => 'color', 'value' => data_get($settings, 'widgets.titleColor') ])
     @style([ 'property' => 'text-transform', 'value' => data_get($settings, 'widgets.titleStyle') ])
 }
 
-
-
+{{-- Footer styles --}}
+{{-- 
 footer {
     @if(data_get($settings, 'footer.general.style') == 'boxed')
         background-color: transparent;
@@ -167,24 +190,6 @@ footer {
 
 footer .footer-wrap {
     @style([ 'property' => 'background-color', 'value' => data_get($settings, 'footer.general.backgroundColor') ])
-}
-
-@media (min-width: 768px) {
-    .container {
-        width: 100%;
-    }
-}
-  
-@media (min-width: 992px) {
-    .container {
-        width: 100%;
-    }
-}
-
-@media (min-width: 1200px) {
-    .container {
-        @style([ 'property' => 'width', 'value' => data_get($settings, 'general.container.width') ])
-    }
 }
 
 h1, .h1 {

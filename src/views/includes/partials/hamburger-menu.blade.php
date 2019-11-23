@@ -5,12 +5,12 @@
             <div class="menu-item @if($item->subItems->count()) dropdown @endif">
                 @if($item->parent_id == null)
                     @if($item->url)
-                        <a href="{{ $item->url }}">{{ $item->title }}</a>
+                        <a id="menu-item-a-{{ $item->id }}" href="{{ $item->url }}">{{ $item->title }}</a>
                     @else
-                        <span id="dropdown-menu-{{ $item->id }}" onclick="Lara.dropDownMenuToggle(this.id)">{{ $item->title }}</span>
+                        <span id="menu-item-a-{{ $item->id }}" onclick="theme.dropDownMenuToggle(this.id)">{{ $item->title }}</span>
                     @endif
                     @if($item->subItems->count())
-                        <i id="dropdown-btn-{{ $item->id }}" onclick="Lara.dropDownMenuToggle('dropdown-menu-{{ $item->id }}')" class="{{ get_theme_setting('header.hamburgerMenu.dropDownButtons.openIcon') }}"></i>
+                        <i id="dropdown-btn-{{ $item->id }}" onclick="theme.dropDownMenuToggle('menu-item-a-{{ $item->id }}')" class="{{ get_theme_setting('header.hamburgerMenu.dropDownButtons.openIcon') }}"></i>
                     @endif
                 @endif
 

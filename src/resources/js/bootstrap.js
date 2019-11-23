@@ -20,4 +20,4 @@ window.axios.defaults.headers.common = {
     'X-Requested-With': 'XMLHttpRequest'
 };
 
-global.Lara = require('./frontend/globals.js');
+global.theme = require('./helpers.js');

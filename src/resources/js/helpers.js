@@ -1,3 +1,5 @@
+/** THEME JS HELPERS for use inside view files */
+
 /**
  * Tab component helper function
  * Opens tabs when clicking on them
@@ -31,12 +33,12 @@ const hamburgerToggle = (id) => {
     if(hasClass(hamburgerBtn, 'is-active')) {
         hamburgerMenu.style.display = 'block';
         hamburgerMenu.setAttribute('class', '');
-        hamburgerMenu.setAttribute('class', 'animated slow ' + window.themeSettings.hamburger.inAnimation);
+        hamburgerMenu.setAttribute('class', 'animated slow ' + window.themeSettings.hamburgerMenu.inAnimation);
     } else {
         hamburgerMenu.setAttribute('class', '')
         window.setTimeout(function() {
             let hamburgerMenu = document.getElementById('hamburger-menu');
-            hamburgerMenu.setAttribute('class', 'animated ' + window.themeSettings.hamburger.outAnimation);
+            hamburgerMenu.setAttribute('class', 'animated ' + window.themeSettings.hamburgerMenu.outAnimation);
         }, 200);
         window.setTimeout(function() {
             let hamburgerMenu = document.getElementById('hamburger-menu');
@@ -59,7 +61,7 @@ const dropDownBtnToggle = (id) => {
     let dropDownMenuVisible = window.getComputedStyle(dropDown, null).display;
     dropDown.style.display = (dropDownMenuVisible == 'none') ? 'block' : 'none';
 
-    let dropDownBtnIcon = dropDown.style.display == 'none' ? window.themeSettings.hamburger.dropDownButtons.openIcon : window.themeSettings.hamburger.dropDownButtons.closeIcon;
+    let dropDownBtnIcon = dropDown.style.display == 'none' ? window.themeSettings.hamburgerMenu.dropDownButtons.openIcon : window.themeSettings.hamburgerMenu.dropDownButtons.closeIcon;
     dropDownBtn.setAttribute('class', dropDownBtnIcon);
 }
 

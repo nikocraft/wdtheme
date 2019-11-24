@@ -972,14 +972,14 @@
                     "type": "section",
                     "settings": [
                         {
-                            "label": "Font Primary Source",
+                            "label": "Primary Font Source",
                             "key": "source-1",
                             "default": "",
                             "type": "string",
                             "meta": { "uiType": "input" }
                         },
                         {
-                            "label": "Font Secondary Source",
+                            "label": "Secondary Font Source",
                             "key": "source-2",
                             "default": "",
                             "type": "string",

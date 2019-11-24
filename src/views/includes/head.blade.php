@@ -30,7 +30,7 @@
 <!-- Theme Font Resource Start -->
 @foreach ( $fontResources as $fontResource )
     @if($fontResource)
-        <link rel="stylesheet" id="font-resource-{{ $loop->iteration }}" href="{{ $fontResource }}">
+        <link rel="stylesheet" href="{{ $fontResource }}">
     @endif
 @endforeach
 <!-- Theme Font Resource End -->
@@ -38,7 +38,7 @@
 <!-- Theme Icon Resource Start -->
 @foreach ( $iconResources as $iconResource )
     @if($iconResource)
-        <link rel="stylesheet" id="icon-resource-{{ $loop->iteration }}" href="{{ $iconResource }}">
+        <link rel="stylesheet" href="{{ $iconResource }}">
     @endif
 @endforeach
 <!-- Theme Icon Resource End -->

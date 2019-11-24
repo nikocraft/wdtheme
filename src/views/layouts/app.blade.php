@@ -5,28 +5,29 @@
     @include('includes/head')
 </head>
 <body>
-<div class="ikigai" id="app">
-    @include('includes/header')
-    @yield('content')
-    @include('includes/footer')
-</div>
+    <div class="ikigai" id="app">
+        @include('includes/header')
+        @yield('content')
+        @include('includes/footer')
+    </div>
 
-@routes
+    <!-- Backend Routes -->
+    @routes
 
-@php
-    $themeFolder = get_theme_folder();
-@endphp
+    @php
+        $themeFolder = get_theme_folder();
+    @endphp
 
-<!-- main script -->
-<script src="{{ mix('js/app.js', 'themes/'.$themeFolder) }}"></script>
+    <!-- main script -->
+    <script src="{{ mix('js/app.js', 'themes/' . $themeFolder) }}"></script>
 
-<!-- theme's custom js variables -->
-@include('includes/scripts')
+    <!-- theme's custom js variables -->
+    @include('includes/scripts')
 
-<!-- scripts injected by specific views -->
-@stack('scripts')
+    <!-- scripts injected by specific views -->
+    @stack('scripts')
 
-<noscript>Please enable JavaScript to view this website correctly.</noscript>
+    <noscript>Please enable JavaScript to view this website correctly.</noscript>
 
 </body>
 </html>

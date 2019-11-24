@@ -1,4 +1,4 @@
-<script id="javascript-global-variables">
+<script id="theme-js-variables">
     window.themeSettings = []
     window.themeSettings.hamburgerMenu = []
     window.themeSettings.hamburgerMenu.dropDownButtons = []

@@ -104,7 +104,7 @@
                         {
                             "label": "Family",
                             "key": "family",
-                            "default": "covik-sans, sans-serif",
+                            "default": "sans-serif",
                             "type": "string",
                             "meta": { "uiType": "input" }
                         },
@@ -120,14 +120,14 @@
                             "key": "size",
                             "default": "15px",
                             "type": "string",
-                            "meta": { "uiType": "px", "maxAllowed": 1 }
+                            "meta": { "uiType": "input" }
                         },
                         {
                             "label": "Line Height",
                             "key": "lineHeight",
                             "default": "25px",
                             "type": "string",
-                            "meta": { "uiType": "px", "maxAllowed": 1 }
+                            "meta": { "uiType": "input" }
                         }
                     ]
                 }
@@ -157,6 +157,20 @@
                             "type": "section",
                             "settings": [
                                 {
+                                    "label": "Font Family",
+                                    "key": "fontFamily",
+                                    "default": "",
+                                    "type": "string",
+                                    "meta": { "uiType": "input" }
+                                },
+                                {
+                                    "label": "Size",
+                                    "key": "size",
+                                    "default": "h2",
+                                    "type": "string",
+                                    "meta": { "uiType": "select", "options": ["h1", "h2", "h3", "h4"] }
+                                },
+                                {
                                     "label": "Color",
                                     "key": "color",
                                     "default": "#444",
@@ -169,13 +183,6 @@
                                     "default": "#444",
                                     "type": "string",
                                     "meta": { "uiType": "color" }
-                                },
-                                {
-                                    "label": "Size",
-                                    "key": "size",
-                                    "default": "h2",
-                                    "type": "string",
-                                    "meta": { "uiType": "select", "options": ["h1", "h2", "h3", "h4"] }
                                 }
                             ]
                         },
@@ -188,37 +195,16 @@
                                 {
                                     "label": "Index Page Height",
                                     "key": "indexPageHeight",
-                                    "default": "300px",
+                                    "default": "400px",
                                     "type": "string",
                                     "meta": { "uiType": "input", "info": "Leave empty for full height" }
                                 },
                                 {
                                     "label": "Single Page Height",
                                     "key": "singlePageHeight",
-                                    "default": "300px",
+                                    "default": "400px",
                                     "type": "string",
                                     "meta": { "uiType": "input", "info": "Leave empty for full height" }
-                                }
-                            ]
-                        },
-                        {
-                            "label": "Pagination",
-                            "key": "pagination",
-                            "type": "section",
-                            "settings": [
-                                {
-                                    "label": "Type",
-                                    "key": "type",
-                                    "default": "simple",
-                                    "type": "string",
-                                    "meta": { "uiType": "select", "options": ["simple", "standard"] }
-                                },
-                                {
-                                    "label": "Per Page",
-                                    "key": "perPage",
-                                    "default": "12",
-                                    "type": "string",
-                                    "meta": { "uiType": "input" }
                                 }
                             ]
                         }
@@ -413,6 +399,13 @@
                             "meta": { "uiType": "select", "options": ["text", "image"] }
                         },
                         {
+                            "label": "Font Family",
+                            "key": "fontFamily",
+                            "default": "",
+                            "type": "string",
+                            "meta": { "uiType": "input", "dependency": { "on": "type", "if": "text" } }
+                        },
+                        {
                             "label": "Font Size",
                             "key": "fontSize",
                             "default": "24px",
@@ -422,7 +415,7 @@
                         {
                             "label": "Font Color",
                             "key": "fontColor",
-                            "default": "#333",
+                            "default": "#222",
                             "type": "string",
                             "meta": { "uiType": "color", "dependency": { "on": "type", "if": "text" } }
                         },
@@ -456,6 +449,13 @@
                                     "label": "Padding",
                                     "key": "padding",
                                     "default": "5px 20px",
+                                    "type": "string",
+                                    "meta": { "uiType": "input" }
+                                },
+                                {
+                                    "label": "Font Family",
+                                    "key": "fontFamily",
+                                    "default": "",
                                     "type": "string",
                                     "meta": { "uiType": "input" }
                                 },
@@ -629,14 +629,14 @@
                                 {
                                     "label": "Font Color",
                                     "key": "fontColor",
-                                    "default": "#222",
+                                    "default": "#fbfbfb",
                                     "type": "string",
                                     "meta": { "uiType": "color" }
                                 },
                                 {
                                     "label": "Font Size",
                                     "key": "fontSize",
-                                    "default": "24px",
+                                    "default": "35px",
                                     "type": "string",
                                     "meta": { "uiType": "input" }
                                 }
@@ -671,7 +671,7 @@
                                 {
                                     "label": "Font Color",
                                     "key": "fontColor",
-                                    "default": "#fbfbfb",
+                                    "default": "white",
                                     "type": "string",
                                     "meta": { "uiType": "color" }
                                 }
@@ -706,7 +706,7 @@
                                 {
                                     "label": "Font Color",
                                     "key": "fontColor",
-                                    "default": "#fbfbfb",
+                                    "default": "white",
                                     "type": "string",
                                     "meta": { "uiType": "color" }
                                 }
@@ -944,9 +944,16 @@
                     "type": "section",
                     "settings": [
                         {
-                            "label": "Font Source",
+                            "label": "Font Primary Source",
                             "key": "source-1",
-                            "default": "https://use.typekit.net/owv5uoj.css",
+                            "default": "",
+                            "type": "string",
+                            "meta": { "uiType": "input" }
+                        },
+                        {
+                            "label": "Font Secondary Source",
+                            "key": "source-2",
+                            "default": "",
                             "type": "string",
                             "meta": { "uiType": "input" }
                         }

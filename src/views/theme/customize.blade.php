@@ -201,27 +201,33 @@ footer .footer-wrap {
     @style([ 'property' => 'background-color', 'value' => data_get($settings, 'footer.general.backgroundColor') ])
 }
 
+ --}}
+
 h1, .h1 {
-    @style([ 'property' => 'font-size', 'value' => data_get($settings, 'headlines.headline1.size') ])
-    @style([ 'property' => 'line-height', 'value' => data_get($settings, 'headlines.headline1.lineHeight') ])
+    @style([ 'property' => 'font-size', 'value' => data_get($settings, 'headlines.size.headline1') ])
 }
 
 h2, .h2 {
-    @style([ 'property' => 'font-size', 'value' => data_get($settings, 'headlines.headline2.size') ])
-    @style([ 'property' => 'line-height', 'value' => data_get($settings, 'headlines.headline2.lineHeight') ])
+    @style([ 'property' => 'font-size', 'value' => data_get($settings, 'headlines.size.headline2') ])
 }
 
 h3, .h3 {
-    @style([ 'property' => 'font-size', 'value' => data_get($settings, 'headlines.headline3.size') ])
-    @style([ 'property' => 'line-height', 'value' => data_get($settings, 'headlines.headline3.lineHeight') ])
+    @style([ 'property' => 'font-size', 'value' => data_get($settings, 'headlines.size.headline3') ])
 }
 
 h4, .h4 {
-    @style([ 'property' => 'font-size', 'value' => data_get($settings, 'headlines.headline4.size') ])
-    @style([ 'property' => 'line-height', 'value' => data_get($settings, 'headlines.headline4.lineHeight') ])
+    @style([ 'property' => 'font-size', 'value' => data_get($settings, 'headlines.size.headline4') ])
 }
 
 h5, .h5 {
-    @style([ 'property' => 'font-size', 'value' => data_get($settings, 'headlines.headline5.size') ])
-    @style([ 'property' => 'line-height', 'value' => data_get($settings, 'headlines.headline5.lineHeight') ])
-} --}}
+    @style([ 'property' => 'font-size', 'value' => data_get($settings, 'headlines.size.headline5') ])
+}
+
+h6, .h6 {
+    @style([ 'property' => 'font-size', 'value' => data_get($settings, 'headlines.size.headline6') ])
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    @style([ 'property' => 'line-height', 'value' => data_get($settings, 'headlines.general.lineHeight') ])
+}
+

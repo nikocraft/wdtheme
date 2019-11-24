@@ -813,27 +813,13 @@
             "type": "section",
             "settings": [
                 {
-                    "label": "Headline 1",
-                    "key": "headline1",
+                    "label": "General",
+                    "key": "general",
                     "type": "section",
                     "settings": [
                         {
-                            "label": "Size",
-                            "key": "size",
-                            "default": "55px",
-                            "type": "string",
-                            "meta": { "uiType": "input" }
-                        }
-                    ]
-                },
-                {
-                    "label": "Headline 2",
-                    "key": "headline2",
-                    "type": "section",
-                    "settings": [
-                        {
-                            "label": "Size",
-                            "key": "size",
+                            "label": "Line Height",
+                            "key": "lineHeight",
                             "default": "45px",
                             "type": "string",
                             "meta": { "uiType": "input" }
@@ -841,55 +827,48 @@
                     ]
                 },
                 {
-                    "label": "Headline 3",
-                    "key": "headline3",
+                    "label": "Size",
+                    "key": "size",
                     "type": "section",
                     "settings": [
                         {
-                            "label": "Size",
-                            "key": "size",
+                            "label": "H1",
+                            "key": "headline1",
+                            "type": "string",
+                            "default": "55px",
+                            "meta": { "uiType": "input" }
+                        },
+                        {
+                            "label": "H2",
+                            "key": "headline2",
+                            "default": "45px",
+                            "type": "string",
+                            "meta": { "uiType": "input" }
+                        },
+                        {
+                            "label": "H3",
+                            "key": "headline3",
                             "default": "30px",
                             "type": "string",
                             "meta": { "uiType": "input" }
-                        }
-                    ]
-                },
-                {
-                    "label": "Headline 4",
-                    "key": "headline4",
-                    "type": "section",
-                    "settings": [
+                        },
                         {
-                            "label": "Size",
-                            "key": "size",
+                            "label": "H4",
+                            "key": "headline4",
                             "default": "25px",
                             "type": "string",
                             "meta": { "uiType": "input" }
-                        }
-                    ]
-                },
-                {
-                    "label": "Headline 5",
-                    "key": "headline5",
-                    "type": "section",
-                    "settings": [
+                        },
                         {
-                            "label": "Size",
-                            "key": "size",
+                            "label": "H5",
+                            "key": "headline5",
                             "default": "20px",
                             "type": "string",
                             "meta": { "uiType": "input" }
-                        }
-                    ]
-                },
-                {
-                    "label": "Headline 6",
-                    "key": "headline6",
-                    "type": "section",
-                    "settings": [
+                        },
                         {
-                            "label": "Size",
-                            "key": "size",
+                            "label": "H6",
+                            "key": "headline6",
                             "default": "15px",
                             "type": "string",
                             "meta": { "uiType": "input" }

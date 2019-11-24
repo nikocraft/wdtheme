@@ -45,7 +45,7 @@ textarea {
 .btn {
     display: inline-block;
     margin-bottom: 0;
-    font-weight: 400;
+    font-weight: $btnFontWeight;
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
@@ -53,9 +53,9 @@ textarea {
     cursor: pointer;
     background-image: none;
     border: 1px solid transparent;
-    padding: 6px 12px;
-    font-size: 14px;
-    line-height: 1.4;
+    padding: $btnPadding;
+    font-size: $btnFontSize;
+    line-height: $btnLineHeight;
     border-radius: 4px;
     user-select: none;
 
@@ -70,28 +70,28 @@ textarea {
 }
 
 .btn-primary {
-    color: #fff;
-    background-color: #333;
+    color: $primaryBtnFontColor;
+    background-color: $primaryBtnColor;
     border-color: unset;
 
     &:hover {
-        color: #fff;
-        background-color: #455056;
+        color: $primaryBtnFontColor;
+        background-color: $primaryBtnHoverColor;
         border-color: unset;
     }
 
     &.active, &:active, .open>&.dropdown-toggle {
-        background-color: #455056;
+        background-color: $primaryBtnHoverColor;
         border-color: unset;
     }
 
     &.focus, &:focus {
-        background-color: #455056;
+        background-color: $primaryBtnHoverColor;
         border-color: unset;
     }
 
     &:active:focus {
-        background-color: #455056;
+        background-color: $primaryBtnHoverColor;
         border-color: unset;
     }
 }

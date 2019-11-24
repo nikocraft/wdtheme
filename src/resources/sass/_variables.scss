@@ -4,9 +4,11 @@ $mediumDevices:        992px;
 $smallDevices:         768px;
 $extraSmallDevices:    576px;
 
+// Container
 $containerWidth: 85%;
 $containerMaxWidth: 1280px;
 
+// Headlines
 $headline1Size: 55px;
 $headline2Size: 45px;
 $headline3Size: 30px;
@@ -14,14 +16,62 @@ $headline4Size: 25px;
 $headline5Size: 20px;
 $headline6Size: 15px;
 $headlinesLineHeight: 45px;
+$headlineMarginTop: 5px;
+$headlineMarginBottom: 10px;
 
-$headerHeight: 122px;
-
+// Body
 $bodyFontSize: 15px;
 $bodyLineHeight: 25px;
 $bodyTextColor: #333;
 $bodyBackgroundColor: #fbfbfb;
+$bodyFontFamily: sans-serif;
 
+// header
+$headerHeight: 122px;
+
+// Footer
 $footerBackgroundColor: #27313a;
 $footerTextColor: white;
 $footerFontSize: 12px;
+
+// featured image
+$featuredImageHeight: 400px;
+
+// Theme Buttons
+$btnPadding: 6px 12px;
+$btnFontSize: 14px;
+$btnLineHeight: 1.4;
+$btnFontWeight: 400;
+$primaryBtnColor: #333;
+$primaryBtnHoverColor: #455056;
+$primaryBtnFontColor: #fff;
+
+// Logo
+$logoFontSize: 24px;
+$logoFontColor: #222;
+$logoFontHoverColor: #111;
+
+// Navigation Desktop Menu
+$menuItemColor: #222;
+$menuItemHoverColor: #444;
+$menuItemPadding: 5px 20px;
+$menuItemFontSize: 14px;
+$menuItemBkgHoverColor: #eef2f4;
+
+$menuDropDownItemColor: #222;
+$menuDropDownItemPadding: 7px 20px;
+$menuDropDownItemHoverColor: #444;
+$menuDropDownItemBkgHoverColor: rgba(1,1,1, 0.05);
+
+// Hamburger Btn
+$hamburgerBtnColor: #333;
+
+// Hamburger Menu
+$hamburgerMenuBkgColor: #222;
+$hamburgerMenuLogoColor: #fbfbfb;
+$hamburgerMenuLogoSize: 35px;
+$hamburgerMenuItemColor: fbfbfb;
+$hamburgerMenuItemPadding: 10px 0 10px 20px;
+$hamburgerDropDownMenuItemPadding: 10px 0 10px 40px;
+
+$paginationFontColor: #337ab7;

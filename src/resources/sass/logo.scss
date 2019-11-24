@@ -11,15 +11,15 @@
     }
 
     .logo-link {
-        font-size: 24px;
-        color: #222;
+        font-size: $logoFontSize;
+        color: $logoFontColor;
         height: 100%;
         text-align: center;
         display: flex;
         align-items: center;
 
         &:hover {
-            color: #111;
+            color: $logoFontHoverColor;
         }
     }
 }

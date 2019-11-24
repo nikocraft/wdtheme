@@ -2,9 +2,10 @@
     margin-bottom: 20px;
 
     .post-featured-image {
-        height: 300px; 
+        height: $featuredImageHeight; 
         background-size: cover; 
         background-position: center;
+        margin-bottom: 10px;
     }
 
     .post-image-link {
@@ -50,19 +51,29 @@
         min-width: 120px;
         height: 115px;
         margin-right: 15px;
+
+        @media (max-width: $smallDevices) {
+            display: none;
+        }
     }
 
     .post-author-image img {
         border-radius: 50%;
     }
 
-    .post-taxonomy .post-term {
-        padding: 1px 12px;
-        color: #555;
-        border-radius: 4px;
-        margin-right: 5px;
-        line-height: 20px;
-        border: 1px solid #c0d3e6;
+    .post-taxonomy {
+        display: flex;
+        flex-wrap: wrap;
+
+        .post-term {
+            padding: 1px 12px;
+            color: #555;
+            border-radius: 4px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            line-height: 20px;
+            border: 1px solid #c0d3e6;
+        }
     }
 }
 
@@ -99,10 +110,6 @@
     margin-bottom: 30px;
     .post {
         @include post-mixin;
-
-        .post-featured-image {
-            margin-bottom: 10px;
-        }
 
         .post-meta {
             margin: 10px 0px;

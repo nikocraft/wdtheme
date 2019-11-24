@@ -12,25 +12,6 @@
     }
 }
 
-.nav-menu div {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-top: 1px solid #525252b5;
-    cursor: pointer;
-
-    &:last-child {
-        border-bottom: 1px solid #525252b5;
-    }
-
-    &:hover {
-        color: #8c8c8c;
-    }
-}
-
-.navbar {
-    margin-bottom: 0px;
-}
-
 /** Menu Stuff */
 .menu-wrapper {
     display: flex;
@@ -76,21 +57,21 @@
             font-weight: bold;
 
             a, span {
-                color: #222;
+                color: $menuItemColor;
                 text-decoration: none;
                 height: 100%;
                 display: flex;
                 align-items: center;
-                padding: 5px 20px;
-                font-size: 14px;
+                padding: $menuItemPadding;
+                font-size: $menuItemFontSize;
 
                 &:hover {
-                    color: #444;
+                    color: $menuItemHoverColor;
                 }
             }
 
             &:hover {
-                background-color: #eef2f4;
+                background-color: $menuItemBkgHoverColor;
             }
         }
 
@@ -109,16 +90,20 @@
 
                 .drop-menu-item {
                     a {
-                        color: #222;
+                        color: $menuDropDownItemColor;
                         text-decoration: none;
                         height: 100%;
                         display: flex;
                         align-items: center;
-                        padding: 7px 20px;
+                        padding: $menuDropDownItemPadding;
+
+                        &:hover {
+                            color: $menuDropDownItemHoverColor;
+                        }
                     }
                     
                     &:hover {
-                        background-color: rgba(1,1,1, 0.05);
+                        background-color: $menuDropDownItemBkgHoverColor;
                     }
                 }
             }
@@ -131,7 +116,7 @@
 }
 
 #hamburger-menu {
-    background-color: #222;
+    background-color: $hamburgerMenuBkgColor;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -144,16 +129,15 @@
     }
 
     .website-title {
-        font-size: 35px;
+        font-size: $hamburgerMenuLogoSize;
         padding: 10px 15px;
         display: flex;
         margin-top: 32px;
-        color: #fbfbfb;
+        color: $hamburgerMenuLogoColor;
     }
 
     .menu {
         color: #fbfbfb;
-        background-color: #222;
         position: relative;
         top: 30px;
 
@@ -167,8 +151,7 @@
                 font-size: 20px;
                 color: white;
                 flex: 1;
-                padding: 10px 0px;
-                padding-left: 20px;
+                padding: $hamburgerMenuItemPadding;
                 text-transform: uppercase;
                 display: flex;
                 justify-content: space-between;
@@ -192,8 +175,7 @@
                         font-size: 18px;
                         color: white;
                         text-transform: none;
-                        padding: 10px 0px;
-                        padding-left: 40px;
+                        padding: $hamburgerDropDownMenuItemPadding;
                     }
                 }
             }
@@ -213,6 +195,12 @@
     @media (max-width: $mediumDevices) {
         display: flex;
     }
+    
+    .hamburger-box .hamburger-inner, 
+    .hamburger-box .hamburger-inner::before, 
+    .hamburger-box .hamburger-inner::after {
+        background-color: $hamburgerBtnColor;
+    }
 
     .hamburger {
         outline: none;
@@ -220,7 +208,7 @@
     
         &.is-active {
             .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-                background-color: #333;
+                background-color: $hamburgerBtnColor;
             }
         }
     }

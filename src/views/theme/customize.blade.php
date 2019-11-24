@@ -14,22 +14,20 @@ body {
 }
 
 {{-- Container --}}
-@media (min-width: 768px) {
-    .container {
-        width: 100%;
-    }
+.container {
+    @style([ 'property' => 'width', 'value' => data_get($settings, 'general.container.width') ])
+    @style([ 'property' => 'max-width', 'value' => data_get($settings, 'general.container.maxWidth') ])
 }
-  
-@media (min-width: 992px) {
+
+@media (max-width: 1200px) {
     .container {
-        width: 100%;
+        width: 90%;
     }
 }
 
-@media (min-width: 1200px) {
+@media (max-width: 992px) {
     .container {
-        @style([ 'property' => 'width', 'value' => data_get($settings, 'general.container.width') ])
-        @style([ 'property' => 'max-width', 'value' => data_get($settings, 'general.container.maxWidth') ])
+        width: 100%;
     }
 }
 
@@ -53,6 +51,7 @@ header {
 
 @if(data_get($settings, 'header.logo.type') == 'text')
 .logo .logo-link {
+    @style([ 'property' => 'font-family', 'value' => data_get($settings, 'header.logo.fontFamily') ])
     @style([ 'property' => 'font-size', 'value' => data_get($settings, 'header.logo.fontSize') ])
     @style([ 'property' => 'color', 'value' => data_get($settings, 'header.logo.fontColor') ])
 }
@@ -72,6 +71,7 @@ header {
 }
 
 .menu-wrapper .menu .menu-item a {
+    @style([ 'property' => 'font-family', 'value' => data_get($settings, 'header.menu.items.fontFamily') ])
     @style([ 'property' => 'font-size', 'value' => data_get($settings, 'header.menu.items.fontSize') ])
     @style([ 'property' => 'color', 'value' => data_get($settings, 'header.menu.items.fontColor') ])
     @style([ 'property' => 'padding', 'value' => data_get($settings, 'header.menu.items.padding') ])
@@ -100,17 +100,15 @@ header {
 }
 
 {{-- Hamburger Button Styles --}}
-.hamburger .hamburger-box .hamburger-inner {
+.hamburger-box .hamburger-inner, 
+.hamburger-box .hamburger-inner::before, 
+.hamburger-box .hamburger-inner::after {
     @style([ 'property' => 'background-color', 'value' => data_get($settings, 'header.hamburgerButton.color') ])
 }
 
-.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-    @style([ 'property' => 'background-color', 'value' => data_get($settings, 'header.hamburgerButton.color') ])
-}
-
-.hamburger.is-active .hamburger-inner, 
-.hamburger.is-active .hamburger-inner::before, 
-.hamburger.is-active .hamburger-inner::after {
+.hamburger-btn-wrapper .hamburger.is-active .hamburger-inner, 
+.hamburger-btn-wrapper .hamburger.is-active .hamburger-inner:after, 
+.hamburger-btn-wrapper .hamburger.is-active .hamburger-inner:before {
     @style([ 'property' => 'background-color', 'value' => data_get($settings, 'header.hamburgerButton.activeColor') ])
 }
 
@@ -124,33 +122,36 @@ header {
 }
 
 #hamburger-menu .website-title {
+    @style([ 'property' => 'font-family', 'value' => data_get($settings, 'header.logo.fontFamily') ])
     @style([ 'property' => 'color', 'value' => data_get($settings, 'header.hamburgerMenu.logo.fontColor') ])
     @style([ 'property' => 'font-size', 'value' => data_get($settings, 'header.hamburgerMenu.logo.fontSize') ])
 }
 
-#hamburger-menu .hamburger-menu-item a {
+#hamburger-menu .menu .menu-item a, #hamburger-menu .menu .menu-item span {
+    @style([ 'property' => 'font-family', 'value' => data_get($settings, 'header.menu.items.fontFamily') ])
     @style([ 'property' => 'font-size', 'value' => data_get($settings, 'header.hamburgerMenu.menuItems.fontSize') ])
     @style([ 'property' => 'color', 'value' => data_get($settings, 'header.hamburgerMenu.menuItems.fontColor') ])
     @style([ 'property' => 'padding', 'value' => data_get($settings, 'header.hamburgerMenu.menuItems.padding') ])
     @style([ 'property' => 'text-transform', 'value' => data_get($settings, 'header.hamburgerMenu.menuItems.textTransform') ])
 }
 
-#hamburger-menu .drop-menu-item a {
+#hamburger-menu .menu .menu-item .dropdown-content .drop-menu-item a {
     @style([ 'property' => 'font-size', 'value' => data_get($settings, 'header.hamburgerMenu.dropDownItems.fontSize') ])
     @style([ 'property' => 'color', 'value' => data_get($settings, 'header.hamburgerMenu.dropDownItems.fontColor') ])
     @style([ 'property' => 'padding', 'value' => data_get($settings, 'header.hamburgerMenu.dropDownItems.padding') ])
     @style([ 'property' => 'text-transform', 'value' => data_get($settings, 'header.hamburgerMenu.dropDownItems.textTransform') ])
 }
 
-#hamburger-menu .hamburger-menu-item i {
+#hamburger-menu .menu .menu-item i {
     @style([ 'property' => 'font-size', 'value' => data_get($settings, 'header.hamburgerMenu.dropDownButtons.fontSize') ])
     @style([ 'property' => 'color', 'value' => data_get($settings, 'header.hamburgerMenu.dropDownButtons.fontColor') ])
 }
 
 {{-- Content styles --}}
-.content-index .posts .post .post-title-link, 
+.content-index .posts .post .post-title-link,
 .content-single .post .post-title {
     @style([ 'property' => 'color', 'value' => data_get($settings, 'content.general.postTitle.color') ])
+    @style([ 'property' => 'font-family', 'value' => data_get($settings, 'content.general.postTitle.fontFamily') ])
 }
 
 .content-index .posts .post .post-title-link:hover, 
@@ -159,22 +160,30 @@ header {
 }
 
 .content-index .posts .post .post-featured-image {
-    @style([ 'property' => 'height', 'value' => data_get($settings, 'content.general.featuredImage.indexPageHeight') ])
+    @if(!empty(get_theme_setting('content.general.featuredImage.indexPageHeight')))
+        @style([ 'property' => 'height', 'value' => data_get($settings, 'content.general.featuredImage.indexPageHeight') ])
+    @else
+        height: auto;
+    @endif
 }
 
 .content-single .post .post-featured-image {
-    @style([ 'property' => 'height', 'value' => data_get($settings, 'content.general.featuredImage.singlePageHeight') ])
+    @if(!empty(get_theme_setting('content.general.featuredImage.singlePageHeight')))
+        @style([ 'property' => 'height', 'value' => data_get($settings, 'content.general.featuredImage.singlePageHeight') ])
+    @else
+        height: auto;
+    @endif
 }
 
 {{-- Widget styles --}}
-.widget {
+{{-- .widget {
     @style([ 'property' => 'margin-bottom', 'value' => data_get($settings, 'widgets.spacing') ])
 }
 
 .widget .widget-title {
     @style([ 'property' => 'color', 'value' => data_get($settings, 'widgets.titleColor') ])
     @style([ 'property' => 'text-transform', 'value' => data_get($settings, 'widgets.titleStyle') ])
-}
+} --}}
 
 {{-- Footer styles --}}
 {{-- 

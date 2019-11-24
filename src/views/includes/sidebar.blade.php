@@ -32,12 +32,12 @@
         <div class="widget">
             @if($settings->get('renderTitle'))
                 <div class="widget-header">
-                    <{{ get_theme_setting('widgets.titleSize')}} class="widget-title">
+                    <{{ get_theme_setting('widgets.header.fontSize')}} class="widget-title">
                         {{ $settings->blockTitle }}
-                    </{{ get_theme_setting('widgets.titleSize')}}>
+                    </{{ get_theme_setting('widgets.header.fontSize')}}>
                 </div>
             @endif
-            <div class="widget-body" style="padding: 10;">
+            <div class="widget-body">
                 @component('content.render.rootwidget', [
                     'widgetId' => $widgetId,
                     'widgets' => $widgets

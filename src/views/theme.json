@@ -776,30 +776,23 @@
                             "meta": { "uiType": "color" }
                         },
                         {
-                            "label": "Font",
-                            "key": "font",
-                            "type": "section",
-                            "settings": [
-                                {
-                                    "label": "Color",
-                                    "key": "color",
-                                    "default": "white",
-                                    "type": "string",
-                                    "meta": { "uiType": "color" }
-                                },
-                                {
-                                    "label": "Size",
-                                    "key": "size",
-                                    "default": "12px",
-                                    "type": "string",
-                                    "meta": { "uiType": "input" }
-                                }
-                            ]
+                            "label": "Font Color",
+                            "key": "fontColor",
+                            "default": "white",
+                            "type": "string",
+                            "meta": { "uiType": "color" }
+                        },
+                        {
+                            "label": "Font Size",
+                            "key": "fontSize",
+                            "default": "12px",
+                            "type": "string",
+                            "meta": { "uiType": "input" }
                         },
                         {
                             "label": "Copyright",
                             "key": "copyright",
-                            "default": "© Niko Craft",
+                            "default": "© Copyright",
                             "type": "string",
                             "meta": { "uiType": "input" }
                         }
@@ -883,32 +876,88 @@
             "type": "section",
             "settings": [
                 {
-                    "label": "Title Size",
-                    "key": "titleSize",
-                    "default": "h4",
-                    "type": "string",
-                    "meta": { "uiType": "select", "options": ["h1", "h2", "h3", "h4", "h5", "h6"] }
+                    "label": "General",
+                    "key": "general",
+                    "type": "section",
+                    "settings": [
+                        {
+                            "label": "Widgets Spacing",
+                            "key": "spacing",
+                            "default": "15px",
+                            "type": "string",
+                            "meta": { "uiType": "input" }
+                        }
+                    ]
                 },
                 {
-                    "label": "Title Text Style",
-                    "key": "titleStyle",
-                    "default": "capitalize",
-                    "type": "string",
-                    "meta": { "uiType": "select", "options": [ "none", "capitalize", "uppercase", "lowercase" ] }
+                    "label": "Widget Header",
+                    "key": "header",
+                    "type": "section",
+                    "settings": [
+                        {
+                            "label": "Font Size",
+                            "key": "fontSize",
+                            "default": "h4",
+                            "type": "string",
+                            "meta": { "uiType": "select", "options": ["h1", "h2", "h3", "h4", "h5", "h6"] }
+                        },
+                        {
+                            "label": "Font Style",
+                            "key": "fontStyle",
+                            "default": "none",
+                            "type": "string",
+                            "meta": { "uiType": "select", "options": [ "none", "capitalize", "uppercase", "lowercase" ] }
+                        },
+                        {
+                            "label": "Font Color",
+                            "key": "fontColor",
+                            "default": "",
+                            "type": "string",
+                            "meta": { "uiType": "color" }
+                        },
+                        {
+                            "label": "Background Color",
+                            "key": "backgroundColor",
+                            "default": "",
+                            "type": "string",
+                            "meta": { "uiType": "color" }
+                        },
+                        {
+                            "label": "Padding",
+                            "key": "padding",
+                            "default": "",
+                            "type": "string",
+                            "meta": { "uiType": "input" }
+                        },
+                        {
+                            "label": "Margin Bottom",
+                            "key": "marginBottom",
+                            "default": "10px",
+                            "type": "string",
+                            "meta": { "uiType": "input" }
+                        }
+                    ]
                 },
                 {
-                    "label": "Title Color",
-                    "key": "titleColor",
-                    "default": "#333",
-                    "type": "string",
-                    "meta": { "uiType": "color" }
-                },
-                {
-                    "label": "Spacing",
-                    "key": "spacing",
-                    "default": "15px",
-                    "type": "string",
-                    "meta": { "uiType": "input" }
+                    "label": "Widget Body",
+                    "key": "body",
+                    "type": "section",
+                    "settings": [
+                        {
+                            "label": "Padding",
+                            "key": "padding",
+                            "default": "",
+                            "type": "string",
+                            "meta": { "uiType": "input" }
+                        },
+                        {
+                            "label": "Background Color",
+                            "key": "backgroundColor",
+                            "default": "",
+                            "type": "string",
+                            "meta": { "uiType": "color" }
+                        }
+                    ]
                 }
             ]
         },

@@ -176,33 +176,42 @@ header {
 }
 
 {{-- Widget styles --}}
-{{-- .widget {
-    @style([ 'property' => 'margin-bottom', 'value' => data_get($settings, 'widgets.spacing') ])
+.sidebar .widget {
+    @style([ 'property' => 'margin-bottom', 'value' => data_get($settings, 'widgets.general.spacing') ])
 }
 
 .widget .widget-title {
-    @style([ 'property' => 'color', 'value' => data_get($settings, 'widgets.titleColor') ])
-    @style([ 'property' => 'text-transform', 'value' => data_get($settings, 'widgets.titleStyle') ])
-} --}}
+    @style([ 'property' => 'color', 'value' => data_get($settings, 'widgets.header.fontColor') ])
+    @style([ 'property' => 'text-transform', 'value' => data_get($settings, 'widgets.header.fontStyle') ])
+}
+
+.widget .widget-header {
+    @style([ 'property' => 'padding', 'value' => data_get($settings, 'widgets.header.padding') ])
+    @style([ 'property' => 'margin-bottom', 'value' => data_get($settings, 'widgets.header.marginBottom') ])
+    @style([ 'property' => 'background-color', 'value' => data_get($settings, 'widgets.header.backgroundColor') ])
+}
+
+.widget .widget-body {
+    @style([ 'property' => 'padding', 'value' => data_get($settings, 'widgets.body.padding') ])
+    @style([ 'property' => 'background-color', 'value' => data_get($settings, 'widgets.body.backgroundColor') ])
+} 
 
 {{-- Footer styles --}}
-{{-- 
 footer {
     @if(data_get($settings, 'footer.general.style') == 'boxed')
         background-color: transparent;
     @else
         @style([ 'property' => 'background-color', 'value' => data_get($settings, 'footer.general.backgroundColor') ])
     @endif
-    @style([ 'property' => 'font-size', 'value' => data_get($settings, 'footer.general.font.size') ])
-    @style([ 'property' => 'color', 'value' => data_get($settings, 'footer.general.font.color') ])
+    @style([ 'property' => 'font-size', 'value' => data_get($settings, 'footer.general.fontSize') ])
+    @style([ 'property' => 'color', 'value' => data_get($settings, 'footer.general.fontColor') ])
 }
 
 footer .footer-wrap {
     @style([ 'property' => 'background-color', 'value' => data_get($settings, 'footer.general.backgroundColor') ])
 }
 
- --}}
-
+{{-- Headline styles --}}
 h1, .h1 {
     @style([ 'property' => 'font-size', 'value' => data_get($settings, 'headlines.size.headline1') ])
 }

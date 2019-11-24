@@ -14,12 +14,10 @@
                 </a>
                 {{-- <img src="{{ $post->featuredimage->original }}" class="img-responsive" alt=""> --}}
             @elseif($post->featuredimage && empty(get_theme_setting('content.general.featuredImage.indexPageHeight')))
-                <img src="{{ $post->featuredimage->original }}" class="post-featured-image img-responsive" alt="">
+                <a class="post-image-link" href="/{{ $post->type->slug }}/{{ $post->slug }}">
+                    <img src="{{ $post->featuredimage->original }}" class="post-featured-image img-responsive">
+                </a>
             @endif
-
-            {{-- <div class="post-excerpt">
-                {{ get_excerpt($post, get_theme_setting('content.general.excerptLength')) }}
-            </div> --}}
 
             @if(has_excerpt($post))
                 <div class="post-excerpt">

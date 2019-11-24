@@ -15,39 +15,50 @@
 <!-- Twitter -->
 @stack('twitter-meta-tags')
 
+<!-- Google Analytics Tracking Code Start -->
+@if(get_website_setting('analytics.googleAnalyticsCode', null) != null)
+{!! get_website_setting('analytics.googleAnalyticsCode') !!}
+@endif
+<!-- Google Analytics Tracking Code End -->
+
 @php
     $fontResources = get_theme_setting('resources.fonts');
     $iconResources = get_theme_setting('resources.icons');
     $themeFolder = get_theme_folder();
 @endphp
 
+<!-- Theme Font Resource Start -->
 @foreach ( $fontResources as $fontResource )
     @if($fontResource)
         <link rel="stylesheet" id="font-resource-{{ $loop->iteration }}" href="{{ $fontResource }}">
     @endif
 @endforeach
+<!-- Theme Font Resource End -->
 
+<!-- Theme Icon Resource Start -->
 @foreach ( $iconResources as $iconResource )
     @if($iconResource)
         <link rel="stylesheet" id="icon-resource-{{ $loop->iteration }}" href="{{ $iconResource }}">
     @endif
 @endforeach
+<!-- Theme Icon Resource End -->
 
-{{-- {!!Theme::css('css/style.css')!!} --}}
-<link rel="stylesheet" href="{{mix('css/styles.css', 'themes/'.$themeFolder)}}">
+<!-- Theme Stylesheet -->
+<link rel="stylesheet" href="{{mix('css/styles.css', 'themes/' . $themeFolder)}}">
 
-@if(file_exists('themes/'.$themeFolder.'/css/customize.css'))
-    <link rel="stylesheet" href="{{ asset('themes/'.$themeFolder.'/css/customize.css') }}?{{ get_theme_timestamp() }}">
+<!-- User Customized Theme Stylesheets -->
+@if(file_exists('themes/' . $themeFolder . '/css/customize.css'))
+    <link rel="stylesheet" href="{{ asset('themes/' . $themeFolder . '/css/customize.css') }}?{{ get_theme_timestamp() }}">
 @endif
 
-{{-- User Custom CSS --}}
+<!-- User Manual CSS -->
 @if(get_theme_setting('css.customCss'))
 <style id="user-custom-css">
     {{ get_theme_setting('css.customCss') }}
 </style>
 @endif
 
-{{-- Content Custom CSS --}}
+<!-- Content Blocks Custom CSS Start -->
 <style id="content-custom-css">
     @stack('content-custom-css')
 </style>
@@ -84,7 +95,9 @@
     @stack('content-block-custom-css')
 </style>
 
-<!-- Scripts -->
+<!-- Content Blocks Custom CSS End -->
+
+
 <script id="csrfToken">
     window.Laravel = {!! json_encode([
         'csrfToken' => csrf_token(),

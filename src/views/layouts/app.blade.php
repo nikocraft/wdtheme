@@ -20,10 +20,10 @@
 <!-- main script -->
 <script src="{{ mix('js/app.js', 'themes/'.$themeFolder) }}"></script>
 
-{{-- theme's custom js variables --}}
+<!-- theme's custom js variables -->
 @include('includes/scripts')
 
-{{-- scripts injected by specific views --}}
+<!-- scripts injected by specific views -->
 @stack('scripts')
 
 <noscript>Please enable JavaScript to view this website correctly.</noscript>

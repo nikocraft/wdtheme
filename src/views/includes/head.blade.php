@@ -43,6 +43,8 @@
 @endforeach
 <!-- Theme Icon Resource End -->
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+
 <!-- Theme Stylesheet -->
 <link rel="stylesheet" href="{{mix('css/styles.css', 'themes/' . $themeFolder)}}">
 
@@ -50,6 +52,9 @@
 @if(file_exists('themes/' . $themeFolder . '/css/customize.css'))
     <link rel="stylesheet" href="{{ asset('themes/' . $themeFolder . '/css/customize.css') }}?{{ get_theme_timestamp() }}">
 @endif
+
+{{-- Custom Styles for Image Zoom --}}
+@include('includes/styles')
 
 <!-- User Manual CSS -->
 @if(get_theme_setting('css.customCss'))

@@ -21,7 +21,11 @@
     <!-- main script -->
     <script src="{{ mix('js/app.js', 'themes/' . $themeFolder) }}"></script>
 
-    <!-- theme's custom js variables -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+    <!-- theme's global js variables -->
     @include('includes/scripts')
 
     <!-- scripts injected by specific views -->

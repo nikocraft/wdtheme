@@ -136,6 +136,10 @@
     p {
         margin: 0 0 0px;
     }
+
+    .image-lightbox {
+        cursor: zoom-in;
+    }
 }
 
 /* Images Block */
@@ -149,6 +153,10 @@
     .images-block-image {
         display: flex;
         flex-direction: column;
+
+        .image-lightbox {
+            cursor: zoom-in;
+        }
     }
 }
 

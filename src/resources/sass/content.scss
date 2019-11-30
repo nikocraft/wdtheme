@@ -86,20 +86,10 @@
             .post-excerpt {
                 margin: 5px 0 10px 0;
             }
+            
             .post-footer {
                 display: flex;
                 justify-content: space-between;
-            }
-            .post-read-more {
-                padding: 2px 12px;
-                background: #e9eff2;
-                color: #333;
-
-                &:hover {
-                    background-color: #444;
-                    color: white;
-                    text-decoration: none;
-                }
             }
         }
     }

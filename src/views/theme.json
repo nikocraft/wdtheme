@@ -6,8 +6,8 @@
     "version"           : "1.0.0",
     "folder"            : "ikigai",
     "tags"              : [ "minimalistic", "clean", "modern", "blog" ],
-    "author"            : "Niko Craft, Reimagined Works",
-    "org"               : "Niko Craft, Reimagined Works",
+    "author"            : "Niko Craft",
+    "org"               : "Niko Craft",
     "description"       : "Default Laraone theme. Ikigai theme can be used for many different types of websites.",
     "url"               : "www.laraone.com",
     "screenshots"       : 1,
@@ -15,8 +15,8 @@
     "asset-path"        : "themes/ikigai",
     "settings": [
         {
-            "label": "General",
-            "key": "general",
+            "label": "Global",
+            "key": "global",
             "type": "section",
             "settings": [
                 {

@@ -1,22 +1,22 @@
 body {
-    @style([ 'property' => 'background-color', 'value' => data_get($settings, 'general.body.backgroundColor') ])
-    @style([ 'property' => 'background-image', 'value' => data_get($settings, 'general.body.backgroundImage') ])
-    @if(data_get($settings, 'general.body.backgroundImage'))
-        @style([ 'property' => 'background-size', 'value' => data_get($settings, 'general.body.backgroundSize') ])
-        @style([ 'property' => 'background-attachment', 'value' => data_get($settings, 'general.body.backgroundStyle') ])
-        @style([ 'property' => 'background-position', 'value' => data_get($settings, 'general.body.backgroundPosition') ])
-        @style([ 'property' => 'background-repeat', 'value' => data_get($settings, 'general.body.backgroundRepeat') ])
+    @style([ 'property' => 'background-color', 'value' => data_get($settings, 'global.body.backgroundColor') ])
+    @style([ 'property' => 'background-image', 'value' => data_get($settings, 'global.body.backgroundImage') ])
+    @if(data_get($settings, 'global.body.backgroundImage'))
+        @style([ 'property' => 'background-size', 'value' => data_get($settings, 'global.body.backgroundSize') ])
+        @style([ 'property' => 'background-attachment', 'value' => data_get($settings, 'global.body.backgroundStyle') ])
+        @style([ 'property' => 'background-position', 'value' => data_get($settings, 'global.body.backgroundPosition') ])
+        @style([ 'property' => 'background-repeat', 'value' => data_get($settings, 'global.body.backgroundRepeat') ])
     @endif
-    @style([ 'property' => 'font-family', 'value' => data_get($settings, 'general.font.family') ])
-    @style([ 'property' => 'color', 'value' => data_get($settings, 'general.font.color') ])
-    @style([ 'property' => 'font-size', 'value' => data_get($settings, 'general.font.size') ])
-    @style([ 'property' => 'line-height', 'value' => data_get($settings, 'general.font.lineHeight') ])
+    @style([ 'property' => 'font-family', 'value' => data_get($settings, 'global.font.family') ])
+    @style([ 'property' => 'color', 'value' => data_get($settings, 'global.font.color') ])
+    @style([ 'property' => 'font-size', 'value' => data_get($settings, 'global.font.size') ])
+    @style([ 'property' => 'line-height', 'value' => data_get($settings, 'global.font.lineHeight') ])
 }
 
 {{-- Container --}}
 .container {
-    @style([ 'property' => 'width', 'value' => data_get($settings, 'general.container.width') ])
-    @style([ 'property' => 'max-width', 'value' => data_get($settings, 'general.container.maxWidth') ])
+    @style([ 'property' => 'width', 'value' => data_get($settings, 'global.container.width') ])
+    @style([ 'property' => 'max-width', 'value' => data_get($settings, 'global.container.maxWidth') ])
 }
 
 @media (max-width: 1200px) {
@@ -33,7 +33,7 @@ body {
 
 {{-- Content Container Styles --}}
 .container.content-wrap {
-    @style([ 'property' => 'background-color', 'value' => data_get($settings, 'general.container.backgroundColor') ])
+    @style([ 'property' => 'background-color', 'value' => data_get($settings, 'global.container.backgroundColor') ])
 }
 
 {{-- Header Styles --}}

@@ -48,13 +48,13 @@
 <!-- Theme Stylesheet -->
 <link rel="stylesheet" href="{{mix('css/styles.css', 'themes/' . $themeFolder)}}">
 
+{{-- Custom Styles for Image Zoom --}}
+@include('includes/styles')
+
 <!-- User Customized Theme Stylesheets -->
 @if(file_exists('themes/' . $themeFolder . '/css/customize.css'))
     <link rel="stylesheet" href="{{ asset('themes/' . $themeFolder . '/css/customize.css') }}?{{ get_theme_timestamp() }}">
 @endif
-
-{{-- Custom Styles for Image Zoom --}}
-@include('includes/styles')
 
 <!-- User Manual CSS -->
 @if(get_theme_setting('css.customCss'))

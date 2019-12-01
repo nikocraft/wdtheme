@@ -17,8 +17,6 @@
             }
         });
     });
-
-
 </script>
 
 <script id="theme-js-variables">

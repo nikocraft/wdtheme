@@ -1,5 +1,5 @@
 {
-    "name"              : "ikigai",
+    "name"              : "Okigai",
     "releases_url"      : "https://github.com/laraone/ikigai/raw/master/releases.json",
     "download_url"      : "https://github.com/laraone/ikigai/releases/download",
     "namespace"         : "com.reimaginedworks.ikigai",
@@ -7,10 +7,9 @@
     "folder"            : "ikigai",
     "tags"              : [ "minimalistic", "clean", "modern", "blog" ],
     "author"            : "Niko Craft",
-    "org"               : "Niko Craft",
-    "description"       : "Default Laraone theme. Ikigai theme can be used for many different types of websites.",
+    "org"               : "Reimagined Works",
+    "description"       : "Ikigai a simple and versatile theme.",
     "url"               : "www.laraone.com",
-    "screenshots"       : 1,
     "views-path"        : "ikigai",
     "asset-path"        : "themes/ikigai",
     "settings": [

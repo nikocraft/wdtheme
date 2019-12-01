@@ -1004,13 +1004,20 @@
             ]
         },
         {
-            "label": "Custom Css",
-            "key": "css",
+            "label": "Custom Css & JavaScript",
+            "key": "custom",
             "type": "section",
             "settings": [
                 {
                     "label": "Css",
-                    "key": "customCss",
+                    "key": "css",
+                    "default": "",
+                    "type": "string",
+                    "meta": { "uiType": "textArea" }
+                },
+                {
+                    "label": "Js",
+                    "key": "javascript",
                     "default": "",
                     "type": "string",
                     "meta": { "uiType": "textArea" }

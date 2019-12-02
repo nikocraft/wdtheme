@@ -1038,7 +1038,7 @@
                 },
                 {
                     "label": "Pintrest",
-                    "key": "pintrest",
+                    "key": "pinterest",
                     "default": "",
                     "type": "string",
                     "meta": { "uiType": "input" }

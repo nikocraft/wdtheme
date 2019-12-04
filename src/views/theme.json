@@ -1004,6 +1004,49 @@
             ]
         },
         {
+            "label": "SEO",
+            "key": "seo",
+            "type": "section",
+            "settings": [
+                {
+                    "label": "Google",
+                    "key": "google",
+                    "type": "section",
+                    "settings": [
+                        {
+                            "label": "Analytics Code",
+                            "key": "analyticsCode",
+                            "default": "",
+                            "type": "string",
+                            "meta": { "uiType": "textArea" }
+                        }
+                    ]
+                },
+                {
+                    "label": "Meta",
+                    "key": "meta",
+                    "type": "section",
+                    "settings": [
+                        {
+                
+                            "label": "Meta Description",
+                            "key": "metaDescription",
+                            "default": "",
+                            "type": "string",
+                            "meta": { "uiType": "input" }
+                        },
+                        {
+                            "label": "Meta Keywords",
+                            "key": "metaKeywords",
+                            "type": "string",
+                            "default": "",
+                            "meta": { "uiType": "input" }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "label": "Social",
             "key": "social",
             "type": "section",
@@ -1081,7 +1124,7 @@
             ]
         },
         {
-            "label": "Custom Css & JavaScript",
+            "label": "Custom Code",
             "key": "custom",
             "type": "section",
             "settings": [

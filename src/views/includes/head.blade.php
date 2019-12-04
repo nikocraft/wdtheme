@@ -16,8 +16,8 @@
 @stack('twitter-meta-tags')
 
 <!-- Google Analytics Tracking Code Start -->
-@if(get_website_setting('analytics.googleAnalyticsCode', null) != null)
-{!! get_website_setting('analytics.googleAnalyticsCode') !!}
+@if(get_theme_setting('seo.google.analyticsCode', null) != null)
+{!! get_theme_setting('seo.google.analyticsCode') !!}
 @endif
 <!-- Google Analytics Tracking Code End -->
 

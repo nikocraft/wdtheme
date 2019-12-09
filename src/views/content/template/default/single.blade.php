@@ -18,7 +18,12 @@
     @if($showMetaData)
         <div class="post-meta">
             <div class="post-meta-detail">
-                Posted on {{ $content->created_at->format('Y-m-d') }} by {{ $content->author->username }}
+                Posted on {{ $content->created_at->format('Y-m-d') }} by
+                @if(get_website_setting('members.userDisplayName') == 'fullname')
+                    {{ $content->author->firstname }} {{ $content->author->lastname }}
+                @else
+                    {{ $content->author->username }}
+                @endif
             </div>
         </div>
     @endif
@@ -47,7 +52,11 @@
         <div class="post-author">
             <div class="post-author-image"><img style="width: 120px;" class="img-responsive" src="{{ get_gravatar($content->author->email) }}" /></div>
             <div class="post-author-details">
-                <div class="post-author-name">About {{ $content->author->firstname }} {{ $content->author->lastname }}</div>
+                @if(get_website_setting('members.userDisplayName') == 'fullname')
+                    <div class="post-author-name">About {{ $content->author->firstname }} {{ $content->author->lastname }}</div>
+                @else
+                    <div class="post-author-name">About {{ $content->author->username }}</div>
+                @endif
                 <div class="post-author-bio">{{ $content->author->bio }}</div>
             </div>
         </div>

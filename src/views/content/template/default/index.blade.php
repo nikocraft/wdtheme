@@ -5,7 +5,12 @@
 
             <div class="post-meta">
                 <div class="post-meta-detail">
-                    Posted on {{ $post->created_at->format('Y-m-d') }} by {{ $post->author->username }}
+                    Posted on {{ $post->created_at->format('Y-m-d') }} by 
+                    @if(get_website_setting('members.userDisplayName') == 'fullname')
+                        {{ $post->author->firstname }} {{ $post->author->lastname }}
+                    @else
+                        {{ $post->author->username }}
+                    @endif
                 </div>
             </div>
             @if($post->featuredimage && !empty(get_theme_setting('content.general.featuredImage.indexPageHeight')))

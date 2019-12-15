@@ -810,7 +810,7 @@
                     "type": "section",
                     "settings": [
                         {
-                            "label": "Line Height",
+                            "label": "H1 - H4 Line Height",
                             "key": "lineHeight",
                             "default": "45px",
                             "type": "string",
@@ -990,7 +990,6 @@
                     "label": "Icons",
                     "key": "icons",
                     "type": "section",
-                    "meta": { "hidden": true },
                     "settings": [
                         {
                             "label": "Source",
@@ -1030,14 +1029,14 @@
                         {
                 
                             "label": "Meta Description",
-                            "key": "metaDescription",
+                            "key": "description",
                             "default": "",
                             "type": "string",
                             "meta": { "uiType": "input" }
                         },
                         {
                             "label": "Meta Keywords",
-                            "key": "metaKeywords",
+                            "key": "keywords",
                             "type": "string",
                             "default": "",
                             "meta": { "uiType": "input" }

@@ -236,7 +236,7 @@ h6, .h6 {
     @style([ 'property' => 'font-size', 'value' => data_get($settings, 'headlines.size.headline6') ])
 }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
     @style([ 'property' => 'line-height', 'value' => data_get($settings, 'headlines.general.lineHeight') ])
 }
 

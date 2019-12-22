@@ -1,4 +1,4 @@
-<div class="website-title">{{ get_website_setting('website.title') }}</div>
+<div class="website-title">{{ get_website_setting('website.general.title') }}</div>
 @if($menu)
     <div class="menu">
         @foreach ($menu as $key => $item)

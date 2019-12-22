@@ -6,7 +6,7 @@
             <div class="post-meta">
                 <div class="post-meta-detail">
                     Posted on {{ $post->created_at->format('Y-m-d') }} by 
-                    @if(get_website_setting('members.userDisplayName') == 'fullname')
+                    @if(get_website_setting('website.members.userDisplayName') == 'fullname')
                         {{ $post->author->firstname }} {{ $post->author->lastname }}
                     @else
                         {{ $post->author->username }}

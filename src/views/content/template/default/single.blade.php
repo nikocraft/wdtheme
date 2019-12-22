@@ -19,7 +19,7 @@
         <div class="post-meta">
             <div class="post-meta-detail">
                 Posted on {{ $content->created_at->format('Y-m-d') }} by
-                @if(get_website_setting('members.userDisplayName') == 'fullname')
+                @if(get_website_setting('website.members.userDisplayName') == 'fullname')
                     {{ $content->author->firstname }} {{ $content->author->lastname }}
                 @else
                     {{ $content->author->username }}
@@ -52,7 +52,7 @@
         <div class="post-author">
             <div class="post-author-image"><img style="width: 120px;" class="img-responsive" src="{{ get_gravatar($content->author->email) }}" /></div>
             <div class="post-author-details">
-                @if(get_website_setting('members.userDisplayName') == 'fullname')
+                @if(get_website_setting('website.members.userDisplayName') == 'fullname')
                     <div class="post-author-name">About {{ $content->author->firstname }} {{ $content->author->lastname }}</div>
                 @else
                     <div class="post-author-name">About {{ $content->author->username }}</div>
@@ -65,18 +65,18 @@
 
 
 @if($showComments)
-    @switch(get_website_setting('comments.type'))
+    @switch(get_website_setting('website.comments.type'))
         @case('native')
             <comments
-                :allow-nested={{ json_encode(get_website_setting('comments.allowNested')) }}
-                :max-depth="{{ get_website_setting('comments.nestedDepth') }}"
-                order="{{ get_website_setting('comments.order') }}"
+                :allow-nested={{ json_encode(get_website_setting('website.comments.allowNested')) }}
+                :max-depth="{{ get_website_setting('website.comments.nestedDepth') }}"
+                order="{{ get_website_setting('website.comments.order') }}"
                 :content-id={{ $content->id }}
                 :content-author-id={{ $content->author->id }}>
             </comments>
             @break
         @case('disqus')
-            @if(!empty(get_website_setting('comments.disqusChannel')))
+            @if(!empty(get_website_setting('website.comments.disqusChannel')))
                 <div id="disqus_thread"></div>
                 @push('scripts')
                     <script id="disqus_comments">
@@ -87,13 +87,13 @@
                         (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
                             var d = document, s = d.createElement('script');
                             
-                            s.src = 'https://{{ get_website_setting('comments.disqusChannel') }}.disqus.com/embed.js';  // IMPORTANT: Replace EXAMPLE with your forum shortname!
+                            s.src = 'https://{{ get_website_setting('website.comments.disqusChannel') }}.disqus.com/embed.js';  // IMPORTANT: Replace EXAMPLE with your forum shortname!
                             
                             s.setAttribute('data-timestamp', +new Date());
                             (d.head || d.body).appendChild(s);
                         })();
                     </script>
-                    <script id="dsq-count-scr" src="//{{ get_website_setting('comments.disqusChannel') }}.disqus.com/count.js" async></script>
+                    <script id="dsq-count-scr" src="//{{ get_website_setting('website.comments.disqusChannel') }}.disqus.com/count.js" async></script>
                 @endpush
             @endif
             @break

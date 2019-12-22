@@ -1,7 +1,7 @@
 <div class="logo">
     @if(get_theme_setting('header.logo.type') == 'text')
         <a class="logo-link" href="{{ url('/') }}">
-            {{ get_website_setting('website.title') }}
+            {{ get_website_setting('website.general.title') }}
         </a>
     @else
         <a class="logo-link" href="{{ url('/') }}">

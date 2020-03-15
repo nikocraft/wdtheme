@@ -1,10 +1,17 @@
 {
   "releasesData": [
     {
+      "index": 2,
+      "version": "1.0.1",
+      "dependency": {
+        "laraone": "1.2.0"
+      }
+    },
+    {
       "index": 1,
       "version": "1.0.0",
       "dependency": {
-        "phoenix": "1.0.0"
+        "laraone": "1.0.0"
       }
     }
   ]

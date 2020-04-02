@@ -6,30 +6,30 @@ $extraSmallDevices:    576px;
 
 // Container
 $containerWidth: 85%;
-$containerMaxWidth: 1280px;
+$containerMaxWidth: 1480px;
 
 // Headlines
 $headline1Size: 55px;
-$headline2Size: 45px;
-$headline3Size: 30px;
-$headline4Size: 25px;
-$headline5Size: 20px;
+$headline2Size: 35px;
+$headline3Size: 22px;
+$headline4Size: 20px;
+$headline5Size: 18px;
 $headline6Size: 15px;
-$headlinesLineHeight: 45px;
+$headlinesLineHeight: 32px;
 $headlineMargin: 5px 0 10px 0;
 
 // Body
 $bodyFontSize: 15px;
 $bodyLineHeight: 25px;
-$bodyTextColor: #333;
-$bodyBackgroundColor: #fbfbfb;
+$bodyTextColor: white;
+$bodyBackgroundColor: #1F2235;
 $bodyFontFamily: sans-serif;
 
 // header
 $headerHeight: 122px;
 
 // Footer
-$footerBackgroundColor: #27313a;
+$footerBackgroundColor: #1F2235;
 $footerTextColor: white;
 $footerFontSize: 12px;
 
@@ -51,15 +51,15 @@ $logoFontColor: #222;
 $logoFontHoverColor: #111;
 
 // Navigation Desktop Menu
-$menuItemColor: #222;
-$menuItemHoverColor: #444;
+$menuItemColor: white;
+$menuItemHoverColor: #DDD;
 $menuItemPadding: 5px 20px;
 $menuItemFontSize: 14px;
 $menuItemBkgHoverColor: #eef2f4;
 
-$menuDropDownItemColor: #222;
+$menuDropDownItemColor: white;
 $menuDropDownItemPadding: 7px 20px;
-$menuDropDownItemHoverColor: #444;
+$menuDropDownItemHoverColor: #DDD;
 $menuDropDownItemBkgHoverColor: rgba(1,1,1, 0.05);
 
 // Hamburger Btn

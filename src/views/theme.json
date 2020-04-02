@@ -1,17 +1,17 @@
 {
-    "name"              : "Ikigai",
-    "releases_url"      : "https://github.com/laraone/ikigai/raw/master/releases.json",
-    "download_url"      : "https://github.com/laraone/ikigai/releases/download",
-    "namespace"         : "com.reimaginedworks.ikigai",
+    "name"              : "Webdevs",
+    "releases_url"      : "https://github.com/nikocraft/wdtheme/raw/master/releases.json",
+    "download_url"      : "https://github.com/nikocraft/wdtheme/releases/download",
+    "namespace"         : "com.reimaginedworks.wdtheme",
     "version"           : "1.0.1",
-    "folder"            : "ikigai",
+    "folder"            : "webdevs",
     "tags"              : [ "minimalistic", "clean", "modern", "blog" ],
     "author"            : "Niko Craft",
     "org"               : "Reimagined Works",
-    "description"       : "Ikigai a simple and versatile theme.",
+    "description"       : "Web Devs a simple and versatile theme.",
     "url"               : "www.laraone.com",
-    "views-path"        : "ikigai",
-    "asset-path"        : "themes/ikigai",
+    "views-path"        : "webdevs",
+    "asset-path"        : "themes/webdevs",
     "settings": [
         {
             "label": "Global",
@@ -33,7 +33,7 @@
                         {
                             "label": "Max Width",
                             "key": "maxWidth",
-                            "default": "1280px",
+                            "default": "1480px",
                             "type": "string",
                             "meta": { "uiType": "input" }
                         },
@@ -770,14 +770,14 @@
                         {
                             "label": "Background Color",
                             "key": "backgroundColor",
-                            "default": "#27313a",
+                            "default": "#fbfbfb",
                             "type": "string",
                             "meta": { "uiType": "color" }
                         },
                         {
                             "label": "Font Color",
                             "key": "fontColor",
-                            "default": "white",
+                            "default": "#333",
                             "type": "string",
                             "meta": { "uiType": "color" }
                         },

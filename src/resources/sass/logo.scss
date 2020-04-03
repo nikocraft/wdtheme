@@ -17,9 +17,17 @@
         text-align: center;
         display: flex;
         align-items: center;
+        font-weight: 700;
+        font-variant: all-petite-caps;
+
+        .logo-devs {
+            color: $logoFontHoverColor;
+        }
 
         &:hover {
-            color: $logoFontHoverColor;
+            .logo-devs {
+                font-style: italic;
+            }
         }
     }
 }

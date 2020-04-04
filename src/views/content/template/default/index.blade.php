@@ -1,3 +1,5 @@
+<div class="hero"><div class="hero-welcome">Welcome to WebDevs!</div><div class="hero-tagline">Learn about web development.</div></div>
+
 <div class="posts">
     @foreach ( $posts as $post )
         <div class="post">

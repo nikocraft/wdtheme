@@ -96,6 +96,24 @@
 }
 
 .content-index {
+    .hero {
+        min-height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+        flex-direction: column;
+        
+        .hero-welcome {
+            font-size: 55px;
+            margin-bottom: 40px;
+        }
+
+        .hero-tagline {
+            font-size: 23px;
+        }
+    }
+
     margin-bottom: 30px;
     .posts {
         display: flex;

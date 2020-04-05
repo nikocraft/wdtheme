@@ -35,6 +35,7 @@ footer {
 .content-wrap {
     display: flex;
     flex: 1;
+    // max-width: 1080px;
 
     @media (max-width: $mediumDevices) {
         display: block;

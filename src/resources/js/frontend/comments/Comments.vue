@@ -1,14 +1,16 @@
 <template>
     <div v-if="commentsLoaded" class="comments">
-        <h3>Comments</h3>
-        <!-- our author: {{ contentAuthorId }} -->
-        <comments-tree v-for="comment in rootComments" style="margin-bottom: 10px;"
-            :comment="comment"
-            :depth="0"
-            :allowNested="allowNested"
-            :maxDepth="maxDepth"
-            :key="comment.id">
-        </comments-tree>
+        <template v-if="rootComments.length">
+            <h3 style="margin-bottom: 30px;">{{ rootComments.length }} comment(s)</h3>
+            <!-- our author: {{ contentAuthorId }} -->
+            <comments-tree v-for="comment in rootComments"
+                :comment="comment"
+                :depth="0"
+                :allowNested="allowNested"
+                :maxDepth="maxDepth"
+                :key="comment.id">
+            </comments-tree>
+        </template>
 
         <div v-if="!replyingToComment">
             <comment-box :content-id="contentId"></comment-box>
@@ -87,6 +89,7 @@
         },
         mounted: function() {
             this.setContentId(this.contentId)
+            this.loadComments()
         }
     }
 </script>

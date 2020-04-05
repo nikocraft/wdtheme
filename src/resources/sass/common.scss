@@ -52,11 +52,11 @@ textarea {
     touch-action: manipulation;
     cursor: pointer;
     background-image: none;
-    border: 1px solid transparent;
+    border: 0px solid transparent;
     padding: $btnPadding;
     font-size: $btnFontSize;
     line-height: $btnLineHeight;
-    border-radius: 4px;
+    border-radius: 35px;
     user-select: none;
 
     &:active, .active {

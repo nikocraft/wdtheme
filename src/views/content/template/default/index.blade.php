@@ -1,4 +1,4 @@
-<div class="hero"><div class="hero-welcome">Welcome to WebDevs!</div><div class="hero-tagline">Learn about web development.</div></div>
+<div class="hero"><div class="hero-welcome">Welcome to WebDevs!</div><div class="hero-tagline">Learn about latest in web development.</div></div>
 
 <div class="posts">
     @foreach ( $posts as $post )
@@ -13,7 +13,7 @@
 
             <div class="post-meta">
                 <div class="post-author">
-                    <div class="post-author-image"><img style="width: 50px;" class="img-responsive" src="{{ get_gravatar($post->author->email) }}" /></div>
+                    <div class="post-author-image"><img style="width: 50px;" class="img-responsive" src="{{ get_gravatar($post->author->email, 100, 'mp') }}" /></div>
                     <div class="post-author-detail">
                         <div class="post-author-label">
                             Author

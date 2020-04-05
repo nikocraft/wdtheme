@@ -2,37 +2,28 @@
     <div class="comment-box">
         <div class="comment-form">
             <div class="comment-box-header">
-                <h3>Leave a Reply</h3>
-                <div>Your email address will not be published. Required fields are marked *</div>
+                <h2>Leave a Reply</h2>
             </div>
 
-            <div v-if="!loggedUser" class="comment-data">
+            <div class="comment-body">
+                <textarea v-validate="'required'" data-vv-as="Comment" name="body" class="form-input" v-model="body" placeholder="Type Your Comment"></textarea>
+                <span>{{ errors.first('body') }}</span>
+            </div>
+
+            <div v-if="!loggedUser || loggedUser" class="comment-data">
                 <div class="comment-data-item">
-                    <label for="name">Name</label> *
-                    <input v-validate="'required'" data-vv-as="Name" name="name" type="text" class="form-input" v-model="name">
+                    <input v-validate="'required'" data-vv-as="Name" name="name" type="text" class="form-input" v-model="name" placeholder="Type Your Name">
                     <span>{{ errors.first('name') }}</span>
                 </div>
             
                 <div class="comment-data-item">
-                    <label for="email">Email</label> *
-                    <input v-validate="'required|email'" data-vv-as="Email" name="email" type="text" class="form-input" v-model="email">
+                    <input v-validate="'required|email'" data-vv-as="Email" name="email" type="text" class="form-input" v-model="email" placeholder="Type Your Email">
                     <span>{{ errors.first('email') }}</span>
                 </div>
-
-                <div class="comment-data-item">
-                    <label for="website">Website</label>
-                    <input type="text" name="website" class="form-input" v-model="website">
-                </div>
-            </div>
-
-            <div class="comment-body">
-                <div><label for="body">Comment</label> <span>*</span></div>
-                <textarea v-validate="'required'" data-vv-as="Comment" name="body" class="form-input" v-model="body"></textarea>
-                <span>{{ errors.first('body') }}</span>
             </div>
 
             <div class="comment-btn">
-                <button @click="comment()" type="submit" name="button" class="btn btn-primary">Comment</button>
+                <button @click="comment()" type="submit" name="button" class="btn btn-primary">Post Comment</button>
             </div>
         </div>
 

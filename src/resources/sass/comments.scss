@@ -6,6 +6,7 @@
 
 .comments {
     margin-top: 35px;
+    font-family: Nunito;
 
     .spinner {
         display: flex;
@@ -118,8 +119,8 @@
 }
 
 .comment {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 16px;
+    line-height: 28px;
 
     .parent-comment {
         padding: 20px 40px;
@@ -164,7 +165,8 @@
             margin-right: 1.1em;
             color: $primaryBtnColor;
             text-decoration: none;
-            font-size: 12px;
+            font-size: 16px;
+            transition: .75s;
         }
         
         .comment-reply:hover {

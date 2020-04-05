@@ -11,6 +11,7 @@
     }
 
     .logo-link {
+        font-family: sans-serif;
         font-size: $logoFontSize;
         color: $logoFontColor;
         height: 100%;
@@ -22,11 +23,12 @@
 
         .logo-devs {
             color: $logoFontHoverColor;
+            font-style: italic;
         }
 
         &:hover {
             .logo-devs {
-                font-style: italic;
+                font-style: normal;
             }
         }
     }

@@ -19,11 +19,11 @@ $headlinesLineHeight: 32px;
 $headlineMargin: 5px 0 10px 0;
 
 // Body
-$bodyFontSize: 15px;
-$bodyLineHeight: 25px;
-$bodyTextColor: white;
+$bodyFontSize: 16px;
+$bodyLineHeight: 26px;
+$bodyTextColor: #dfdfdf;
 $bodyBackgroundColor: #1F2235;
-$bodyFontFamily: sans-serif;
+$bodyFontFamily: Poppins;
 
 // header
 $headerHeight: 122px;
@@ -46,15 +46,16 @@ $primaryBtnHoverColor: #f13c48;
 $primaryBtnFontColor: #fff;
 
 // Logo
-$logoFontSize: 40px;
+$logoFontSize: 30px;
 $logoFontColor: white;
 $logoFontHoverColor: #ff4a57;
 
 // Navigation Desktop Menu
 $menuItemColor: white;
+$menuFontFamily: Nunito;
 $menuItemHoverColor: #ff4a57;
 $menuItemPadding: 5px 20px;
-$menuItemFontSize: 20px;
+$menuItemFontSize: 16px;
 $menuItemBkgHoverColor: #eef2f4;
 
 $menuDropDownItemColor: white;

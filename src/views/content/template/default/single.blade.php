@@ -57,7 +57,9 @@
         <img src="{{ $content->featuredimage->original }}" class="post-featured-image img-responsive" alt="">
     @endif
 
-    @include('content/template/default/partials/content')
+    <div class="single-post-content">
+        @include('content/template/default/partials/content')
+    </div>
 
     {{-- @if($showAuthorBio)
         <div class="post-author">

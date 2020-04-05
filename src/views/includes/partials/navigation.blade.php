@@ -1,6 +1,6 @@
 <div class="logo">
     <a class="logo-link" href="{{ url('/') }}">
-        <div class="logo-web">Web</div><div class="logo-devs">Devs</div><div class="logo-dot">.</div><div class="logo-domain">se</div>
+        <div class="logo-web">Web</div><div class="logo-devs">Devs</div>
     </a>
 </div>
 

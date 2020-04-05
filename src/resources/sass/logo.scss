@@ -21,14 +21,23 @@
         font-weight: 700;
         font-variant: all-petite-caps;
 
+        .logo-web {
+            color: white;
+            transition: .75s;
+        }
+
         .logo-devs {
             color: $logoFontHoverColor;
             font-style: italic;
+            transition: .75s;
         }
 
         &:hover {
+            .logo-web {
+                color: $logoFontHoverColor;
+            }
             .logo-devs {
-                font-style: normal;
+                color: white;
             }
         }
     }

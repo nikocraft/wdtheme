@@ -19,7 +19,8 @@
 </div>
 <div class="content-wrap">
     <div class="container">
-        <div class="content-index" style="margin-top: 80px;">
+        <div class="content-index" style="margin-top: 50px;">
+            <h2 style="margin-left: 18px; margin-bottom: 30px; color: white; font-weight: bold;">My Articles</h2>
             <div class="posts">
                 @foreach ( $user->content as $post )
                     <div class="post">

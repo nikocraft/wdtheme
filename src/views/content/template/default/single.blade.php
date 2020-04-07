@@ -23,7 +23,7 @@
                         <div class="post-author-label">
                             Author
                         </div>
-                        <div class="post-author-name">{{ $content->author->firstname }} {{ $content->author->lastname }}</div>
+                    <div class="post-author-name"><a href="\user\{{ $content->author->id }}">{{ $content->author->firstname }} {{ $content->author->lastname }}</a></div>
                     </div>
                 </div>
                 <div class="post-taxonomy">

@@ -73,6 +73,7 @@ textarea {
     color: $primaryBtnFontColor;
     background-color: $primaryBtnColor;
     border-color: unset;
+    transition: .5s;
 
     &:hover {
         color: $primaryBtnFontColor;

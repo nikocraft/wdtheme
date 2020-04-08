@@ -7,45 +7,6 @@
 .comments {
     margin-top: 35px;
     font-family: Nunito;
-
-    .spinner {
-        display: flex;
-        justify-content: center;
-        position: absolute;
-        top: -5px;
-        background: rgba(255, 255, 255, 0.11);
-        height: 100%;
-        align-items: center;
-        width: 100%;
-        align-self: center;
-    }
-
-    .lds-dual-ring {
-        display: flex;
-        width: 64px;
-        height: 64px;
-    }
-
-    .lds-dual-ring:after {
-        content: " ";
-        display: block;
-        width: 46px;
-        height: 46px;
-        margin: 1px;
-        border-radius: 50%;
-        border: 5px solid #cef;
-        border-color: #cef transparent #cef transparent;
-        animation: lds-dual-ring 1.2s linear infinite;
-    }
-
-    @keyframes lds-dual-ring {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
-    }
 }
 
 .comment-box {

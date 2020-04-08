@@ -11,8 +11,7 @@
             </div>
             <div style="margin: 40px 0; font-size: 40px; font-weight: 500; color: white;">{{ $user->firstname }} {{ $user->lastname }}</div>
             <div style="width: 50%; margin-bottom: 80px;">
-                <h2 style="margin-top: 20px; margin-bottom: 20px; color: white; font-weight: bold;">Hi There!</h2>
-                <div class="user-bio">{{ $user->bio }}</div>
+                <div class="user-bio" style="text-align: center;">{{ $user->bio }}</div>
             </div>
         </div>
     </div>

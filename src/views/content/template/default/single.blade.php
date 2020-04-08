@@ -14,11 +14,11 @@
 <div class="post">
     @if($showTitle)
         <div class="breadcrumbs">
-            <h1 class="post-title">{{ $content->title }}</h1>
+            
 
             <div class="post-meta">
                 <div class="post-author">
-                    <div class="post-author-image"><img style="width: 50px;" class="img-responsive" src="{{ get_gravatar($content->author->email, 100, 'mp') }}" /></div>
+                    <div class="post-author-image"><img style="width: 50px;" class="img-responsive" src="{{ get_gravatar($content->author->email, 180, 'mp') }}" /></div>
                     <div class="post-author-detail">
                         <div class="post-author-label">
                             Author
@@ -26,15 +26,9 @@
                     <div class="post-author-name"><a href="\user\{{ $content->author->id }}">{{ $content->author->firstname }} {{ $content->author->lastname }}</a></div>
                     </div>
                 </div>
-                <div class="post-taxonomy">
-                    @taxonomy([
-                        'taxonomy' => 'Tags',
-                        'post' => $content,
-                        'commaSeparate' => false
-                    ]) @endtaxonomy
-                </div>
             </div>
 
+            <h1 class="post-title">{{ $content->title }}</h1>
 
         </div>
     @endif
@@ -59,6 +53,16 @@
 
     <div class="single-post-content">
         @include('content/template/default/partials/content')
+    </div>
+
+    <div class="post-meta">
+        <div class="post-taxonomy">
+            @taxonomy([
+                'taxonomy' => 'Tags',
+                'post' => $content,
+                'commaSeparate' => false
+            ]) @endtaxonomy
+        </div>
     </div>
 
     {{-- @if($showAuthorBio)

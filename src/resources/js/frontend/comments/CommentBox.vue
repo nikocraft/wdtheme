@@ -22,13 +22,13 @@
                 </div>
             </div>
 
-            <div class="comment-btn">
-                <button @click="comment()" type="submit" name="button" class="btn btn-primary">Post Comment</button>
-            </div>
-        </div>
+            <div v-if="successfulPost" style="text-align: center;">Comment successfully posted. Comment may need to be moderated before appearing.</div>
+            <div v-if="errorStatus" style="text-align: center; color: #ff4a57;">Server responded with an error, the comment could not be posted.</div>
 
-        <div v-if="showPostAnimation(comment.id)" class="spinner">
-            <div class="lds-dual-ring"></div>
+            <div class="comment-btn">
+                <button v-if="!postingOngoing" @click="submit()" type="submit" name="button" class="btn btn-primary" style="min-width: 200px;">Post Comment</button>
+                <button v-else name="button" class="btn btn-primary" style="min-width: 200px;">Posting...</button>
+            </div>
         </div>
     </div>
 </template>
@@ -42,7 +42,9 @@
                 name: '',
                 email: '',
                 body: '',
-                website: ''
+                errorStatus: false,
+                successfulPost: false,
+                postingOngoing: false
             }
         },
         props: {
@@ -72,20 +74,41 @@
             ...mapActions([
                 'postComment'
             ]),
-            comment(commentId) {
-                let comment = {
-                    name: this.name,
-                    email: this.email,
-                    body: this.body,
-                    website: this.website
-                }
-                this.postComment(comment)
-                    .then(() => {
-                        this.name = ''
-                        this.email = ''
-                        this.body = ''
-                        this.website = ''
-                    })
+            submit(commentId) {
+                this.$validator.validateAll().then((result) =>{
+                    if(result) {
+                        this.postingOngoing = true
+                        this.successfulPost = false
+                        this.errorStatus = false
+                        let payload = {
+                            name: this.name,
+                            email: this.email,
+                            body: this.body,
+                        }
+                        this.postComment(payload)
+                            .then(() => {
+                                this.name = ''
+                                this.email = ''
+                                this.body = ''
+                                this.postingOngoing = false
+                                this.successfulPost = true
+
+                                this.$nextTick(() => {
+                                    this.errors.clear();
+                                    this.$nextTick(() => {
+                                        this.$validator.reset();
+                                    });
+                                });
+                            })
+                            .catch((error) => {
+                                this.postingOngoing = false
+                                this.successfulPost = false
+                                this.errorStatus = error.response.status
+                            })
+                    } else {
+                        this.successfulPost = false
+                    }
+                })
             },
             showPostAnimation() {
                 if(this.replyToComment == this.commentId && this.postingComment)

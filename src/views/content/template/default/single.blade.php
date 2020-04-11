@@ -18,7 +18,7 @@
 
             <div class="post-meta">
                 <div class="post-author">
-                    <div class="post-author-image"><img style="width: 50px;" class="img-responsive" src="{{ get_gravatar($content->author->email, 180, 'mp') }}" /></div>
+                    <div class="post-author-image"><img style="width: 70px;" class="img-responsive" src="{{ get_gravatar($content->author->email, 70, 'mp') }}" /></div>
                     <div class="post-author-detail">
                         <div class="post-author-label">
                             Author
@@ -29,6 +29,17 @@
             </div>
 
             <h1 class="post-title">{{ $content->title }}</h1>
+
+
+            <div class="post-meta">
+                <div class="post-taxonomy">
+                    @taxonomy([
+                        'taxonomy' => 'Tags',
+                        'post' => $content,
+                        'commaSeparate' => false
+                    ]) @endtaxonomy
+                </div>
+            </div>
 
         </div>
     @endif
@@ -53,16 +64,6 @@
 
     <div class="single-post-content">
         @include('content/template/default/partials/content')
-    </div>
-
-    <div class="post-meta">
-        <div class="post-taxonomy">
-            @taxonomy([
-                'taxonomy' => 'Tags',
-                'post' => $content,
-                'commaSeparate' => false
-            ]) @endtaxonomy
-        </div>
     </div>
 
     {{-- @if($showAuthorBio)

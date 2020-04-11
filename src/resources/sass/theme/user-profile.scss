@@ -1,0 +1,18 @@
+
+.user-profile {
+    background: $secondaryBKGColor;
+    width: 100%;
+}
+
+.user-articles {
+    .content-index {
+        margin-top: 50px;
+
+        .user-articles-headline {
+            margin-left: 20px;
+            margin-bottom: 45px;
+            color: white;
+            font-weight: bold;
+        }
+    }
+}

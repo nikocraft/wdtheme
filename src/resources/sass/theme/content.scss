@@ -50,10 +50,6 @@
 
             .post-author-image {
                 margin-right: 15px;
-
-                @media (max-width: $smallDevices) {
-                    display: none;
-                }
             }
 
             .post-author-image img {
@@ -111,6 +107,7 @@
             font-size: 55px;
             margin-bottom: 40px;
             color: white;
+            line-height: 55px;
         }
 
         .hero-tagline {
@@ -123,6 +120,8 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        margin-left: -10px;
+        margin-right: -10px;
         .post {
             display: flex;
             flex-direction: column;
@@ -130,11 +129,45 @@
             @include post-mixin;
             width: 23.8%;
             padding: 35px;
-            border-radius: 10px;
-            background: #23263a;
+            border-radius: 8px;
+            background: $secondaryBKGColor;
             transition: .75s;
             margin: 8px;
             min-height: 380px;
+
+            .post-meta {
+                .post-taxonomy {
+                    .post-term {
+                        padding: 2px;
+                        border: 0px;
+
+                        &:hover {
+                            border: 0px;
+                        }
+                    }
+                }
+            }
+
+            @media (max-width: 1579px) {
+                width: 31.5%;
+            }
+
+            @media (max-width: 1500px) {
+                width: 31.5%;
+            }
+
+            @media (max-width: 1423px) {
+                width: 31%;
+            }
+
+            @media (max-width: 1199px) {
+                width: 48.5%;
+            }
+
+            @media (max-width: 1076px) {
+                width: 100%;
+                min-height: auto;
+            }
 
             &:hover {
                 background: #ff4a57;
@@ -182,7 +215,7 @@
             font-size: 13px;
 
             .post-author {
-                margin-bottom: 25px;
+                margin-bottom: 35px;
             }
         }
 
@@ -202,7 +235,7 @@
             .post-title {
                 font-weight: 700;
                 text-align: center;
-                margin-bottom: 25px;
+                margin-bottom: 35px;
                 color: #fff;
                 font-family: Poppins;
             }

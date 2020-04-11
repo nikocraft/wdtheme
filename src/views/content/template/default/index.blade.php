@@ -13,7 +13,7 @@
 
             <div class="post-meta">
                 <div class="post-author">
-                    <div class="post-author-image"><img style="width: 50px;" class="img-responsive" src="{{ get_gravatar($post->author->email, 100, 'mp') }}" /></div>
+                    <div class="post-author-image"><img style="width: 50px;" class="img-responsive" src="{{ get_gravatar($post->author->email, 50, 'mp') }}" /></div>
                     <div class="post-author-detail">
                         <div class="post-author-label">
                             Author

@@ -10,7 +10,7 @@
                 <span>{{ errors.first('body') }}</span>
             </div>
 
-            <div v-if="!loggedUser || loggedUser" class="comment-data">
+            <div v-if="!loggedUser" class="comment-data">
                 <div class="comment-data-item">
                     <input v-validate="'required'" data-vv-as="Name" name="name" type="text" class="form-input" v-model="name" placeholder="Type Your Name">
                     <span>{{ errors.first('name') }}</span>

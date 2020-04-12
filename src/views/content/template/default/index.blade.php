@@ -4,23 +4,30 @@
     @foreach ( $posts as $post )
         <div class="post">
             <div class="post-content">
-                <{{ get_theme_setting('content.general.postTitle.size') }} class="post-title"><a class="post-title-link" href="/{{ $post->type->slug }}/{{ $post->slug }}">{{ $post->title }}</a></{{ get_theme_setting('content.general.postTitle.size') }}>
-
-                <div class="post-excerpt">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-                </div>
+                <h3 class="post-title"><a class="post-title-link" href="/{{ $post->type->slug }}/{{ $post->slug }}">{{ $post->title }}</a></h3>
+                @if(has_excerpt($post))
+                    <div class="post-excerpt">
+                        {!! get_excerpt($post, get_theme_setting('content.general.excerptLength')) !!}
+                    </div>
+                @elseif(has_text_block($post))
+                    <div class="post-excerpt text-block">
+                        {!! get_text_block($post) !!}
+                    </div>
+                @endif
             </div>
 
             <div class="post-meta">
-                <div class="post-author">
-                    <div class="post-author-image"><img style="width: 50px;" class="img-responsive" src="{{ get_gravatar($post->author->email, 50, 'mp') }}" /></div>
-                    <div class="post-author-detail">
-                        <div class="post-author-label">
-                            Author
+                <a href="\user\{{ $post->author->id }}">
+                    <div class="post-author">
+                        <div class="post-author-image"><img style="width: 50px;" class="img-responsive" src="{{ get_gravatar($post->author->email, 50, 'mp') }}" /></div>
+                        <div class="post-author-detail">
+                            <div class="post-author-label">
+                                Author
+                            </div>
+                            <div class="post-author-name">{{ $post->author->firstname }} {{ $post->author->lastname }}</div>
                         </div>
-                        <div class="post-author-name">{{ $post->author->firstname }} {{ $post->author->lastname }}</div>
                     </div>
-                </div>
+                </a>
                 <div class="post-taxonomy">
                     @taxonomy([
                         'taxonomy' => 'Tags',

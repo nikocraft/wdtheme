@@ -14,18 +14,18 @@
 <div class="post">
     @if($showTitle)
         <div class="breadcrumbs">
-            
-
             <div class="post-meta">
-                <div class="post-author">
-                    <div class="post-author-image"><img style="width: 70px;" class="img-responsive" src="{{ get_gravatar($content->author->email, 70, 'mp') }}" /></div>
-                    <div class="post-author-detail">
-                        <div class="post-author-label">
-                            Author
+                <a href="\user\{{ $content->author->id }}">
+                    <div class="post-author">
+                        <div class="post-author-image"><img style="width: 70px;" class="img-responsive" src="{{ get_gravatar($content->author->email, 70, 'mp') }}" /></div>
+                        <div class="post-author-detail">
+                            <div class="post-author-label">
+                                Author
+                            </div>
+                        <div class="post-author-name">{{ $content->author->firstname }} {{ $content->author->lastname }}</div>
                         </div>
-                    <div class="post-author-name"><a href="\user\{{ $content->author->id }}">{{ $content->author->firstname }} {{ $content->author->lastname }}</a></div>
                     </div>
-                </div>
+                </a>
             </div>
 
             <h1 class="post-title">{{ $content->title }}</h1>

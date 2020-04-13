@@ -7,7 +7,7 @@
                 <h3 class="post-title"><a class="post-title-link" href="/{{ $post->type->slug }}/{{ $post->slug }}">{{ $post->title }}</a></h3>
                 @if(has_excerpt($post))
                     <div class="post-excerpt">
-                        {!! get_excerpt($post, get_theme_setting('content.general.excerptLength')) !!}
+                        {!! get_excerpt($post, 300) !!}
                     </div>
                 @elseif(has_text_block($post))
                     <div class="post-excerpt text-block">

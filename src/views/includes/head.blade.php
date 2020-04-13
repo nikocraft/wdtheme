@@ -22,17 +22,10 @@
 <!-- Google Analytics Tracking Code End -->
 
 @php
-    $fontResources = get_theme_setting('resources.fonts');
     $iconResources = get_theme_setting('resources.icons');
     $themeFolder = get_theme_folder();
 @endphp
 
-<!-- Theme Font Resource Start -->
-@foreach ( $fontResources as $fontResource )
-    @if($fontResource)
-        <link rel="stylesheet" href="{{ $fontResource }}">
-    @endif
-@endforeach
 <!-- Theme Font Resource End -->
 
 <!-- Theme Icon Resource Start -->

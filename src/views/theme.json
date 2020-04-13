@@ -36,62 +36,6 @@
                             "default": "1480px",
                             "type": "string",
                             "meta": { "uiType": "input" }
-                        },
-                        {
-                            "label": "Background Color",
-                            "key": "backgroundColor",
-                            "default": "",
-                            "type": "string",
-                            "meta": { "uiType": "color" }
-                        }
-                    ]
-                },
-                {
-                    "label": "Page Body",
-                    "key": "body",
-                    "type": "section",
-                    "settings": [
-                        {
-                            "label": "Background Color",
-                            "key": "backgroundColor",
-                            "default": "#222430",
-                            "type": "string",
-                            "meta": { "uiType": "color" }
-                        }
-                    ]
-                },
-                {
-                    "label": "Font",
-                    "key": "font",
-                    "type": "section",
-                    "settings": [
-                        {
-                            "label": "Family",
-                            "key": "family",
-                            "default": "sans-serif",
-                            "type": "string",
-                            "meta": { "uiType": "input" }
-                        },
-                        {
-                            "label": "Color",
-                            "key": "color",
-                            "default": "#dfdfdf",
-                            "type": "string",
-                            "meta": { "uiType": "color" }
-                        },
-                        {
-                            "label": "Size",
-                            "key": "size",
-                            "default": "15px",
-                            "type": "string",
-                            "meta": { "uiType": "input" }
-                        },
-                        {
-                            "label": "Line Height",
-                            "key": "lineHeight",
-                            "default": "25px",
-                            "type": "string",
-                            "meta": { "uiType": "input" }
                         }
                     ]
                 }
@@ -102,35 +46,6 @@
             "key": "content",
             "type": "section",
             "settings": [
-                {
-                    "label": "General",
-                    "key": "general",
-                    "type": "section",
-                    "settings": [
-                        {
-                            "label": "Excerpt Length",
-                            "key": "excerptLength",
-                            "default": "300",
-                            "type": "string",
-                            "meta": { "uiType": "input" }
-                        },
-                        {
-                            "label": "Featured Image",
-                            "key": "featuredImage",
-                            "default": "300",
-                            "type": "section",
-                            "settings": [
-                                {
-                                    "label": "Single Page Height",
-                                    "key": "singlePageHeight",
-                                    "default": "400px",
-                                    "type": "string",
-                                    "meta": { "uiType": "input", "info": "Leave empty for full height" }
-                                }
-                            ]
-                        }
-                    ]
-                },
                 {
                     "label": "Pages",
                     "key": "pages",
@@ -280,27 +195,6 @@
             "type": "section",
             "settings": [
                 {
-                    "label": "Fonts",
-                    "key": "fonts",
-                    "type": "section",
-                    "settings": [
-                        {
-                            "label": "Primary Font Source",
-                            "key": "source-1",
-                            "default": "",
-                            "type": "string",
-                            "meta": { "uiType": "input" }
-                        },
-                        {
-                            "label": "Secondary Font Source",
-                            "key": "source-2",
-                            "default": "",
-                            "type": "string",
-                            "meta": { "uiType": "input" }
-                        }
-                    ]
-                },
-                {
                     "label": "Icons",
                     "key": "icons",
                     "type": "section",
@@ -341,7 +235,6 @@
                     "type": "section",
                     "settings": [
                         {
-                
                             "label": "Meta Description",
                             "key": "description",
                             "default": "",
@@ -464,6 +357,34 @@
             "meta": { "hidden": true },
             "settings": [
                 {
+                    "label": "Header",
+                    "key": "header",
+                    "default": "Header",
+                    "type": "string",
+                    "meta": { "layout": "horisontal" }
+                },
+                {
+                    "label": "Footer",
+                    "key": "footer",
+                    "default": "Footer",
+                    "type": "string",
+                    "meta": { "layout": "horisontal" }
+                },
+                {
+                    "label": "Above Post",
+                    "key": "abovePost",
+                    "default": "Above Post",
+                    "type": "string",
+                    "meta": { "layout": "horisontal" }
+                },
+                {
+                    "label": "Below Post",
+                    "key": "belowPost",
+                    "default": "Below Post",
+                    "type": "string",
+                    "meta": { "layout": "horisontal" }
+                },
+                {
                     "label": "Sidebar",
                     "key": "sidebar",
                     "default": "Sidebar",
@@ -482,6 +403,13 @@
                     "label": "Header",
                     "key": "header",
                     "default": "Header",
+                    "type": "string",
+                    "meta": { }
+                },
+                {
+                    "label": "Footer",
+                    "key": "footer",
+                    "default": "Footer",
                     "type": "string",
                     "meta": { }
                 }

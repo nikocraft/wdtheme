@@ -1,17 +1,17 @@
 {
-    "name"              : "Webdevs",
+    "name"              : "Wdtheme",
     "releases_url"      : "https://github.com/nikocraft/wdtheme/raw/master/releases.json",
     "download_url"      : "https://github.com/nikocraft/wdtheme/releases/download",
     "namespace"         : "com.reimaginedworks.wdtheme",
     "version"           : "1.1.0",
-    "folder"            : "webdevs",
+    "folder"            : "wdtheme",
     "tags"              : [ "minimalistic", "clean", "modern", "portal" ],
     "author"            : "Niko Craft",
     "org"               : "Reimagined Works",
     "description"       : "Web Devs...",
     "url"               : "www.laraone.com",
-    "views-path"        : "webdevs",
-    "asset-path"        : "themes/webdevs",
+    "views-path"        : "wdtheme",
+    "asset-path"        : "themes/wdtheme",
     "settings": [
         {
             "label": "Global",

@@ -36,6 +36,7 @@ Vue.directive('localdate', localdateDirective)
 Vue.component('comments-tree', CommentsTree)
 Vue.component('comment-box', CommentBox)
 
+
 const app = new Vue({
     store,
     data: {

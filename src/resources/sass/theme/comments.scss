@@ -1,0 +1,148 @@
+/** Comments */
+.load-comments-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.comments {
+    margin-top: 35px;
+    font-family: Nunito;
+}
+
+.comment-box {
+    position: relative;
+    margin-top: 15px;
+
+    h3 {
+        margin-top: 0px;
+    }
+}
+
+.comment-form {
+    padding: 10px 0px;
+    font-size: 14px;
+
+    .form-input {
+        display: block;
+        font-size: 16px;
+        line-height: 1.42;
+        color: #fff;
+        width: 100%;
+        height: 60px;
+        padding: 20px 25px;
+        background-color: $secondaryBKGColor;
+        border: 0px solid #ccc;
+        border-radius: 4px;
+        box-shadow: inset 0 0px 0px rgba(0,0,0,0);
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+
+
+    .comment-box-header {
+        margin-bottom: 10px;
+    }
+
+    .comment-data {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    
+        @media (max-width: $mediumDevices) {
+            display: block;
+        }
+    
+        .comment-data-item {
+            flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: 49%;
+    
+            @media (max-width: $mediumDevices) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .comment-body {
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        textarea {
+            height: 165px;
+        }
+    }
+
+    .comment-btn {
+        display: flex; 
+        justify-content: flex-end;
+    }
+}
+
+.comment {
+    font-size: 16px;
+    line-height: 28px;
+
+    .parent-comment {
+        padding: 20px 40px;
+        background: $secondaryBKGColor;
+        margin-bottom: 30px;
+        border-radius: 5px;
+
+        .comment-header {
+            margin-bottom: 5px;
+        }
+
+        .comment-datetime {
+            font-size: 13px;
+        }
+
+        .comment-footer {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .comment-name {
+            font-weight: bold;
+            font-size: 15px;
+        }
+        
+        .comment-author {
+            color: rgb(61, 120, 168);
+            font-weight: bold;
+            font-size: 15px;
+        }
+        
+        .comment-member {
+            color: rgb(59, 109, 218);
+            font-weight: bold;
+            font-size: 15px;
+        }
+        
+        .comment-reply {
+            align-self: flex-end;
+            cursor: pointer;
+            display: inline-block;
+            margin-right: 1.1em;
+            color: $primaryBtnColor;
+            text-decoration: none;
+            font-size: 16px;
+            transition: .75s;
+        }
+        
+        .comment-reply:hover {
+            color: white;
+        }
+    }
+    
+    .nested-comment {
+        padding-left: 40px;
+        margin-top: 5px;
+        margin-bottom: 20px;
+    }
+}
+
+.nested-comment {
+    .comment {
+        margin-bottom: 15px;
+    }
+}

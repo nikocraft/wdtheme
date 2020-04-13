@@ -1,13 +1,7 @@
 <div class="logo">
-    @if(get_theme_setting('header.logo.type') == 'text')
-        <a class="logo-link" href="{{ url('/') }}">
-            {{ get_website_setting('website.general.title') }}
-        </a>
-    @else
-        <a class="logo-link" href="{{ url('/') }}">
-            <img src="{{ get_theme_setting('header.logo.logoImage') }}" class="img-responsive" alt="logo">
-        </a>
-    @endif
+    <a class="logo-link" href="{{ url('/') }}">
+        <div class="logo-web">Web</div><div class="logo-devs">Devs</div>
+    </a>
 </div>
 
 <div class="hamburger-btn-wrapper">

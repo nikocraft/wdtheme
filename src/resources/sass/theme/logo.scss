@@ -1,0 +1,44 @@
+
+/** Logo */
+.logo {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $smallDevices) {
+        flex: 3;
+    }
+
+    .logo-link {
+        font-family: sans-serif;
+        font-size: $logoFontSize;
+        color: $logoFontColor;
+        height: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+        font-variant: all-petite-caps;
+
+        .logo-web {
+            color: white;
+            transition: .75s;
+        }
+
+        .logo-devs {
+            color: $logoFontHoverColor;
+            font-style: italic;
+            transition: .75s;
+        }
+
+        &:hover {
+            .logo-web {
+                color: $logoFontHoverColor;
+            }
+            .logo-devs {
+                color: white;
+            }
+        }
+    }
+}

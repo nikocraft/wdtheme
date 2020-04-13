@@ -2,12 +2,12 @@ body {
     font-family: $bodyFontFamily;
     font-size: $bodyFontSize;
     line-height: $bodyLineHeight;
-    background-color: $bodyBackgroundColor;
+    background-color: $primaryBackgroundColor;
     color: $bodyTextColor;
     overflow-x: hidden;
 }
 
-.ikigai {
+.webdev_theme {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -19,7 +19,7 @@ header {
 }
 
 footer {
-    background-color: $footerBackgroundColor;
+    background-color: $primaryBackgroundColor;
     color: $footerTextColor;
     font-size: $footerFontSize;
 
@@ -35,6 +35,8 @@ footer {
 .content-wrap {
     display: flex;
     flex: 1;
+    flex-direction: column;
+    // max-width: 1080px;
 
     @media (max-width: $mediumDevices) {
         display: block;

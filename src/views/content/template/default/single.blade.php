@@ -13,9 +13,37 @@
 
 <div class="post">
     @if($showTitle)
-        <{{ get_theme_setting('content.general.postTitle.size') }} class="post-title">{{ $content->title }}</{{ get_theme_setting('content.general.postTitle.size') }}>
+        <div class="breadcrumbs">
+            <div class="post-meta">
+                <a href="\user\{{ $content->author->id }}">
+                    <div class="post-author">
+                        <div class="post-author-image"><img style="width: 70px;" class="img-responsive" src="{{ get_gravatar($content->author->email, 70, 'mp') }}" /></div>
+                        <div class="post-author-detail">
+                            <div class="post-author-label">
+                                Author
+                            </div>
+                        <div class="post-author-name">{{ $content->author->firstname }} {{ $content->author->lastname }}</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <h1 class="post-title">{{ $content->title }}</h1>
+
+
+            <div class="post-meta">
+                <div class="post-taxonomy">
+                    @taxonomy([
+                        'taxonomy' => 'Tags',
+                        'post' => $content,
+                        'commaSeparate' => false
+                    ]) @endtaxonomy
+                </div>
+            </div>
+
+        </div>
     @endif
-    @if($showMetaData)
+    {{-- @if($showMetaData)
         <div class="post-meta">
             <div class="post-meta-detail">
                 Posted on {{ $content->created_at->format('Y-m-d') }} by
@@ -26,7 +54,7 @@
                 @endif
             </div>
         </div>
-    @endif
+    @endif --}}
 
     @if($content->featuredimage && !empty(get_theme_setting('content.general.featuredImage.singlePageHeight')))
         <div class="post-featured-image" style='background-image: url({{ $content->featuredimage->original }});'></div>
@@ -34,23 +62,13 @@
         <img src="{{ $content->featuredimage->original }}" class="post-featured-image img-responsive" alt="">
     @endif
 
-    @include('content/template/default/partials/content')
-
-    <div class="post-meta">
-        <div class="post-meta-detail">
-            <div class="post-taxonomy">
-                @taxonomy([
-                    'taxonomy' => 'Tags',
-                    'post' => $content,
-                    'commaSeparate' => false
-                ]) @endtaxonomy
-            </div>
-        </div>
+    <div class="single-post-content">
+        @include('content/template/default/partials/content')
     </div>
 
-    @if($showAuthorBio)
+    {{-- @if($showAuthorBio)
         <div class="post-author">
-            <div class="post-author-image"><img style="width: 120px;" class="img-responsive" src="{{ get_gravatar($content->author->email) }}" /></div>
+            <div class="post-author-image"><img style="width: 120px;" class="img-responsive" src="{{ get_gravatar($content->author->email, 100, 'mp') }}" /></div>
             <div class="post-author-details">
                 @if(get_website_setting('website.members.userDisplayName') == 'fullname')
                     <div class="post-author-name">About {{ $content->author->firstname }} {{ $content->author->lastname }}</div>
@@ -60,7 +78,7 @@
                 <div class="post-author-bio">{{ $content->author->bio }}</div>
             </div>
         </div>
-    @endif
+    @endif --}}
 </div>
 
 

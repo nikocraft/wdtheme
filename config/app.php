@@ -67,6 +67,6 @@ return [
     | Relative path where Phoenix is, used to sync the themes while developing
     |
     */
-    'phoenix_path' => env('PHOENIX_PATH', '../phoenix'),
+    'phoenix_path' => env('PHOENIX_PATH', '../webdevs.se'),
 
 ];

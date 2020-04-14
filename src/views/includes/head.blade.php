@@ -36,6 +36,13 @@
 @endforeach
 <!-- Theme Icon Resource End -->
 
+@if(get_theme_setting('syntaxHighlighter.enabled'))
+<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/themes/prism-{{get_theme_setting('syntaxHighlighter.theme')}}.min.css" rel="stylesheet" />
+    @if(get_theme_setting('syntaxHighlighter.lineNumbers'))
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet" />
+    @endif
+@endif
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400;1,700" rel="stylesheet">
 

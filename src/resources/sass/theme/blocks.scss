@@ -19,6 +19,21 @@
     }
 }
 
+/* Code Block */
+.code-block {
+    pre[class*=language-] {
+        background: #252834;
+    }
+
+    .line-numbers .line-numbers-rows {
+        border-right: 1px solid #3c3f52;
+    }
+
+    .line-numbers-rows>span:before {
+        color: #676975;
+    }
+}
+
 /* Columns Block */
 .columns-block {
     display: flex;

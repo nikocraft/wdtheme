@@ -7,17 +7,17 @@
                 <h3 class="post-title"><a class="post-title-link" href="/{{ $post->type->slug }}/{{ $post->slug }}">{{ $post->title }}</a></h3>
                 @if(has_excerpt($post))
                     <div class="post-excerpt">
-                        {!! get_excerpt($post, 300) !!}
+                        {!! get_excerpt($post, 200) !!}
                     </div>
                 @elseif(has_text_block($post))
                     <div class="post-excerpt text-block">
-                        {!! get_text_block($post) !!}
+                        {!! get_text_block($post, 200) !!}
                     </div>
                 @endif
             </div>
 
             <div class="post-meta">
-                <a href="\user\{{ $post->author->id }}">
+                <a href="\user\{{ $post->author->slug }}">
                     <div class="post-author">
                         <div class="post-author-image"><img style="width: 50px;" class="img-responsive" src="{{ get_gravatar($post->author->email, 50, 'mp') }}" /></div>
                         <div class="post-author-detail">

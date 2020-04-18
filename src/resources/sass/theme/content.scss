@@ -207,24 +207,12 @@
             line-height: 28px;
         }
 
-        .post-meta {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 10px;
-            font-size: 13px;
-
-            .post-author {
-                margin-bottom: 35px;
-            }
-        }
-
         .post-featured-image {
             border-radius: 4px;
             margin-bottom: 30px;
         }
 
-        .breadcrumbs {
+        .post-header {
             margin-top: 100px;
             margin-bottom: 40px;
             display: flex;
@@ -232,10 +220,47 @@
             align-items: center;
             font-family: Poppins;
 
+            .post-meta {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 10px;
+                font-size: 13px;
+
+                .post-author {
+                    display: flex;
+                    margin-bottom: 15px;
+                    flex-direction: column;
+                    align-items: center;
+        
+                    .post-author-image {
+                        margin-bottom: 15px;
+                    }
+        
+                    .post-author-image img {
+                        border-radius: 50%;
+                    }
+        
+                    .post-author-detail {
+                        display: block;
+        
+                        .post-author-label {
+                            color: #dbe1e8;
+                            font-weight: 800;
+                        }
+        
+                        .post-author-name {
+                            color: white;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+
             .post-title {
                 font-weight: 700;
                 text-align: center;
-                margin-bottom: 35px;
+                margin-bottom: 20px;
                 color: #fff;
                 font-family: Poppins;
             }

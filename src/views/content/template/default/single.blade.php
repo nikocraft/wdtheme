@@ -13,15 +13,12 @@
 
 <div class="post">
     @if($showTitle)
-        <div class="breadcrumbs">
+        <div class="post-header">
             <div class="post-meta">
                 <a href="\user\{{ $content->author->id }}">
                     <div class="post-author">
-                        <div class="post-author-image"><img style="width: 70px;" class="img-responsive" src="{{ get_gravatar($content->author->email, 70, 'mp') }}" /></div>
+                        <div class="post-author-image"><img style="width: 90px;" class="img-responsive" src="{{ get_gravatar($content->author->email, 90, 'mp') }}" /></div>
                         <div class="post-author-detail">
-                            <div class="post-author-label">
-                                Author
-                            </div>
                         <div class="post-author-name">{{ $content->author->firstname }} {{ $content->author->lastname }}</div>
                         </div>
                     </div>

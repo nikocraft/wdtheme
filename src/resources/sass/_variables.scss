@@ -1,4 +1,6 @@
 // media query break points
+$xxLargeDevices:       1400px;
+$xLargeDevices:        1300px;
 $largeDevices:         1200px;
 $mediumDevices:        992px;
 $smallDevices:         768px;
@@ -23,6 +25,11 @@ $bodyFontSize: 16px;
 $bodyLineHeight: 26px;
 $bodyTextColor: #dfdfdf;
 $bodyFontFamily: Poppins;
+
+// Layout widths
+$contentWidth: 75%;
+$sidebarWidth: 25%;
+
 
 // Background Colors
 $primaryBackgroundColor: #222430;

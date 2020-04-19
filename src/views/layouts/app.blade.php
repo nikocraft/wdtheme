@@ -7,6 +7,7 @@
 <body>
     <div class="webdev_theme" id="app">
         @include('includes/header')
+        @yield('hero')
         @yield('content')
         @include('includes/footer')
     </div>

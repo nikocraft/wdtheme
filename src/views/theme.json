@@ -3,7 +3,7 @@
     "releases_url"      : "https://github.com/nikocraft/wdtheme/raw/master/releases.json",
     "download_url"      : "https://github.com/nikocraft/wdtheme/releases/download",
     "namespace"         : "com.reimaginedworks.wdtheme",
-    "version"           : "1.3.0",
+    "version"           : "1.4.0",
     "folder"            : "wdtheme",
     "tags"              : [ "minimalistic", "clean", "modern", "portal" ],
     "author"            : "Niko Craft",
@@ -105,6 +105,132 @@
                 {
                     "label": "Posts",
                     "key": "posts",
+                    "type": "section",
+                    "settings": [
+                        {
+                            "label": "Layout",
+                            "key": "layout",
+                            "type": "section",
+                            "settings": [
+                                {
+                                    "label": "Single Page",
+                                    "key": "singlePage",
+                                    "default": "content-fullwidth",
+                                    "type": "string",
+                                    "meta": { "uiType": "contentLayoutSelector" }
+                                },
+                                {
+                                    "label": "Index Page",
+                                    "key": "indexPage",
+                                    "default": "content-fullwidth",
+                                    "type": "string",
+                                    "meta": { "uiType": "contentLayoutSelector" }
+                                }
+                            ]
+                        },
+                        {
+                            "label": "Settings",
+                            "key": "settings",
+                            "type": "section",
+                            "settings": [
+                                {
+                                    "label": "Show Title",
+                                    "key": "showTitle",
+                                    "default": true,
+                                    "type": "boolean",
+                                    "meta": { "uiType": "boolSelect" }
+                                },
+                                {
+                                    "label": "Show Meta Data",
+                                    "key": "showMetaData",
+                                    "default": true,
+                                    "type": "boolean",
+                                    "meta": { "uiType": "boolSelect" }
+                                },
+                                {
+                                    "label": "Show Author Bio",
+                                    "key": "showAuthorBio",
+                                    "default": true,
+                                    "type": "boolean",
+                                    "meta": { "uiType": "boolSelect" }
+                                },
+                                {
+                                    "label": "Show Comments",
+                                    "key": "showComments",
+                                    "default": true,
+                                    "type": "boolean",
+                                    "meta": { "uiType": "boolSelect" }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "label": "Interviews",
+                    "key": "interviews",
+                    "type": "section",
+                    "settings": [
+                        {
+                            "label": "Layout",
+                            "key": "layout",
+                            "type": "section",
+                            "settings": [
+                                {
+                                    "label": "Single Page",
+                                    "key": "singlePage",
+                                    "default": "content-fullwidth",
+                                    "type": "string",
+                                    "meta": { "uiType": "contentLayoutSelector" }
+                                },
+                                {
+                                    "label": "Index Page",
+                                    "key": "indexPage",
+                                    "default": "content-fullwidth",
+                                    "type": "string",
+                                    "meta": { "uiType": "contentLayoutSelector" }
+                                }
+                            ]
+                        },
+                        {
+                            "label": "Settings",
+                            "key": "settings",
+                            "type": "section",
+                            "settings": [
+                                {
+                                    "label": "Show Title",
+                                    "key": "showTitle",
+                                    "default": true,
+                                    "type": "boolean",
+                                    "meta": { "uiType": "boolSelect" }
+                                },
+                                {
+                                    "label": "Show Meta Data",
+                                    "key": "showMetaData",
+                                    "default": true,
+                                    "type": "boolean",
+                                    "meta": { "uiType": "boolSelect" }
+                                },
+                                {
+                                    "label": "Show Author Bio",
+                                    "key": "showAuthorBio",
+                                    "default": true,
+                                    "type": "boolean",
+                                    "meta": { "uiType": "boolSelect" }
+                                },
+                                {
+                                    "label": "Show Comments",
+                                    "key": "showComments",
+                                    "default": true,
+                                    "type": "boolean",
+                                    "meta": { "uiType": "boolSelect" }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "label": "Meetups",
+                    "key": "meetups",
                     "type": "section",
                     "settings": [
                         {

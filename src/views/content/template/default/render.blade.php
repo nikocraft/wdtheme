@@ -11,9 +11,28 @@
             $contentLayout = get_theme_setting('content.' . $contentType->slug . '.layout.indexPage');
             break;
     }
+    if(is_null($contentLayout)) {
+        $contentLayout = "content-fullwidth";
+    }
 @endphp
 
 @include('includes/seo')
+
+@section('hero')
+    @if($pageType == 'index')
+        @switch($contentType->front_slug)
+            @case("posts")
+                <div class="hero"><div class="hero-tagline">Stay up to date on the latest in web development.</div></div>
+                @break
+            @case("interviews")
+                <div class="hero"><div class="hero-tagline">Interviews with interesting people in IT.</div></div>
+                @break
+            @case("meetups")
+                <div class="hero"><div class="hero-tagline">Our web developer meetups.</div></div>
+                @break
+        @endswitch
+    @endif
+@endsection
 
 @section('content')
     @switch($contentLayout)
@@ -31,7 +50,3 @@
             @break
     @endswitch
 @endsection
-
-@push('scripts')
-
-@endpush

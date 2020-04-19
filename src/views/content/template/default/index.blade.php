@@ -1,5 +1,3 @@
-<div class="hero"><div class="hero-welcome">Welcome to WebDevs!</div><div class="hero-tagline">Learn about latest in web development.</div></div>
-
 <div class="posts">
     @foreach ( $posts as $post )
         <div class="post">
@@ -7,11 +5,11 @@
                 <h3 class="post-title"><a class="post-title-link" href="/{{ $post->type->slug }}/{{ $post->slug }}">{{ $post->title }}</a></h3>
                 @if(has_excerpt($post))
                     <div class="post-excerpt">
-                        {!! get_excerpt($post, 200) !!}
+                        {!! get_excerpt($post, 300) !!}
                     </div>
                 @elseif(has_text_block($post))
                     <div class="post-excerpt text-block">
-                        {!! get_text_block($post, 200) !!}
+                        {!! get_text_block($post, 300) !!}
                     </div>
                 @endif
             </div>
@@ -39,4 +37,4 @@
         </div>
     @endforeach
 </div>
-{{ $posts->links() }}
+{{-- {{ $posts->links() }} --}}

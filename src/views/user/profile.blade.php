@@ -3,7 +3,7 @@
 {{-- @include('includes/seo') --}}
 
 @section('content')
-<div class="content-wrap">
+<div class="user-wrap">
     <div class="user-profile">
         <div class="container">
             <div class="user-profile" style="display: flex; flex-direction: column; align-items: center;">
@@ -28,11 +28,11 @@
                                 <h3 class="post-title"><a class="post-title-link" href="/{{ $post->type->slug }}/{{ $post->slug }}">{{ $post->title }}</a></h3>
                                 @if(has_excerpt($post))
                                     <div class="post-excerpt">
-                                        {!! get_excerpt($post, 200) !!}
+                                        {!! get_excerpt($post, 300) !!}
                                     </div>
                                 @elseif(has_text_block($post))
                                     <div class="post-excerpt text-block">
-                                        {!! get_text_block($post, 200) !!}
+                                        {!! get_text_block($post, 300) !!}
                                     </div>
                                 @endif
                             </div>

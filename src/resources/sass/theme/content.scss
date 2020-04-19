@@ -94,27 +94,27 @@
     }
 }
 
-.content-index {
-    .hero {
-        min-height: 150px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 50px;
-        flex-direction: column;
-        
-        .hero-welcome {
-            font-size: 55px;
-            margin-bottom: 40px;
-            color: white;
-            line-height: 55px;
-        }
-
-        .hero-tagline {
-            font-size: 23px;
-        }
+.hero {
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    flex-direction: column;
+    
+    .hero-welcome {
+        font-size: 55px;
+        margin-bottom: 40px;
+        color: white;
+        line-height: 55px;
     }
 
+    .hero-tagline {
+        font-size: 23px;
+    }
+}
+
+.content-index {
     margin-bottom: 30px;
     .posts {
         display: flex;
@@ -127,13 +127,13 @@
             flex-direction: column;
             justify-content: space-between;
             @include post-mixin;
-            width: 23.8%;
-            padding: 35px;
+            width: 31.8%;
+            padding: 20px;
             border-radius: 8px;
             background: $secondaryBKGColor;
             transition: .75s;
             margin: 8px;
-            min-height: 380px;
+            min-height: 150px;
 
             .post-meta {
                 .post-taxonomy {

@@ -18,7 +18,11 @@
     width: $containerWidth;
     max-width: $containerMaxWidth;
 
-    @media (max-width: $largeDevices) {
+    @media (max-width: $xxLargeDevices) {
+        width: 95%;
+    }
+
+    @media (max-width: $xLargeDevices) {
         width: 100%;
     }
 }

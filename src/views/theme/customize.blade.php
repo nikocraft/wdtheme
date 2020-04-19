@@ -4,13 +4,13 @@
     @style([ 'property' => 'max-width', 'value' => data_get($settings, 'global.container.maxWidth') ])
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
     .container {
-        width: 90%;
+        width: 95%;
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1300px) {
     .container {
         width: 100%;
     }

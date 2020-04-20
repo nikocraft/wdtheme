@@ -1,7 +1,7 @@
 <template>
     <div v-if="commentsLoaded" class="comments">
         <template v-if="rootComments.length">
-            <h3 style="margin-bottom: 30px;">{{ rootComments.length }} comment(s)</h3>
+            <h3 style="margin-bottom: 30px;">Comments</h3>
             <!-- our author: {{ contentAuthorId }} -->
             <comments-tree v-for="comment in rootComments"
                 :comment="comment"

@@ -5,7 +5,7 @@
 </div>
 
 <div class="hamburger-btn-wrapper">
-    <button id="hamburger-btn" onClick="theme.hamburgerToggle(this.id)" class="hamburger {{ get_theme_setting('header.hamburgerButton.animation') }}" type="button">
+    <button id="hamburger-btn" onClick="theme.hamburgerToggle(this.id)" class="hamburger hamburger--elastic" type="button">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>

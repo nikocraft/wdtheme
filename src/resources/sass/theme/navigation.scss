@@ -146,7 +146,7 @@
             flex-wrap: wrap;
     
             a, span {
-                font-size: 20px;
+                font-size: 25px;
                 color: white;
                 flex: 1;
                 padding: $hamburgerMenuItemPadding;
@@ -182,6 +182,27 @@
 
     .dropdown-button-close {
         display: none;
+    }
+}
+
+.hamburger-logo {
+    font-family: sans-serif;
+    font-size: 38px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-variant: all-petite-caps;
+    padding: 20px;
+    margin-top: 30px;
+
+    .logo-web {
+        color: white;
+    }
+
+    .logo-devs {
+        color: $logoFontHoverColor;
+        font-style: italic;
     }
 }
 

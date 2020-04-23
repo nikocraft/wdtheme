@@ -1,4 +1,6 @@
-<div class="website-title">WebDevs</div>
+<div class="hamburger-logo">
+    <div class="logo-web">Web</div><div class="logo-devs">Devs</div>
+</div>
 @if($menu)
     <div class="menu">
         @foreach ($menu as $key => $item)

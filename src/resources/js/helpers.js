@@ -33,12 +33,12 @@ const hamburgerToggle = (id) => {
     if(hasClass(hamburgerBtn, 'is-active')) {
         hamburgerMenu.style.display = 'block';
         hamburgerMenu.setAttribute('class', '');
-        hamburgerMenu.setAttribute('class', 'animated slow ' + window.themeSettings.hamburgerMenu.inAnimation);
+        hamburgerMenu.setAttribute('class', 'animated slow bounceInRight');
     } else {
         hamburgerMenu.setAttribute('class', '')
         window.setTimeout(function() {
             let hamburgerMenu = document.getElementById('hamburger-menu');
-            hamburgerMenu.setAttribute('class', 'animated ' + window.themeSettings.hamburgerMenu.outAnimation);
+            hamburgerMenu.setAttribute('class', 'animated bounceOutUp');
         }, 200);
         window.setTimeout(function() {
             let hamburgerMenu = document.getElementById('hamburger-menu');

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @php
-    $templatePath = 'content/template/default';
+    $templatePath = 'content/template/interviews';
 
     switch ($pageType) {
         case 'single':

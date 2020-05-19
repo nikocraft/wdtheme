@@ -19,6 +19,7 @@
         .post-title {
             font-weight: 700;
             margin: 0px 0px 10px 0px;
+            text-align: center;
         }
     
         .post-title-link {
@@ -135,7 +136,7 @@
         margin-right: -15px;
         justify-content: center;
 
-        .post {
+        .post, .interview {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -191,6 +192,52 @@
                 justify-content: space-between;
             }
         }
+
+        .interview {
+            width: 22%;
+            padding: 0px;
+            margin: 10px;
+
+            @media (max-width: $largeDevices) {
+                width: 28%;
+            }
+
+            @media (max-width: $mediumDevices) {
+                width: 30.5%;
+            }
+
+            @media (max-width: $smallDevices) {
+                width: 42.5%;
+                min-height: auto;
+            }
+
+            @media (max-width: $extraSmallDevices) {
+                width: 100%;
+                min-height: auto;
+            }
+
+            .post-meta {
+                padding: 20px;
+                margin-top: 0px;
+            }
+
+            .post-content {
+                .post-title {
+                    padding: 10px 20px 5px 20px;
+                }
+
+                .post-featured-image {
+                    object-fit: cover;
+                }
+            }
+
+            .post-image-container {
+                .post-featured-image {
+                    height: auto;
+                    border-radius: 4px;
+                }
+            }
+        }
     }
 }
 
@@ -199,7 +246,7 @@
     max-width: 980px;
     margin: 0 auto;
 
-    .post {
+    .post, .interview {
         @include post-mixin;
 
         div[class*="-block"] {
@@ -264,6 +311,43 @@
                 margin-bottom: 20px;
                 color: #fff;
                 font-family: Poppins;
+            }
+        }
+    }
+
+    .interview {
+        .post-header {
+            margin-bottom: 0px;
+
+
+            @media (max-width: $smallDevices) {
+                margin-top: 40px;
+            }
+
+            @media (max-width: $extraSmallDevices) {
+                margin-top: 0px;
+            }
+
+            .post-meta {
+                margin-bottom: 20px;
+                
+                .post-meta-detail {
+                    font-size: 15px;
+                    text-align: center;
+                }
+            }
+
+            .post-title {
+                margin-bottom: 0px;
+            }
+        }
+
+        .post-image-container {
+            display: flex;
+            justify-content: center;
+            .post-featured-image {
+                height: auto;
+                border-radius: 150px;
             }
         }
     }

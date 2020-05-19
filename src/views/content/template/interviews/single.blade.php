@@ -9,60 +9,37 @@
     $showMetaData = $content->settings->get('showMetaData', get_theme_setting($themeDefaultContentSettings . '.showMetaData'));
     $showAuthorBio = $content->settings->get('showAuthorBio', get_theme_setting($themeDefaultContentSettings . '.showAuthorBio'));
     $showComments = $content->settings->get('showComments', get_theme_setting($themeDefaultContentSettings . '.showComments'));
-
-    // dd('who the fuck sends us here???');
 @endphp
 
-<div class="post">
+<div class="interview">
     @if($showTitle)
         <div class="post-header">
-            <div class="post-meta">
-                <a href="\user\{{ $content->author->slug }}">
-                    <div class="post-author">
-                        <div class="post-author-image"><img style="width: 90px;" class="img-responsive" src="{{ get_gravatar($content->author->email, 90, 'mp') }}" /></div>
-                        <div class="post-author-detail">
-                        <div class="post-author-name">{{ $content->author->firstname }} {{ $content->author->lastname }}</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
             <h1 class="post-title">{{ $content->title }}</h1>
-
-
-            <div class="post-meta">
-                <div class="post-taxonomy">
-                    @taxonomy([
-                        'taxonomy' => 'Tags',
-                        'post' => $content,
-                        'commaSeparate' => false
-                    ]) @endtaxonomy
+            @if($showMetaData)
+                <div class="post-meta">
+                    <div class="post-meta-detail">
+                        {{ $content->created_at->format('Y-m-d') }} by
+                        @if(get_website_setting('website.members.userDisplayName') == 'fullname')
+                            {{ $content->author->firstname }} {{ $content->author->lastname }}
+                        @else
+                            {{ $content->author->username }}
+                        @endif
+                    </div>
                 </div>
-            </div>
-
+            @endif
         </div>
     @endif
-    {{-- @if($showMetaData)
-        <div class="post-meta">
-            <div class="post-meta-detail">
-                Posted on {{ $content->created_at->format('Y-m-d') }} by
-                @if(get_website_setting('website.members.userDisplayName') == 'fullname')
-                    {{ $content->author->firstname }} {{ $content->author->lastname }}
-                @else
-                    {{ $content->author->username }}
-                @endif
-            </div>
-        </div>
-    @endif --}}
 
     @if($content->featuredimage && !empty(get_theme_setting('content.general.featuredImage.singlePageHeight')))
         <div class="post-featured-image" style='background-image: url({{ $content->featuredimage->original }});'></div>
     @elseif($content->featuredimage && empty(get_theme_setting('content.general.featuredImage.singlePageHeight')))
-        <img src="{{ $content->featuredimage->original }}" class="post-featured-image img-responsive" alt="">
+        <div class="post-image-container">
+            <img src="{{ $content->featuredimage->original }}" class="post-featured-image img-responsive">
+        </div>
     @endif
 
     <div class="single-post-content">
-        @include('content/template/default/partials/content')
+        @include('content/template/interviews/partials/content')
     </div>
 
     {{-- @if($showAuthorBio)

@@ -25,6 +25,14 @@
     @media (max-width: $xLargeDevices) {
         width: 100%;
     }
+
+    @media (max-width: $smallDevices) {
+        padding: 30px;
+    }
+
+    @media (max-width: $extraSmallDevices) {
+        padding: 30px;
+    }
 }
 
 .container-wide :last-child {

@@ -16,7 +16,7 @@
 <div class="post">
     @if($showTitle)
         <div class="post-header">
-            <div class="post-meta">
+            {{-- <div class="post-meta">
                 <a href="\user\{{ $content->author->slug }}">
                     <div class="post-author">
                         <div class="post-author-image"><img style="width: 90px;" class="img-responsive" src="{{ get_gravatar($content->author->email, 90, 'mp') }}" /></div>
@@ -25,7 +25,7 @@
                         </div>
                     </div>
                 </a>
-            </div>
+            </div> --}}
 
             <h1 class="post-title">{{ $content->title }}</h1>
 
@@ -65,19 +65,15 @@
         @include('content/template/default/partials/content')
     </div>
 
-    {{-- @if($showAuthorBio)
+    <a class="link-to-author" href="/user/nikocraft">
         <div class="post-author">
-            <div class="post-author-image"><img style="width: 120px;" class="img-responsive" src="{{ get_gravatar($content->author->email, 100, 'mp') }}" /></div>
-            <div class="post-author-details">
-                @if(get_website_setting('website.members.userDisplayName') == 'fullname')
-                    <div class="post-author-name">About {{ $content->author->firstname }} {{ $content->author->lastname }}</div>
-                @else
-                    <div class="post-author-name">About {{ $content->author->username }}</div>
-                @endif
+            <div class="post-author-image"><img class="img-responsive" src="{{ get_gravatar($content->author->email, 90, 'mp') }}" /></div>
+            <div class="post-author-detail">
+                <div class="post-author-name">{{ $content->author->firstname }} {{ $content->author->lastname }}</div>
                 <div class="post-author-bio">{{ $content->author->bio }}</div>
             </div>
         </div>
-    @endif --}}
+    </a>
 </div>
 
 

@@ -65,7 +65,7 @@
         @include('content/template/default/partials/content')
     </div>
 
-    <a class="link-to-author" href="/user/nikocraft">
+    <a class="link-to-author" href="/user/{{ $content->author->slug }}">
         <div class="post-author">
             <div class="post-author-image"><img class="img-responsive" src="{{ get_gravatar($content->author->email, 90, 'mp') }}" /></div>
             <div class="post-author-detail">

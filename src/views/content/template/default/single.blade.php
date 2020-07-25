@@ -26,9 +26,7 @@
                     </div>
                 </a>
             </div> --}}
-
             <h1 class="post-title">{{ $content->title }}</h1>
-
 
             <div class="post-meta">
                 <div class="post-taxonomy">
@@ -40,20 +38,20 @@
                 </div>
             </div>
 
+            @if($showMetaData)
+            <div class="post-meta">
+                <div class="post-meta-detail">
+                    Posted on {{ $content->created_at->format('Y-m-d') }} by
+                    @if(get_website_setting('website.members.userDisplayName') == 'fullname')
+                        {{ $content->author->firstname }} {{ $content->author->lastname }}
+                    @else
+                        {{ $content->author->username }}
+                    @endif
+                </div>
+            </div>
+        @endif
         </div>
     @endif
-    {{-- @if($showMetaData)
-        <div class="post-meta">
-            <div class="post-meta-detail">
-                Posted on {{ $content->created_at->format('Y-m-d') }} by
-                @if(get_website_setting('website.members.userDisplayName') == 'fullname')
-                    {{ $content->author->firstname }} {{ $content->author->lastname }}
-                @else
-                    {{ $content->author->username }}
-                @endif
-            </div>
-        </div>
-    @endif --}}
 
     @if($content->featuredimage && !empty(get_theme_setting('content.general.featuredImage.singlePageHeight')))
         <div class="post-featured-image" style='background-image: url({{ $content->featuredimage->original }});'></div>
